@@ -1,0 +1,22 @@
+{
+  "files": [
+    "depth/1074x910/clouds-0.png",
+    "depth/1074x910/clouds-60.png"
+  ],
+  "times_seconds": [
+    0,
+    60
+  ],
+  "image_size": [
+    1074,
+    604
+  ],
+  "sky_patch_normalized": [
+    0.17,
+    0.01,
+    0.24,
+    0.04
+  ],
+  "mean_absolute_rgb_change": 2.5244444444444443,
+  "fraction_pixels_changed": 0.26296296296296295
+}

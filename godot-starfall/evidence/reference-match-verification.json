@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "reference": "art-direction/starfall-hd2d-concept-v1.png",
+  "runtime_screenshots": [
+    "01-starfall-day.png",
+    "02-bridge-detail.png",
+    "03-star-shrine.png",
+    "04-starfall-night.png"
+  ],
+  "checked": [
+    "8 transparent nearest-sampled pixel actors",
+    "9 local lights",
+    "meadow fern instances",
+    "distant forest",
+    "10x8 original map",
+    "camera reset",
+    "day/night switching",
+    "Blender UV and embedded textures",
+    "alpha mask foliage",
+    "clean native runtime and import logs"
+  ],
+  "visual_limitations": [
+    "Tree silhouettes and fine material detail still differ from the reference image."
+  ],
+  "renderer": "Godot 4.6.3 Forward+ Metal"
+}

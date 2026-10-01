@@ -1,0 +1,334 @@
+{
+  "version": 2,
+  "status": "battle",
+  "activeChapterId": "moss-hollow",
+  "turn": 1,
+  "roster": [
+    {
+      "id": "kael",
+      "name": "凯尔",
+      "title": "星火剑士",
+      "team": "player",
+      "class": "sword",
+      "x": 2,
+      "y": 7,
+      "hp": 24,
+      "level": 1,
+      "exp": 0,
+      "stats": {
+        "maxHp": 24,
+        "strength": 10,
+        "skill": 7,
+        "speed": 9,
+        "luck": 7,
+        "defense": 4,
+        "resistance": 4
+      },
+      "growths": {
+        "maxHp": 50,
+        "strength": 40,
+        "skill": 35,
+        "speed": 40,
+        "luck": 30,
+        "defense": 25,
+        "resistance": 15
+      },
+      "itemId": "steel-sword",
+      "spells": [],
+      "acted": false,
+      "portrait": 0
+    },
+    {
+      "id": "lyra",
+      "name": "莱拉",
+      "title": "星祈骑士",
+      "team": "player",
+      "class": "star-cavalry",
+      "x": 3,
+      "y": 7,
+      "hp": 22,
+      "level": 1,
+      "exp": 0,
+      "stats": {
+        "maxHp": 22,
+        "strength": 9,
+        "skill": 6,
+        "speed": 8,
+        "luck": 6,
+        "defense": 4,
+        "resistance": 10
+      },
+      "growths": {
+        "maxHp": 45,
+        "strength": 35,
+        "skill": 35,
+        "speed": 40,
+        "luck": 45,
+        "defense": 25,
+        "resistance": 30
+      },
+      "spells": [
+        "resire",
+        "recover"
+      ],
+      "activeSpellId": "resire",
+      "activeHealingSpellId": "recover",
+      "acted": false,
+      "portrait": 4
+    },
+    {
+      "id": "mira",
+      "name": "米菈",
+      "title": "苍林枪卫",
+      "team": "player",
+      "class": "lancer",
+      "x": 4,
+      "y": 7,
+      "hp": 28,
+      "level": 1,
+      "exp": 0,
+      "stats": {
+        "maxHp": 28,
+        "strength": 10,
+        "skill": 5,
+        "speed": 6,
+        "luck": 3,
+        "defense": 7,
+        "resistance": 2
+      },
+      "growths": {
+        "maxHp": 55,
+        "strength": 45,
+        "skill": 30,
+        "speed": 25,
+        "luck": 20,
+        "defense": 40,
+        "resistance": 10
+      },
+      "itemId": "steel-lance",
+      "spells": [],
+      "acted": false,
+      "portrait": 2
+    }
+  ],
+  "inventory": [],
+  "completedChapterIds": [],
+  "unlockedChapterIds": [
+    "starfall-bridge"
+  ],
+  "visitedNodes": [],
+  "phase": "player",
+  "battleUnits": [
+    {
+      "id": "kael",
+      "name": "凯尔",
+      "title": "星火剑士",
+      "team": "player",
+      "class": "sword",
+      "x": 2,
+      "y": 7,
+      "hp": 24,
+      "level": 1,
+      "exp": 0,
+      "stats": {
+        "maxHp": 24,
+        "strength": 10,
+        "skill": 7,
+        "speed": 9,
+        "luck": 7,
+        "defense": 4,
+        "resistance": 4
+      },
+      "growths": {
+        "maxHp": 50,
+        "strength": 40,
+        "skill": 35,
+        "speed": 40,
+        "luck": 30,
+        "defense": 25,
+        "resistance": 15
+      },
+      "itemId": "steel-sword",
+      "spells": [],
+      "acted": false,
+      "portrait": 0
+    },
+    {
+      "id": "lyra",
+      "name": "莱拉",
+      "title": "星祈骑士",
+      "team": "player",
+      "class": "star-cavalry",
+      "x": 3,
+      "y": 7,
+      "hp": 22,
+      "level": 1,
+      "exp": 0,
+      "stats": {
+        "maxHp": 22,
+        "strength": 9,
+        "skill": 6,
+        "speed": 8,
+        "luck": 6,
+        "defense": 4,
+        "resistance": 10
+      },
+      "growths": {
+        "maxHp": 45,
+        "strength": 35,
+        "skill": 35,
+        "speed": 40,
+        "luck": 45,
+        "defense": 25,
+        "resistance": 30
+      },
+      "spells": [
+        "resire",
+        "recover"
+      ],
+      "activeSpellId": "resire",
+      "activeHealingSpellId": "recover",
+      "acted": false,
+      "portrait": 4
+    },
+    {
+      "id": "mira",
+      "name": "米菈",
+      "title": "苍林枪卫",
+      "team": "player",
+      "class": "lancer",
+      "x": 4,
+      "y": 7,
+      "hp": 28,
+      "level": 1,
+      "exp": 0,
+      "stats": {
+        "maxHp": 28,
+        "strength": 10,
+        "skill": 5,
+        "speed": 6,
+        "luck": 3,
+        "defense": 7,
+        "resistance": 2
+      },
+      "growths": {
+        "maxHp": 55,
+        "strength": 45,
+        "skill": 30,
+        "speed": 25,
+        "luck": 20,
+        "defense": 40,
+        "resistance": 10
+      },
+      "itemId": "steel-lance",
+      "spells": [],
+      "acted": false,
+      "portrait": 2
+    },
+    {
+      "id": "mossling-0",
+      "name": "苔灯灵",
+      "title": "林间魔物",
+      "team": "enemy",
+      "class": "mossling",
+      "x": 2,
+      "y": 2,
+      "hp": 12,
+      "level": 1,
+      "stats": {
+        "maxHp": 12,
+        "strength": 5,
+        "skill": 2,
+        "speed": 3,
+        "luck": 0,
+        "defense": 1,
+        "resistance": 0
+      },
+      "portrait": 3,
+      "ai": "active",
+      "growths": {
+        "maxHp": 0,
+        "strength": 0,
+        "skill": 0,
+        "speed": 0,
+        "luck": 0,
+        "defense": 0,
+        "resistance": 0
+      },
+      "exp": 0,
+      "acted": false,
+      "spells": []
+    },
+    {
+      "id": "mossling-1",
+      "name": "苔灯灵",
+      "title": "林间魔物",
+      "team": "enemy",
+      "class": "mossling",
+      "x": 5,
+      "y": 2,
+      "hp": 12,
+      "level": 1,
+      "stats": {
+        "maxHp": 12,
+        "strength": 5,
+        "skill": 2,
+        "speed": 3,
+        "luck": 0,
+        "defense": 1,
+        "resistance": 0
+      },
+      "portrait": 3,
+      "ai": "active",
+      "growths": {
+        "maxHp": 0,
+        "strength": 0,
+        "skill": 0,
+        "speed": 0,
+        "luck": 0,
+        "defense": 0,
+        "resistance": 0
+      },
+      "exp": 0,
+      "acted": false,
+      "spells": []
+    },
+    {
+      "id": "mossling-2",
+      "name": "苔灯灵",
+      "title": "林间魔物",
+      "team": "enemy",
+      "class": "mossling",
+      "x": 4,
+      "y": 0,
+      "hp": 12,
+      "level": 2,
+      "stats": {
+        "maxHp": 12,
+        "strength": 5,
+        "skill": 2,
+        "speed": 3,
+        "luck": 0,
+        "defense": 1,
+        "resistance": 0
+      },
+      "portrait": 3,
+      "ai": "active",
+      "growths": {
+        "maxHp": 0,
+        "strength": 0,
+        "skill": 0,
+        "speed": 0,
+        "luck": 0,
+        "defense": 0,
+        "resistance": 0
+      },
+      "exp": 0,
+      "acted": false,
+      "spells": []
+    }
+  ],
+  "battleLoot": [],
+  "moonlitLayoutVersion": 2,
+  "savedAt": 0
+}

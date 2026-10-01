@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "tileSize": 2,
+  "origin": [
+    5.5,
+    5.5
+  ],
+  "grid": {
+    "columns": 12,
+    "rows": 12,
+    "rowsNorthToSouth": [
+      "gggggggggggg",
+      "ggfgggrggggg",
+      "ggfffggggsgg",
+      "ggffmggffggg",
+      "gggmmgrffggg",
+      "wwwwbbbrwwww",
+      "ggggrrgggggg",
+      "ggffrrgmfggg",
+      "ggggrrfffggg",
+      "ggggrrgggggg",
+      "gggssssssggg",
+      "gggssssssggg"
+    ]
+  },
+  "deployment": [
+    {
+      "x": 4,
+      "y": 11
+    },
+    {
+      "x": 5,
+      "y": 11
+    },
+    {
+      "x": 6,
+      "y": 11
+    },
+    {
+      "x": 7,
+      "y": 11
+    }
+  ],
+  "objective": [
+    9,
+    2
+  ],
+  "oldCellTranslation": [
+    1,
+    2
+  ],
+  "partyWorldShiftSouth": 4,
+  "enemyCount": 7,
+  "changes": [
+    "Fill northwest ground cutout",
+    "Remove Distant basalt towers rear wall",
+    "Move entry terrace and party 4 metres south",
+    "Expand playable grid and collisions",
+    "Add northern scout and altar lancer",
+    "Temporarily open chapter without recording story completion"
+  ]
+}

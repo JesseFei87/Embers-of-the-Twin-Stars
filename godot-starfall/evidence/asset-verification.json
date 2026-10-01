@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "meshes": 39,
+  "embedded_images": 31,
+  "source_textures": 34,
+  "layout_matches_original": true,
+  "uv_complete": true,
+  "alpha_mask_foliage": true,
+  "scene_external_resources_present": true
+}

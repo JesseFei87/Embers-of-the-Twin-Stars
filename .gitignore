@@ -1,0 +1,17 @@
+node_modules/
+dist/
+work/
+.DS_Store
+
+# Local tooling, editor caches and credentials
+.img2threejs/
+.godot/
+__pycache__/
+*.pyc
+*.log
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/

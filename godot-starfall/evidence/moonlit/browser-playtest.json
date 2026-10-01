@@ -1,0 +1,58 @@
+{
+  "origin": "http://moonlit-qa.localhost:4174/",
+  "isolatedFromPlayerSave": true,
+  "beforeEntry": {
+    "completedChapterIds": [],
+    "unlockedChapterIds": [
+      "starfall-bridge"
+    ]
+  },
+  "enteredChapter": "moonlit-pass",
+  "freshDeployment": [
+    [
+      4,
+      11
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      6,
+      11
+    ]
+  ],
+  "enemyCount": 7,
+  "verifiedMouseMoveAndWait": {
+    "unit": "kael",
+    "from": [
+      4,
+      11
+    ],
+    "savedTo": [
+      4,
+      10
+    ],
+    "acted": true
+  },
+  "classicTerrain": "all 12x12 cells rendered; fixed previous 10x8 renderer limit",
+  "cameraFramingSizes": [
+    [
+      1280,
+      720
+    ],
+    [
+      1440,
+      810
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      1074,
+      909
+    ]
+  ],
+  "saveCompatibility": "pre-expansion battle migration preserves HP, turn, phase, defeated units and loot; idempotent reload"
+}

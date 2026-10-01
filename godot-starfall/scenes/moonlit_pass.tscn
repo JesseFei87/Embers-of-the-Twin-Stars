@@ -1,0 +1,2732 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/moonlit_pass.gd" id="1_hjjxl"]
+[ext_resource type="PackedScene" path="res://assets/models/moonlit_environment.glb" id="2_gpag4"]
+[ext_resource type="Shader" path="res://shaders/moonlit_sky.gdshader" id="3_ndpfg"]
+[ext_resource type="Shader" path="res://shaders/moonlit_water.gdshader" id="4_e1r2p"]
+[ext_resource type="Shader" path="res://shaders/moonlit_waterfall.gdshader" id="5_m8mm4"]
+[ext_resource type="Shader" path="res://shaders/moonlit_fire.gdshader" id="6_idnls"]
+[ext_resource type="Texture2D" path="res://assets/sprites-hd2d/sword.png" id="7_mihrq"]
+[ext_resource type="Texture2D" path="res://assets/sprites-hd2d/cavalry.png" id="8_ddr7q"]
+[ext_resource type="Texture2D" path="res://assets/sprites-hd2d/lancer.png" id="9_hkf8t"]
+[ext_resource type="Texture2D" path="res://assets/sprites-hd2d/mage.png" id="10_iwsu2"]
+[ext_resource type="Texture2D" path="res://assets/sprites-hd2d/eileen.png" id="11_kw8k1"]
+[ext_resource type="Texture2D" path="res://assets/sprites-hd2d/knight.png" id="12_hxhep"]
+[ext_resource type="Texture2D" path="res://assets/sprites-hd2d/raider.png" id="13_fyatn"]
+[ext_resource type="Texture2D" path="res://assets/sprites-hd2d/altar-mage.png" id="14_p1iny"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yid5p"]
+shader = ExtResource("3_ndpfg")
+shader_parameter/cloud_time = null
+shader_parameter/moon_direction = null
+
+[sub_resource type="Sky" id="Sky_ykhwt"]
+sky_material = SubResource("ShaderMaterial_yid5p")
+
+[sub_resource type="Environment" id="Environment_ba5dg"]
+background_mode = 2
+sky = SubResource("Sky_ykhwt")
+ambient_light_source = 2
+ambient_light_color = Color(0.63529414, 0.6901961, 0.76862746, 1)
+ambient_light_energy = 0.45
+tonemap_mode = 3
+ssao_enabled = true
+ssao_radius = 0.8
+ssao_intensity = 1.1
+ssil_enabled = true
+ssil_intensity = 0.65
+glow_enabled = true
+glow_intensity = 0.48
+glow_hdr_threshold = 1.8
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0009
+volumetric_fog_albedo = Color(0.3882353, 0.48235294, 0.61960787, 1)
+volumetric_fog_anisotropy = 0.25
+volumetric_fog_length = 100.0
+
+[sub_resource type="FogMaterial" id="FogMaterial_ndacw"]
+density = 0.065
+albedo = Color(0.46666667, 0.5647059, 0.7137255, 1)
+edge_fade = 0.65
+
+[sub_resource type="FogMaterial" id="FogMaterial_rxivn"]
+density = 0.035
+albedo = Color(0.46666667, 0.5647059, 0.7137255, 1)
+edge_fade = 0.65
+
+[sub_resource type="FogMaterial" id="FogMaterial_r8f0q"]
+density = 0.02
+albedo = Color(0.46666667, 0.5647059, 0.7137255, 1)
+edge_fade = 0.65
+
+[sub_resource type="FogMaterial" id="FogMaterial_cak52"]
+density = 0.018
+albedo = Color(0.46666667, 0.5647059, 0.7137255, 1)
+edge_fade = 0.65
+
+[sub_resource type="FogMaterial" id="FogMaterial_57pb1"]
+density = 0.021
+albedo = Color(0.4509804, 0.58431375, 0.75686276, 1)
+edge_fade = 0.9
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8wqq5"]
+render_priority = 0
+shader = ExtResource("4_e1r2p")
+shader_parameter/motion_time = null
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ianc4"]
+size = Vector2(32, 8)
+subdivide_width = 50
+subdivide_depth = 18
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q84q0"]
+render_priority = 0
+shader = ExtResource("4_e1r2p")
+shader_parameter/motion_time = null
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_j20vh"]
+size = Vector2(9, 17)
+subdivide_width = 50
+subdivide_depth = 18
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_arn4d"]
+render_priority = 0
+shader = ExtResource("5_m8mm4")
+shader_parameter/motion_time = null
+shader_parameter/splash = null
+
+[sub_resource type="QuadMesh" id="QuadMesh_cc2je"]
+size = Vector2(1.7, 1.4)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4f31u"]
+render_priority = 0
+shader = ExtResource("5_m8mm4")
+shader_parameter/motion_time = null
+shader_parameter/splash = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_q0qsq"]
+size = Vector2(2.72, 1.15)
+subdivide_width = 50
+subdivide_depth = 18
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f0s16"]
+render_priority = 0
+shader = ExtResource("5_m8mm4")
+shader_parameter/motion_time = null
+shader_parameter/splash = null
+
+[sub_resource type="QuadMesh" id="QuadMesh_gyism"]
+size = Vector2(1.3, 1.85)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_23fqg"]
+render_priority = 0
+shader = ExtResource("5_m8mm4")
+shader_parameter/motion_time = null
+shader_parameter/splash = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_18yxg"]
+size = Vector2(2.08, 1.15)
+subdivide_width = 50
+subdivide_depth = 18
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_are6r"]
+render_priority = 0
+shader = ExtResource("6_idnls")
+shader_parameter/motion_time = null
+shader_parameter/seed = 0.0
+shader_parameter/flame_color = null
+
+[sub_resource type="QuadMesh" id="QuadMesh_7pgus"]
+size = Vector2(0.52, 0.88)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0uuco"]
+render_priority = 0
+shader = ExtResource("6_idnls")
+shader_parameter/motion_time = null
+shader_parameter/seed = 1.73
+shader_parameter/flame_color = null
+
+[sub_resource type="QuadMesh" id="QuadMesh_t371k"]
+size = Vector2(0.52, 0.88)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h5otp"]
+render_priority = 0
+shader = ExtResource("6_idnls")
+shader_parameter/motion_time = null
+shader_parameter/seed = 3.46
+shader_parameter/flame_color = null
+
+[sub_resource type="QuadMesh" id="QuadMesh_l3dgo"]
+size = Vector2(0.52, 0.88)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3ya4l"]
+render_priority = 0
+shader = ExtResource("6_idnls")
+shader_parameter/motion_time = null
+shader_parameter/seed = 5.1899999999999995
+shader_parameter/flame_color = null
+
+[sub_resource type="QuadMesh" id="QuadMesh_rri2u"]
+size = Vector2(0.52, 0.88)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vo341"]
+render_priority = 0
+shader = ExtResource("6_idnls")
+shader_parameter/motion_time = null
+shader_parameter/seed = 6.92
+shader_parameter/flame_color = null
+
+[sub_resource type="QuadMesh" id="QuadMesh_7ktgu"]
+size = Vector2(0.52, 0.88)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8jndb"]
+render_priority = 0
+shader = ExtResource("6_idnls")
+shader_parameter/motion_time = null
+shader_parameter/seed = 8.65
+shader_parameter/flame_color = null
+
+[sub_resource type="QuadMesh" id="QuadMesh_cdof6"]
+size = Vector2(0.52, 0.88)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t4p8p"]
+render_priority = 0
+shader = ExtResource("6_idnls")
+shader_parameter/motion_time = null
+shader_parameter/seed = 10.379999999999999
+shader_parameter/flame_color = null
+
+[sub_resource type="QuadMesh" id="QuadMesh_svelh"]
+size = Vector2(0.52, 0.88)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_awjc2"]
+render_priority = 0
+shader = ExtResource("6_idnls")
+shader_parameter/motion_time = null
+shader_parameter/seed = 12.11
+shader_parameter/flame_color = null
+
+[sub_resource type="QuadMesh" id="QuadMesh_o3h0o"]
+size = Vector2(0.52, 0.88)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3fxbd"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.01, 0.018, 0.035, 0.48)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_adpgk"]
+top_radius = 0.36
+bottom_radius = 0.36
+height = 0.007
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aobt0"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.01, 0.018, 0.035, 0.48)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hyqwu"]
+top_radius = 0.36
+bottom_radius = 0.36
+height = 0.007
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uatop"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.01, 0.018, 0.035, 0.48)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kdkqv"]
+top_radius = 0.36
+bottom_radius = 0.36
+height = 0.007
+
+[sub_resource type="Image" id="Image_uy3l7"]
+data = {
+"data": PackedByteArray("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"),
+"format": "RGBA8",
+"height": 52,
+"mipmaps": false,
+"width": 46
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_dh6fv"]
+image = SubResource("Image_uy3l7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yb6ke"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.01, 0.018, 0.035, 0.48)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gan0d"]
+top_radius = 0.36
+bottom_radius = 0.36
+height = 0.007
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ssty"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.01, 0.018, 0.035, 0.48)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wiifn"]
+top_radius = 0.36
+bottom_radius = 0.36
+height = 0.007
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mc3wy"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.01, 0.018, 0.035, 0.48)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jql57"]
+top_radius = 0.36
+bottom_radius = 0.36
+height = 0.007
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0epd4"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.01, 0.018, 0.035, 0.48)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_x8rg0"]
+top_radius = 0.36
+bottom_radius = 0.36
+height = 0.007
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydtp6"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.01, 0.018, 0.035, 0.48)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lmhvr"]
+top_radius = 0.36
+bottom_radius = 0.36
+height = 0.007
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sp8r0"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.01, 0.018, 0.035, 0.48)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hccos"]
+top_radius = 0.36
+bottom_radius = 0.36
+height = 0.007
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1voxr"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.01, 0.018, 0.035, 0.48)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_muh0i"]
+top_radius = 0.36
+bottom_radius = 0.36
+height = 0.007
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ve6uq"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.01, 0.018, 0.035, 0.48)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yoci2"]
+top_radius = 0.36
+bottom_radius = 0.36
+height = 0.007
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hoqrv"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_07g3f"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_varmv"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dkuld"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kfkmn"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qps2g"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1nl48"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mk4cn"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lojiy"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lvf5u"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8b8y8"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_370xe"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_putul"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x3jmg"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iff1l"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ka37m"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xr4i0"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ld7hi"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1k5jx"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wbt4p"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ntsix"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6u4i4"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m6h31"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hbt2m"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nvh5x"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6r7wj"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nbp8y"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2dwmh"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x31sk"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l11fl"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0j3sc"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ugxom"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h1sf4"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wby24"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iess6"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1op1k"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ywwx3"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wovnh"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1pxds"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nqgxo"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_64pau"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3wl3t"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gkibs"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i376s"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nwwkk"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hfdr5"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3nj35"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r7sy7"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2vqfj"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bxkl0"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cr6pw"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4721u"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ebd3c"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tjxap"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_elwwy"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qf5iw"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vms0t"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sddgi"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ax3qp"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_binps"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_74617"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q86ce"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ruot7"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iolww"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kew2h"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uhu6d"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6101p"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x406b"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qi2m2"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d1af2"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_71esv"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rjrte"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6cevp"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ifnyt"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v7x8s"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e2a0j"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uv5e2"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig15d"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vueul"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_38b13"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2e46m"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s0m1k"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hxydp"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5sfg5"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o406c"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ax4ib"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q72r2"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t7dgs"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rspo6"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r7t3e"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sf60m"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m071x"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3mhqm"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfr0r"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fcsl8"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_krny8"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_08vxb"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ifmy"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uavoj"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uvlt8"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_etoku"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_exc08"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p2oip"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iicn6"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yqyp0"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2oyfi"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_286s6"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pq64i"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4bhub"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vuxxq"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nlqd4"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0feh"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hl872"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wffsi"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8uoaq"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ldken"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vbyhc"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h80bt"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uifdd"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_667hj"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t31fu"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ewvkb"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4yxry"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vvksq"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uutbm"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jyyfp"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gb0nu"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0psrp"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ye7wn"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uk7tv"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jc707"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pikjx"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7k2s5"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yo3t6"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kb8dk"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bkbjn"]
+size = Vector3(2, 0.2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwev2"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.48, 0.75, 1, 0.5)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gq508"]
+_surfaces = [{
+"aabb": AABB(-12, -1.13, -12, 24, 2.5819001, 24),
+"format": 34359738369,
+"material": SubResource("StandardMaterial3D_dwev2"),
+"primitive": 1,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 1152,
+"vertex_data": PackedByteArray("AABAwYJzFj8AAEDBAAAgwYJzFj8AAEDBAAAgwYJzFj8AAEDBAAAgwYJzFj8AACDBAAAgwYJzFj8AACDBAABAwYJzFj8AACDBAABAwYJzFj8AACDBAABAwYJzFj8AAEDBAAAgwc4ZIT8AAEDBAAAAwc4ZIT8AAEDBAAAAwc4ZIT8AAEDBAAAAwc4ZIT8AACDBAAAAwc4ZIT8AACDBAAAgwc4ZIT8AACDBAAAgwc4ZIT8AACDBAAAgwc4ZIT8AAEDBAAAAwTEILD8AAEDBAADAwDEILD8AAEDBAADAwDEILD8AAEDBAADAwDEILD8AACDBAADAwDEILD8AACDBAAAAwTEILD8AACDBAAAAwTEILD8AACDBAAAAwTEILD8AAEDBAADAwLgeJT8AAEDBAACAwLgeJT8AAEDBAACAwLgeJT8AAEDBAACAwLgeJT8AACDBAACAwLgeJT8AACDBAADAwLgeJT8AACDBAADAwLgeJT8AACDBAADAwLgeJT8AAEDBAACAwGfVFz8AAEDBAAAAwGfVFz8AAEDBAAAAwGfVFz8AAEDBAAAAwGfVFz8AACDBAAAAwGfVFz8AACDBAACAwGfVFz8AACDBAACAwGfVFz8AACDBAACAwGfVFz8AAEDBAAAAwHE9Gj8AAEDBAAAAAHE9Gj8AAEDBAAAAAHE9Gj8AAEDBAAAAAHE9Gj8AACDBAAAAAHE9Gj8AACDBAAAAwHE9Gj8AACDBAAAAwHE9Gj8AACDBAAAAwHE9Gj8AAEDBAAAAAOxRKD8AAEDBAAAAQOxRKD8AAEDBAAAAQOxRKD8AAEDBAAAAQOxRKD8AACDBAAAAQOxRKD8AACDBAAAAAOxRKD8AACDBAAAAAOxRKD8AACDBAAAAAOxRKD8AAEDBAAAAQPW5Kj8AAEDBAACAQPW5Kj8AAEDBAACAQPW5Kj8AAEDBAACAQPW5Kj8AACDBAACAQPW5Kj8AACDBAAAAQPW5Kj8AACDBAAAAQPW5Kj8AACDBAAAAQPW5Kj8AAEDBAACAQKRwHT8AAEDBAADAQKRwHT8AAEDBAADAQKRwHT8AAEDBAADAQKRwHT8AACDBAADAQKRwHT8AACDBAACAQKRwHT8AACDBAACAQKRwHT8AACDBAACAQKRwHT8AAEDBAADAQCuHFj8AAEDBAAAAQSuHFj8AAEDBAAAAQSuHFj8AAEDBAAAAQSuHFj8AACDBAAAAQSuHFj8AACDBAADAQCuHFj8AACDBAADAQCuHFj8AACDBAADAQCuHFj8AAEDBAAAAQY51IT8AAEDBAAAgQY51IT8AAEDBAAAgQY51IT8AAEDBAAAgQY51IT8AACDBAAAgQY51IT8AACDBAAAAQY51IT8AACDBAAAAQY51IT8AACDBAAAAQY51IT8AAEDBAAAgQdobLD8AAEDBAABAQdobLD8AAEDBAABAQdobLD8AAEDBAABAQdobLD8AACDBAABAQdobLD8AACDBAAAgQdobLD8AACDBAAAgQdobLD8AACDBAAAgQdobLD8AAEDBAABAwZEPGj8AACDBAAAgwZEPGj8AACDBAAAgwZEPGj8AACDBAAAgwZEPGj8AAADBAAAgwZEPGj8AAADBAABAwZEPGj8AAADBAABAwZEPGj8AAADBAABAwZEPGj8AACDBAAAgwekmIT8AACDBAAAAwekmIT8AACDBAAAAwekmIT8AACDBAAAAwekmIT8AAADBAAAAwekmIT8AAADBAAAgwekmIT8AAADBAAAgwekmIT8AAADBAAAgwekmIT8AACDBAAAAwT55KD8AACDBAADAwD55KD8AACDBAADAwD55KD8AACDBAADAwD55KD8AAADBAADAwD55KD8AAADBAAAAwT55KD8AAADBAAAAwT55KD8AAADBAAAAwT55KD8AACDBAADAwArXIz8AACDBAACAwArXIz8AACDBAACAwArXIz8AACDBAACAwArXIz8AAADBAACAwArXIz8AAADBAADAwArXIz8AAADBAADAwArXIz8AAADBAADAwArXIz8AACDBAACAwPH0Gj8AACDBAAAAwPH0Gj8AACDBAAAAwPH0Gj8AACDBAAAAwPH0Gj8AAADBAAAAwPH0Gj8AAADBAACAwPH0Gj8AAADBAACAwPH0Gj8AAADBAACAwPH0Gj8AACDBAAAAwNGRHD8AACDBAAAAANGRHD8AACDBAAAAANGRHD8AACDBAAAAANGRHD8AAADBAAAAANGRHD8AAADBAAAAwNGRHD8AAADBAAAAwNGRHD8AAADBAAAAwNGRHD8AACDBAAAAAIv9JT8AACDBAAAAQIv9JT8AACDBAAAAQIv9JT8AACDBAAAAQIv9JT8AAADBAAAAQIv9JT8AAADBAAAAAIv9JT8AAADBAAAAAIv9JT8AAADBAAAAAIv9JT8AACDBAAAAQGuaJz8AACDBAACAQGuaJz8AACDBAACAQGuaJz8AACDBAACAQGuaJz8AAADBAACAQGuaJz8AAADBAAAAQGuaJz8AAADBAAAAQGuaJz8AAADBAAAAQGuaJz8AACDBAACAQKRwPT8AACDBAADAQKRwPT8AACDBAADAQKRwPT8AACDBAADAQKRwPT8AAADBAADAQKRwPT8AAADBAACAQKRwPT8AAADBAACAQKRwPT8AAADBAACAQKRwPT8AACDBAADAQDMzsz8AACDBAAAAQTMzsz8AACDBAAAAQTMzsz8AACDBAAAAQTMzsz8AAADBAAAAQTMzsz8AAADBAADAQDMzsz8AAADBAADAQDMzsz8AAADBAADAQDMzsz8AACDBAAAAQaRwPT8AACDBAAAgQaRwPT8AACDBAAAgQaRwPT8AACDBAAAgQaRwPT8AAADBAAAgQaRwPT8AAADBAAAAQaRwPT8AAADBAAAAQaRwPT8AAADBAAAAQaRwPT8AACDBAAAgQcx/KD8AACDBAABAQcx/KD8AACDBAABAQcx/KD8AACDBAABAQcx/KD8AAADBAABAQcx/KD8AAADBAAAgQcx/KD8AAADBAAAgQcx/KD8AAADBAAAgQcx/KD8AACDBAABAwV3cJj8AAADBAAAgwV3cJj8AAADBAAAgwV3cJj8AAADBAAAgwV3cJj8AAMDAAAAgwV3cJj8AAMDAAABAwV3cJj8AAMDAAABAwV3cJj8AAMDAAABAwV3cJj8AAADBAAAgweVhIT8AAADBAAAAweVhIT8AAADBAAAAweVhIT8AAADBAAAAweVhIT8AAMDAAAAAweVhIT8AAMDAAAAgweVhIT8AAMDAAAAgweVhIT8AAMDAAAAgweVhIT8AAADBAAAAwYy5Gz8AAADBAADAwIy5Gz8AAADBAADAwIy5Gz8AAADBAADAwIy5Gz8AAMDAAADAwIy5Gz8AAMDAAAAAwYy5Gz8AAMDAAAAAwYy5Gz8AAMDAAAAAwYy5Gz8AAADBAADAwA5PHz8AAADBAACAwA5PHz8AAADBAACAwA5PHz8AAADBAACAwA5PHz8AAMDAAACAwA5PHz8AAMDAAADAwA5PHz8AAMDAAADAwA5PHz8AAMDAAADAwA5PHz8AAADBAACAwN0kJj8AAADBAAAAwN0kJj8AAADBAAAAwN0kJj8AAADBAAAAwN0kJj8AAMDAAAAAwN0kJj8AAMDAAACAwN0kJj8AAMDAAACAwN0kJj8AAMDAAACAwN0kJj8AAADBAAAAwEvqJD8AAADBAAAAAEvqJD8AAADBAAAAAEvqJD8AAADBAAAAAEvqJD8AAMDAAAAAAEvqJD8AAMDAAAAAwEvqJD8AAMDAAAAAwEvqJD8AAMDAAAAAwEvqJD8AAADBAAAAABKlHT8AAADBAAAAQBKlHT8AAADBAAAAQBKlHT8AAADBAAAAQBKlHT8AAMDAAAAAQBKlHT8AAMDAAAAAABKlHT8AAMDAAAAAABKlHT8AAMDAAAAAABKlHT8AAADBAAAAQH9qHD8AAADBAACAQH9qHD8AAADBAACAQH9qHD8AAADBAACAQH9qHD8AAMDAAACAQH9qHD8AAMDAAAAAQH9qHD8AAMDAAAAAQH9qHD8AAMDAAAAAQH9qHD8AAADBAACAQDMzsz8AAADBAADAQDMzsz8AAADBAADAQDMzsz8AAADBAADAQDMzsz8AAMDAAADAQDMzsz8AAMDAAACAQDMzsz8AAMDAAACAQDMzsz8AAMDAAACAQDMzsz8AAADBAADAQDMzsz8AAADBAAAAQTMzsz8AAADBAAAAQTMzsz8AAADBAAAAQTMzsz8AAMDAAAAAQTMzsz8AAMDAAADAQDMzsz8AAMDAAADAQDMzsz8AAMDAAADAQDMzsz8AAADBAAAAQTMzsz8AAADBAAAgQTMzsz8AAADBAAAgQTMzsz8AAADBAAAgQTMzsz8AAMDAAAAgQTMzsz8AAMDAAAAAQTMzsz8AAMDAAAAAQTMzsz8AAMDAAAAAQTMzsz8AAADBAAAgQf+yGz8AAADBAABAQf+yGz8AAADBAABAQf+yGz8AAADBAABAQf+yGz8AAMDAAABAQf+yGz8AAMDAAAAgQf+yGz8AAMDAAAAgQf+yGz8AAMDAAAAgQf+yGz8AAADBAABAwXe+Dz8AAMDAAAAgwXe+Dz8AAMDAAAAgwXe+Dz8AAMDAAAAgwXe+Dz8AAIDAAAAgwXe+Dz8AAIDAAABAwXe+Dz8AAIDAAABAwXe+Dz8AAIDAAABAwXe+Dz8AAMDAAAAgwcGoBD8AAMDAAAAAwcGoBD8AAMDAAAAAwcGoBD8AAMDAAAAAwcGoBD8AAIDAAAAAwcGoBD8AAIDAAAAgwcGoBD8AAIDAAAAgwcGoBD8AAIDAAAAgwcGoBD8AAMDAAAAAwc07tj8AAMDAAADAwM07tj8AAMDAAADAwM07tj8AAMDAAADAwM07tj8AAIDAAADAwM07tj8AAIDAAAAAwc07tj8AAIDAAAAAwc07tj8AAIDAAAAAwc07tj8AAMDAAADAwNzXuT8AAMDAAACAwNzXuT8AAMDAAACAwNzXuT8AAMDAAACAwNzXuT8AAIDAAACAwNzXuT8AAIDAAADAwNzXuT8AAIDAAADAwNzXuT8AAIDAAADAwNzXuT8AAMDAAACAwPCnJj8AAMDAAAAAwPCnJj8AAMDAAAAAwPCnJj8AAMDAAAAAwPCnJj8AAIDAAAAAwPCnJj8AAIDAAACAwPCnJj8AAIDAAACAwPCnJj8AAIDAAACAwPCnJj8AAMDAAAAAwMPTCz8AAMDAAAAAAMPTCz8AAMDAAAAAAMPTCz8AAMDAAAAAAMPTCz8AAIDAAAAAAMPTCz8AAIDAAAAAwMPTCz8AAIDAAAAAwMPTCz8AAIDAAAAAwMPTCz8AAMDAAAAAAP5D+j4AAMDAAAAAQP5D+j4AAMDAAAAAQP5D+j4AAMDAAAAAQP5D+j4AAIDAAAAAQP5D+j4AAIDAAAAAAP5D+j4AAIDAAAAAAP5D+j4AAIDAAAAAAP5D+j4AAMDAAAAAQH0/9T4AAMDAAACAQH0/9T4AAMDAAACAQH0/9T4AAMDAAACAQH0/9T4AAIDAAACAQH0/9T4AAIDAAAAAQH0/9T4AAIDAAAAAQH0/9T4AAIDAAAAAQH0/9T4AAMDAAACAQKRwPT8AAMDAAADAQKRwPT8AAMDAAADAQKRwPT8AAMDAAADAQKRwPT8AAIDAAADAQKRwPT8AAIDAAACAQKRwPT8AAIDAAACAQKRwPT8AAIDAAACAQKRwPT8AAMDAAADAQDMzsz8AAMDAAAAAQTMzsz8AAMDAAAAAQTMzsz8AAMDAAAAAQTMzsz8AAIDAAAAAQTMzsz8AAIDAAADAQDMzsz8AAIDAAADAQDMzsz8AAIDAAADAQDMzsz8AAMDAAAAAQaRwPT8AAMDAAAAgQaRwPT8AAMDAAAAgQaRwPT8AAMDAAAAgQaRwPT8AAIDAAAAgQaRwPT8AAIDAAAAAQaRwPT8AAIDAAAAAQaRwPT8AAIDAAAAAQaRwPT8AAMDAAAAgQZhu8j4AAMDAAABAQZhu8j4AAMDAAABAQZhu8j4AAMDAAABAQZhu8j4AAIDAAABAQZhu8j4AAIDAAAAgQZhu8j4AAIDAAAAgQZhu8j4AAIDAAAAgQZhu8j4AAMDAAABAwWPumj4AAIDAAAAgwWPumj4AAIDAAAAgwWPumj4AAIDAAAAgwWPumj4AAADAAAAgwWPumj4AAADAAABAwWPumj4AAADAAABAwWPumj4AAADAAABAwWPumj4AAIDAAAAgwcbclT4AAIDAAAAAwcbclT4AAIDAAAAAwcbclT4AAIDAAAAAwcbclT4AAADAAAAAwcbclT4AAADAAAAgwcbclT4AAADAAAAgwcbclT4AAADAAAAgwcbclT4AAIDAAAAAwY/CnT8AAIDAAADAwI/CnT8AAIDAAADAwI/CnT8AAIDAAADAwI/CnT8AAADAAADAwI/CnT8AAADAAAAAwY/CnT8AAADAAAAAwY/CnT8AAADAAAAAwY/CnT8AAIDAAADAwEaUnj8AAIDAAACAwEaUnj8AAIDAAACAwEaUnj8AAIDAAACAwEaUnj8AAADAAACAwEaUnj8AAADAAADAwEaUnj8AAADAAADAwEaUnj8AAADAAADAwEaUnj8AAIDAAACAwNXnyj4AAIDAAAAAwNXnyj4AAIDAAAAAwNXnyj4AAIDAAAAAwNXnyj4AAADAAAAAwNXnyj4AAADAAACAwNXnyj4AAADAAACAwNXnyj4AAADAAACAwNXnyj4AAIDAAAAAwKMjmT4AAIDAAAAAAKMjmT4AAIDAAAAAAKMjmT4AAIDAAAAAAKMjmT4AAADAAAAAAKMjmT4AAADAAAAAwKMjmT4AAADAAAAAwKMjmT4AAADAAAAAwKMjmT4AAIDAAAAAAHxhkj4AAIDAAAAAQHxhkj4AAIDAAAAAQHxhkj4AAIDAAAAAQHxhkj4AAADAAAAAQHxhkj4AAADAAAAAAHxhkj4AAADAAAAAAHxhkj4AAADAAAAAAHxhkj4AAIDAAAAAQCBBkT4AAIDAAACAQCBBkT4AAIDAAACAQCBBkT4AAIDAAACAQCBBkT4AAADAAACAQCBBkT4AAADAAAAAQCBBkT4AAADAAAAAQCBBkT4AAADAAAAAQCBBkT4AAIDAAACAQGualz4AAIDAAADAQGualz4AAIDAAADAQGualz4AAIDAAADAQGualz4AAADAAADAQGualz4AAADAAACAQGualz4AAADAAACAQGualz4AAADAAACAQGualz4AAIDAAADAQEjhmj4AAIDAAAAAQUjhmj4AAIDAAAAAQUjhmj4AAIDAAAAAQUjhmj4AAADAAAAAQUjhmj4AAADAAADAQEjhmj4AAADAAADAQEjhmj4AAADAAADAQEjhmj4AAIDAAAAAQViolT4AAIDAAAAgQViolT4AAIDAAAAgQViolT4AAIDAAAAgQViolT4AAADAAAAgQViolT4AAADAAAAAQViolT4AAADAAAAAQViolT4AAADAAAAAQViolT4AAIDAAAAgQbyWkD4AAIDAAABAQbyWkD4AAIDAAABAQbyWkD4AAIDAAABAQbyWkD4AAADAAABAQbyWkD4AAADAAAAgQbyWkD4AAADAAAAgQbyWkD4AAADAAAAgQbyWkD4AAIDAAABAwdejkL8AAADAAAAgwdejkL8AAADAAAAgwdejkL8AAADAAAAgwdejkL8AAAAAAAAgwdejkL8AAAAAAABAwdejkL8AAAAAAABAwdejkL8AAAAAAABAwdejkL8AAADAAAAgwdejkL8AAADAAAAAwdejkL8AAADAAAAAwdejkL8AAADAAAAAwdejkL8AAAAAAAAAwdejkL8AAAAAAAAgwdejkL8AAAAAAAAgwdejkL8AAAAAAAAgwdejkL8AAADAAAAAwdejkL8AAADAAADAwNejkL8AAADAAADAwNejkL8AAADAAADAwNejkL8AAAAAAADAwNejkL8AAAAAAAAAwdejkL8AAAAAAAAAwdejkL8AAAAAAAAAwdejkL8AAADAAADAwNejkL8AAADAAACAwNejkL8AAADAAACAwNejkL8AAADAAACAwNejkL8AAAAAAACAwNejkL8AAAAAAADAwNejkL8AAAAAAADAwNejkL8AAAAAAADAwNejkL8AAADAAACAwAAAgD4AAADAAAAAwAAAgD4AAADAAAAAwAAAgD4AAADAAAAAwAAAgD4AAAAAAAAAwAAAgD4AAAAAAACAwAAAgD4AAAAAAACAwAAAgD4AAAAAAACAwAAAgD4AAADAAAAAwAAAgD4AAADAAAAAAAAAgD4AAADAAAAAAAAAgD4AAADAAAAAAAAAgD4AAAAAAAAAAAAAgD4AAAAAAAAAwAAAgD4AAAAAAAAAwAAAgD4AAAAAAAAAwAAAgD4AAADAAAAAAAAAgD4AAADAAAAAQAAAgD4AAADAAAAAQAAAgD4AAADAAAAAQAAAgD4AAAAAAAAAQAAAgD4AAAAAAAAAAAAAgD4AAAAAAAAAAAAAgD4AAAAAAAAAAAAAgD4AAADAAAAAQL4wWT4AAADAAACAQL4wWT4AAADAAACAQL4wWT4AAADAAACAQL4wWT4AAAAAAACAQL4wWT4AAAAAAAAAQL4wWT4AAAAAAAAAQL4wWT4AAAAAAAAAQL4wWT4AAADAAACAQNejkL8AAADAAADAQNejkL8AAADAAADAQNejkL8AAADAAADAQNejkL8AAAAAAADAQNejkL8AAAAAAACAQNejkL8AAAAAAACAQNejkL8AAAAAAACAQNejkL8AAADAAADAQNejkL8AAADAAAAAQdejkL8AAADAAAAAQdejkL8AAADAAAAAQdejkL8AAAAAAAAAQdejkL8AAAAAAADAQNejkL8AAAAAAADAQNejkL8AAAAAAADAQNejkL8AAADAAAAAQdejkL8AAADAAAAgQdejkL8AAADAAAAgQdejkL8AAADAAAAgQdejkL8AAAAAAAAgQdejkL8AAAAAAAAAQdejkL8AAAAAAAAAQdejkL8AAAAAAAAAQdejkL8AAADAAAAgQdejkL8AAADAAABAQdejkL8AAADAAABAQdejkL8AAADAAABAQdejkL8AAAAAAABAQdejkL8AAAAAAAAgQdejkL8AAAAAAAAgQdejkL8AAAAAAAAgQdejkL8AAADAAABAwTy9Ej4AAAAAAAAgwTy9Ej4AAAAAAAAgwTy9Ej4AAAAAAAAgwTy9Ej4AAABAAAAgwTy9Ej4AAABAAABAwTy9Ej4AAABAAABAwTy9Ej4AAABAAABAwTy9Ej4AAAAAAAAgwaK0Nz4AAAAAAAAAwaK0Nz4AAAAAAAAAwaK0Nz4AAAAAAAAAwaK0Nz4AAABAAAAAwaK0Nz4AAABAAAAgwaK0Nz4AAABAAAAgwaK0Nz4AAABAAAAgwaK0Nz4AAAAAAAAAwS2yXT4AAAAAAADAwC2yXT4AAAAAAADAwC2yXT4AAAAAAADAwC2yXT4AAABAAADAwC2yXT4AAABAAAAAwS2yXT4AAABAAAAAwS2yXT4AAABAAAAAwS2yXT4AAAAAAADAwMuhRT4AAAAAAACAwMuhRT4AAAAAAACAwMuhRT4AAAAAAACAwMuhRT4AAABAAACAwMuhRT4AAABAAADAwMuhRT4AAABAAADAwMuhRT4AAABAAADAwMuhRT4AAAAAAACAwBlzFz4AAAAAAAAAwBlzFz4AAAAAAAAAwBlzFz4AAAAAAAAAwBlzFz4AAABAAAAAwBlzFz4AAABAAACAwBlzFz4AAABAAACAwBlzFz4AAABAAACAwBlzFz4AAAAAAAAAwK7YHz4AAAAAAAAAAK7YHz4AAAAAAAAAAK7YHz4AAAAAAAAAAK7YHz4AAABAAAAAAK7YHz4AAABAAAAAwK7YHz4AAABAAAAAwK7YHz4AAABAAAAAwK7YHz4AAAAAAAAAACnLUD4AAAAAAAAAQCnLUD4AAAAAAAAAQCnLUD4AAAAAAAAAQCnLUD4AAABAAAAAQCnLUD4AAABAAAAAACnLUD4AAABAAAAAACnLUD4AAABAAAAAACnLUD4AAAAAAAAAQL4wWT4AAAAAAACAQL4wWT4AAAAAAACAQL4wWT4AAAAAAACAQL4wWT4AAABAAACAQL4wWT4AAABAAAAAQL4wWT4AAABAAAAAQL4wWT4AAABAAAAAQL4wWT4AAAAAAACAQAwCKz4AAAAAAADAQAwCKz4AAAAAAADAQAwCKz4AAAAAAADAQAwCKz4AAABAAADAQAwCKz4AAABAAACAQAwCKz4AAABAAACAQAwCKz4AAABAAACAQAwCKz4AAAAAAADAQKrxEj4AAAAAAAAAQarxEj4AAAAAAAAAQarxEj4AAAAAAAAAQarxEj4AAABAAAAAQarxEj4AAABAAADAQKrxEj4AAABAAADAQKrxEj4AAABAAADAQKrxEj4AAAAAAAAAQTXvOD4AAAAAAAAgQTXvOD4AAAAAAAAgQTXvOD4AAAAAAAAgQTXvOD4AAABAAAAgQTXvOD4AAABAAAAAQTXvOD4AAABAAAAAQTXvOD4AAABAAAAAQTXvOD4AAAAAAAAgQZvmXT4AAAAAAABAQZvmXT4AAAAAAABAQZvmXT4AAAAAAABAQZvmXT4AAABAAABAQZvmXT4AAABAAAAgQZvmXT4AAABAAAAgQZvmXT4AAABAAAAgQZvmXT4AAAAAAABAwZOpQj4AAABAAAAgwZOpQj4AAABAAAAgwZOpQj4AAABAAAAgwZOpQj4AAIBAAAAgwZOpQj4AAIBAAABAwZOpQj4AAIBAAABAwZOpQj4AAIBAAABAwZOpQj4AAABAAAAgwVmGOD4AAABAAAAAwVmGOD4AAABAAAAAwVmGOD4AAABAAAAAwVmGOD4AAIBAAAAAwVmGOD4AAIBAAAAgwVmGOD4AAIBAAAAgwVmGOD4AAIBAAAAgwVmGOD4AAABAAAAAwXsULj4AAABAAADAwHsULj4AAABAAADAwHsULj4AAABAAADAwHsULj4AAIBAAADAwHsULj4AAIBAAAAAwXsULj4AAIBAAAAAwXsULj4AAIBAAAAAwXsULj4AAABAAADAwDSiND4AAABAAACAwDSiND4AAABAAACAwDSiND4AAABAAACAwDSiND4AAIBAAACAwDSiND4AAIBAAADAwDSiND4AAIBAAADAwDSiND4AAIBAAADAwDSiND4AAABAAACAwMpUQT4AAABAAAAAwMpUQT4AAABAAAAAwMpUQT4AAABAAAAAwMpUQT4AAIBAAAAAwMpUQT4AAIBAAACAwMpUQT4AAIBAAACAwMpUQT4AAIBAAACAwMpUQT4AAABAAAAAwBIUPz4AAABAAAAAABIUPz4AAABAAAAAABIUPz4AAABAAAAAABIUPz4AAIBAAAAAABIUPz4AAIBAAAAAwBIUPz4AAIBAAAAAwBIUPz4AAIBAAAAAwBIUPz4AAABAAAAAAMWPMT4AAABAAAAAQMWPMT4AAABAAAAAQMWPMT4AAABAAAAAQMWPMT4AAIBAAAAAQMWPMT4AAIBAAAAAAMWPMT4AAIBAAAAAAMWPMT4AAIBAAAAAAMWPMT4AAABAAAAAQA5PLz4AAABAAACAQA5PLz4AAABAAACAQA5PLz4AAABAAACAQA5PLz4AAIBAAACAQA5PLz4AAIBAAAAAQA5PLz4AAIBAAAAAQA5PLz4AAIBAAAAAQA5PLz4AAABAAACAQKMBPD4AAABAAADAQKMBPD4AAABAAADAQKMBPD4AAABAAADAQKMBPD4AAIBAAADAQKMBPD4AAIBAAACAQKMBPD4AAIBAAACAQKMBPD4AAIBAAACAQKMBPD4AAABAAADAQFyPQj4AAABAAAAAQVyPQj4AAABAAAAAQVyPQj4AAABAAAAAQVyPQj4AAIBAAAAAQVyPQj4AAIBAAADAQFyPQj4AAIBAAADAQFyPQj4AAIBAAADAQFyPQj4AAABAAAAAQX4dOD4AAABAAAAgQX4dOD4AAABAAAAgQX4dOD4AAABAAAAgQX4dOD4AAIBAAAAgQX4dOD4AAIBAAAAAQX4dOD4AAIBAAAAAQX4dOD4AAIBAAAAAQX4dOD4AAABAAAAgQUT6LT4AAABAAABAQUT6LT4AAABAAABAQUT6LT4AAABAAABAQUT6LT4AAIBAAABAQUT6LT4AAIBAAAAgQUT6LT4AAIBAAAAgQUT6LT4AAIBAAAAgQUT6LT4AAABAAABAwUJgZT4AAIBAAAAgwUJgZT4AAIBAAAAgwUJgZT4AAIBAAAAgwUJgZT4AAMBAAAAgwUJgZT4AAMBAAABAwUJgZT4AAMBAAABAwUJgZT4AAMBAAABAwUJgZT4AAIBAAAAgwWwJOT4AAIBAAAAAwWwJOT4AAIBAAAAAwWwJOT4AAIBAAAAAwWwJOT4AAMBAAAAAwWwJOT4AAMBAAAAgwWwJOT4AAMBAAAAgwWwJOT4AAMBAAAAgwWwJOT4AAIBAAAAAwQN4Cz4AAIBAAADAwAN4Cz4AAIBAAADAwAN4Cz4AAIBAAADAwAN4Cz4AAMBAAADAwAN4Cz4AAMBAAAAAwQN4Cz4AAMBAAAAAwQN4Cz4AAMBAAAAAwQN4Cz4AAIBAAADAwHlYKD4AAIBAAACAwHlYKD4AAIBAAACAwHlYKD4AAIBAAACAwHlYKD4AAMBAAACAwHlYKD4AAMBAAADAwHlYKD4AAMBAAADAwHlYKD4AAMBAAADAwHlYKD4AAIBAAACAwHe+Xz4AAIBAAAAAwHe+Xz4AAIBAAAAAwHe+Xz4AAIBAAAAAwHe+Xz4AAMBAAAAAwHe+Xz4AAMBAAACAwHe+Xz4AAMBAAACAwHe+Xz4AAMBAAACAwHe+Xz4AAIBAAAAAwHS1VT4AAIBAAAAAAHS1VT4AAIBAAAAAAHS1VT4AAIBAAAAAAHS1VT4AAMBAAAAAAHS1VT4AAMBAAAAAwHS1VT4AAMBAAAAAwHS1VT4AAMBAAAAAwHS1VT4AAIBAAAAAAGPuGj4AAIBAAAAAQGPuGj4AAIBAAAAAQGPuGj4AAIBAAAAAQGPuGj4AAMBAAAAAQGPuGj4AAMBAAAAAAGPuGj4AAMBAAAAAAGPuGj4AAMBAAAAAAGPuGj4AAIBAAAAAQGDlED4AAIBAAACAQGDlED4AAIBAAACAQGDlED4AAIBAAACAQGDlED4AAMBAAACAQGDlED4AAMBAAAAAQGDlED4AAMBAAAAAQGDlED4AAMBAAAAAQGDlED4AAIBAAACAQF5LSD4AAIBAAADAQF5LSD4AAIBAAADAQF5LSD4AAIBAAADAQF5LSD4AAMBAAADAQF5LSD4AAMBAAACAQF5LSD4AAMBAAACAQF5LSD4AAMBAAACAQF5LSD4AAIBAAADAQNQrZT4AAIBAAAAAQdQrZT4AAIBAAAAAQdQrZT4AAIBAAAAAQdQrZT4AAMBAAAAAQdQrZT4AAMBAAADAQNQrZT4AAMBAAADAQNQrZT4AAMBAAADAQNQrZT4AAIBAAAAAQWuaNz4AAIBAAAAgQWuaNz4AAIBAAAAgQWuaNz4AAIBAAAAgQWuaNz4AAMBAAAAgQWuaNz4AAMBAAAAAQWuaNz4AAMBAAAAAQWuaNz4AAMBAAAAAQWuaNz4AAIBAAAAgQZZDCz4AAIBAAABAQZZDCz4AAIBAAABAQZZDCz4AAIBAAABAQZZDCz4AAMBAAABAQZZDCz4AAMBAAAAgQZZDCz4AAMBAAAAgQZZDCz4AAMBAAAAgQZZDCz4AAIBAAABAwamkTj4AAMBAAAAgwamkTj4AAMBAAAAgwamkTj4AAMBAAAAgwamkTj4AAABBAAAgwamkTj4AAABBAABAwamkTj4AAABBAABAwamkTj4AAABBAABAwamkTj4AAMBAAAAgwce6OD4AAMBAAAAAwce6OD4AAMBAAAAAwce6OD4AAMBAAAAAwce6OD4AAABBAAAAwce6OD4AAABBAAAgwce6OD4AAABBAAAgwce6OD4AAABBAAAgwce6OD4AAMBAAAAAwWUZIj4AAMBAAADAwGUZIj4AAMBAAADAwGUZIj4AAMBAAADAwGUZIj4AAABBAADAwGUZIj4AAABBAAAAwWUZIj4AAABBAAAAwWUZIj4AAABBAAAAwWUZIj4AAMBAAADAwGlvMD4AAMBAAACAwGlvMD4AAMBAAACAwGlvMD4AAMBAAACAwGlvMD4AAABBAACAwGlvMD4AAABBAADAwGlvMD4AAABBAADAwGlvMD4AAABBAADAwGlvMD4AAMBAAACAwKjGSz4AAMBAAAAAwKjGSz4AAMBAAAAAwKjGSz4AAMBAAAAAwKjGSz4AAABBAAAAwKjGSz4AAABBAACAwKjGSz4AAABBAACAwKjGSz4AAABBAACAwKjGSz4AAMBAAAAAwF3cRj4AAMBAAAAAAF3cRj4AAMBAAAAAAF3cRj4AAMBAAAAAAF3cRj4AAABBAAAAAF3cRj4AAABBAAAAwF3cRj4AAABBAAAAwF3cRj4AAABBAAAAwF3cRj4AAMBAAAAAAHrHKT4AAMBAAAAAQHrHKT4AAMBAAAAAQHrHKT4AAMBAAAAAQHrHKT4AAABBAAAAQHrHKT4AAABBAAAAAHrHKT4AAABBAAAAAHrHKT4AAABBAAAAAHrHKT4AAMBAAAAAQC/dJD4AAMBAAACAQC/dJD4AAMBAAACAQC/dJD4AAMBAAACAQC/dJD4AAABBAACAQC/dJD4AAABBAAAAQC/dJD4AAABBAAAAQC/dJD4AAABBAAAAQC/dJD4AAMBAAACAQG40QD4AAMBAAADAQG40QD4AAMBAAADAQG40QD4AAMBAAADAQG40QD4AAABBAADAQG40QD4AAABBAACAQG40QD4AAABBAACAQG40QD4AAABBAACAQG40QD4AAMBAAADAQHKKTj4AAMBAAAAAQXKKTj4AAMBAAAAAQXKKTj4AAMBAAAAAQXKKTj4AAABBAAAAQXKKTj4AAABBAADAQHKKTj4AAABBAADAQHKKTj4AAABBAADAQHKKTj4AAMBAAAAAQRDpNz4AAMBAAAAgQRDpNz4AAMBAAAAgQRDpNz4AAMBAAAAgQRDpNz4AAABBAAAgQRDpNz4AAABBAAAAQRDpNz4AAABBAAAAQRDpNz4AAABBAAAAQRDpNz4AAMBAAAAgQS7/IT4AAMBAAABAQS7/IT4AAMBAAABAQS7/IT4AAMBAAABAQS7/IT4AAABBAABAQS7/IT4AAABBAAAgQS7/IT4AAABBAAAgQS7/IT4AAABBAAAgQS7/IT4AAMBAAABAwXZxGz4AAABBAAAgwXZxGz4AAABBAAAgwXZxGz4AAABBAAAgwXZxGz4AACBBAAAgwXZxGz4AACBBAABAwXZxGz4AACBBAABAwXZxGz4AACBBAABAwXZxGz4AAABBAAAgwdnONz4AAABBAAAAwdnONz4AAABBAAAAwdnONz4AAABBAAAAwdnONz4AACBBAAAAwdnONz4AACBBAAAgwdnONz4AACBBAAAgwdnONz4AACBBAAAgwdnONz4AAABBAAAAwSsYVT4AAABBAADAwCsYVT4AAABBAADAwCsYVT4AAABBAADAwCsYVT4AACBBAADAwCsYVT4AACBBAAAAwSsYVT4AACBBAAAAwSsYVT4AACBBAAAAwSsYVT4AAABBAADAwFyPQj4AAABBAACAwFyPQj4AAABBAACAwFyPQj4AAABBAACAwFyPQj4AACBBAACAwFyPQj4AACBBAADAwFyPQj4AACBBAADAwFyPQj4AACBBAADAwFyPQj4AAABBAACAwPcGHz4AAABBAAAAwPcGHz4AAABBAAAAwPcGHz4AAABBAAAAwPcGHz4AACBBAAAAwPcGHz4AACBBAACAwPcGHz4AACBBAACAwPcGHz4AACBBAACAwPcGHz4AAABBAAAAwHh6JT4AAABBAAAAAHh6JT4AAABBAAAAAHh6JT4AAABBAAAAAHh6JT4AACBBAAAAAHh6JT4AACBBAAAAwHh6JT4AACBBAAAAwHh6JT4AACBBAAAAwHh6JT4AAABBAAAAAF8pSz4AAABBAAAAQF8pSz4AAABBAAAAQF8pSz4AAABBAAAAQF8pSz4AACBBAAAAQF8pSz4AACBBAAAAAF8pSz4AACBBAAAAAF8pSz4AACBBAAAAAF8pSz4AAABBAAAAQOCcUT4AAABBAACAQOCcUT4AAABBAACAQOCcUT4AAABBAACAQOCcUT4AACBBAACAQOCcUT4AACBBAAAAQOCcUT4AACBBAAAAQOCcUT4AACBBAAAAQOCcUT4AAABBAACAQHsULj4AAABBAADAQHsULj4AAABBAADAQHsULj4AAABBAADAQHsULj4AACBBAADAQHsULj4AACBBAACAQHsULj4AACBBAACAQHsULj4AACBBAACAQHsULj4AAABBAADAQKyLGz4AAABBAAAAQayLGz4AAABBAAAAQayLGz4AAABBAAAAQayLGz4AACBBAAAAQayLGz4AACBBAADAQKyLGz4AACBBAADAQKyLGz4AACBBAADAQKyLGz4AAABBAAAAQf7UOD4AAABBAAAgQf7UOD4AAABBAAAgQf7UOD4AAABBAAAgQf7UOD4AACBBAAAgQf7UOD4AACBBAAAAQf7UOD4AACBBAAAAQf7UOD4AACBBAAAAQf7UOD4AAABBAAAgQWEyVT4AAABBAABAQWEyVT4AAABBAABAQWEyVT4AAABBAABAQWEyVT4AACBBAABAQWEyVT4AACBBAAAgQWEyVT4AACBBAAAgQWEyVT4AACBBAAAgQWEyVT4AAABBAABAwTsBDT4AACBBAAAgwTsBDT4AACBBAAAgwTsBDT4AACBBAAAgwTsBDT4AAEBBAAAgwTsBDT4AAEBBAABAwTsBDT4AAEBBAABAwTsBDT4AAEBBAABAwTsBDT4AACBBAAAgwWuaNz4AACBBAAAAwWuaNz4AACBBAAAAwWuaNz4AACBBAAAAwWuaNz4AAEBBAAAAwWuaNz4AAEBBAAAgwWuaNz4AAEBBAAAgwWuaNz4AAEBBAAAgwWuaNz4AACBBAAAAwfhTYz4AACBBAADAwPhTYz4AACBBAADAwPhTYz4AACBBAADAwPhTYz4AAEBBAADAwPhTYz4AAEBBAAAAwfhTYz4AAEBBAAAAwfhTYz4AAEBBAAAAwfhTYz4AACBBAADAwBSuRz4AACBBAACAwBSuRz4AACBBAACAwBSuRz4AACBBAACAwBSuRz4AAEBBAACAwBSuRz4AAEBBAADAwBSuRz4AAEBBAADAwBSuRz4AAEBBAADAwBSuRz4AACBBAACAwEjhuj4AACBBAAAAwEjhuj4AACBBAAAAwEjhuj4AACBBAAAAwEjhuj4AAEBBAAAAwEjhuj4AAEBBAACAwEjhuj4AAEBBAACAwEjhuj4AAEBBAACAwEjhuj4AACBBAAAAwEjhuj4AACBBAAAAAEjhuj4AACBBAAAAAEjhuj4AACBBAAAAAEjhuj4AAEBBAAAAAEjhuj4AAEBBAAAAwEjhuj4AAEBBAAAAwEjhuj4AAEBBAAAAwEjhuj4AACBBAAAAAEjhuj4AACBBAAAAQEjhuj4AACBBAAAAQEjhuj4AACBBAAAAQEjhuj4AAEBBAAAAQEjhuj4AAEBBAAAAAEjhuj4AAEBBAAAAAEjhuj4AAEBBAAAAAEjhuj4AACBBAAAAQEjhuj4AACBBAACAQEjhuj4AACBBAACAQEjhuj4AACBBAACAQEjhuj4AAEBBAACAQEjhuj4AAEBBAAAAQEjhuj4AAEBBAAAAQEjhuj4AAEBBAAAAQEjhuj4AACBBAACAQMP1KD4AACBBAADAQMP1KD4AACBBAADAQMP1KD4AACBBAADAQMP1KD4AAEBBAADAQMP1KD4AAEBBAACAQMP1KD4AAEBBAACAQMP1KD4AAEBBAACAQMP1KD4AACBBAADAQN9PDT4AACBBAAAAQd9PDT4AACBBAAAAQd9PDT4AACBBAAAAQd9PDT4AAEBBAAAAQd9PDT4AAEBBAADAQN9PDT4AAEBBAADAQN9PDT4AAEBBAADAQN9PDT4AACBBAAAAQWwJOT4AACBBAAAgQWwJOT4AACBBAAAgQWwJOT4AACBBAAAgQWwJOT4AAEBBAAAgQWwJOT4AAEBBAAAAQWwJOT4AAEBBAAAAQWwJOT4AAEBBAAAAQWwJOT4AACBBAAAgQZyiYz4AACBBAABAQZyiYz4AACBBAABAQZyiYz4AACBBAABAQZyiYz4AAEBBAABAQZyiYz4AAEBBAAAgQZyiYz4AAEBBAAAgQZyiYz4AAEBBAAAgQZyiYz4AACBB")
+}]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_75efs"]
+dof_blur_far_distance = 58.0
+dof_blur_far_transition = 15.0
+dof_blur_near_enabled = true
+dof_blur_near_distance = 15.0
+dof_blur_near_transition = 8.0
+dof_blur_amount = 0.12
+
+[node name="MoonlitPass" type="Node3D" unique_id=1737089236]
+script = ExtResource("1_hjjxl")
+
+[node name="BlenderEnvironment" type="Node3D" parent="." unique_id=1280511565 instance=ExtResource("2_gpag4")]
+
+[node name="Atmosphere" type="WorldEnvironment" parent="." unique_id=2088704275]
+environment = SubResource("Environment_ba5dg")
+
+[node name="Moonlight" type="DirectionalLight3D" parent="." unique_id=912774162]
+transform = Transform3D(-0.74740934, 0.48739883, -0.45146608, 0, 0.6795465, 0.73363245, 0.6643638, 0.54832375, -0.5078994, -15, 26, -15)
+light_color = Color(0.827451, 0.8666667, 0.92941177, 1)
+light_energy = 1.2
+light_angular_distance = 2.2
+shadow_enabled = true
+shadow_bias = 0.035
+shadow_normal_bias = 0.35
+directional_shadow_max_distance = 110.0
+
+[node name="FrontFill" type="DirectionalLight3D" parent="." unique_id=1010776397]
+transform = Transform3D(-0.81915206, -0.3686878, 0.43938506, 0, 0.76604444, 0.6427876, -0.57357645, 0.52654076, -0.62750685, 0, 0, 0)
+light_color = Color(0.6509804, 0.7176471, 0.81960785, 1)
+light_energy = 0.3
+
+[node name="RavineMist" type="Node3D" parent="." unique_id=307586285]
+
+[node name="Mist0" type="FogVolume" parent="RavineMist" unique_id=701067621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.5, -18)
+size = Vector3(14, 7, 46)
+shape = 0
+material = SubResource("FogMaterial_ndacw")
+
+[node name="Mist1" type="FogVolume" parent="RavineMist" unique_id=1743271539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -1, -2)
+size = Vector3(6, 3, 12)
+shape = 0
+material = SubResource("FogMaterial_rxivn")
+
+[node name="Mist2" type="FogVolume" parent="RavineMist" unique_id=845514962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.7, -1)
+size = Vector3(24, 1.6, 6)
+shape = 0
+material = SubResource("FogMaterial_r8f0q")
+
+[node name="Mist3" type="FogVolume" parent="RavineMist" unique_id=1489584823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -22, -43)
+size = Vector3(160, 32, 55)
+shape = 0
+material = SubResource("FogMaterial_cak52")
+
+[node name="Moonbeams" type="Node3D" parent="." unique_id=6256645]
+
+[node name="Moonshaft0" type="SpotLight3D" parent="Moonbeams" unique_id=1695189225]
+transform = Transform3D(-0.78404576, 0.45506984, -0.42211804, 0, 0.68006444, 0.73315233, 0.620703, 0.574825, -0.53320163, -11.5, 16.5, -9)
+light_color = Color(0.67058825, 0.7921569, 1, 1)
+light_energy = 3.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+shadow_bias = 0.025
+spot_range = 39.0
+spot_angle = 10.0
+spot_angle_attenuation = 1.4
+
+[node name="Moonshaft1" type="SpotLight3D" parent="Moonbeams" unique_id=1996152693]
+transform = Transform3D(-0.79178214, 0.4167239, -0.4465671, 0, 0.7311141, 0.6822552, 0.61080354, 0.5401975, -0.57888305, -9.8, 16.5, -9)
+light_color = Color(0.67058825, 0.7921569, 1, 1)
+light_energy = 3.0
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+shadow_bias = 0.025
+spot_range = 39.0
+spot_angle = 13.0
+spot_angle_attenuation = 1.4
+
+[node name="MoonlitAir" type="FogVolume" parent="Moonbeams" unique_id=1285791683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 6, -1)
+size = Vector3(23, 18, 20)
+shape = 0
+material = SubResource("FogMaterial_57pb1")
+
+[node name="MovingWater" type="Node3D" parent="." unique_id=1833303773]
+
+[node name="MainRiver" type="MeshInstance3D" parent="MovingWater" unique_id=1024088815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.25, -1)
+material_override = SubResource("ShaderMaterial_8wqq5")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_ianc4")
+
+[node name="WestRavine" type="MeshInstance3D" parent="MovingWater" unique_id=361510453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -1.3, -4)
+material_override = SubResource("ShaderMaterial_q84q0")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_j20vh")
+
+[node name="Waterfall0" type="MeshInstance3D" parent="MovingWater" unique_id=553564970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1, -0.55, -7.5)
+material_override = SubResource("ShaderMaterial_arn4d")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_cc2je")
+
+[node name="FallFoam0" type="MeshInstance3D" parent="MovingWater" unique_id=1816130820]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1, -1.2, -7.15)
+material_override = SubResource("ShaderMaterial_4f31u")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_q0qsq")
+
+[node name="Waterfall1" type="MeshInstance3D" parent="MovingWater" unique_id=271588808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1.075, -11)
+material_override = SubResource("ShaderMaterial_f0s16")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_gyism")
+
+[node name="FallFoam1" type="MeshInstance3D" parent="MovingWater" unique_id=1857708245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.2, -10.65)
+material_override = SubResource("ShaderMaterial_23fqg")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_18yxg")
+
+[node name="BrazierLights" type="Node3D" parent="." unique_id=1963788023]
+
+[node name="Brazier00" type="OmniLight3D" parent="BrazierLights" unique_id=307892044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1, 1.7, 0.6)
+light_color = Color(1, 0.627451, 0.25490198, 1)
+light_energy = 4.0
+omni_range = 4.3
+omni_attenuation = 1.55
+
+[node name="Brazier01" type="OmniLight3D" parent="BrazierLights" unique_id=711487377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 1.7, 0.6)
+light_color = Color(1, 0.627451, 0.25490198, 1)
+light_energy = 4.0
+omni_range = 4.3
+omni_attenuation = 1.55
+
+[node name="Brazier02" type="OmniLight3D" parent="BrazierLights" unique_id=1364495107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1, 1.75, -2.6)
+light_color = Color(1, 0.627451, 0.25490198, 1)
+light_energy = 4.0
+omni_range = 4.3
+omni_attenuation = 1.55
+
+[node name="Brazier03" type="OmniLight3D" parent="BrazierLights" unique_id=966402956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 1.75, -2.6)
+light_color = Color(1, 0.627451, 0.25490198, 1)
+light_energy = 4.0
+omni_range = 4.3
+omni_attenuation = 1.55
+
+[node name="Brazier04" type="OmniLight3D" parent="BrazierLights" unique_id=1090521957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.5, 12.2)
+light_color = Color(1, 0.627451, 0.25490198, 1)
+light_energy = 4.0
+omni_range = 4.3
+omni_attenuation = 1.55
+
+[node name="Brazier05" type="OmniLight3D" parent="BrazierLights" unique_id=888986976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 1.5, 12.2)
+light_color = Color(1, 0.627451, 0.25490198, 1)
+light_energy = 4.0
+omni_range = 4.3
+omni_attenuation = 1.55
+
+[node name="Brazier06" type="OmniLight3D" parent="BrazierLights" unique_id=1136864313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 1.9000001, -5.35)
+light_color = Color(1, 0.627451, 0.25490198, 1)
+light_energy = 4.0
+omni_range = 4.3
+omni_attenuation = 1.55
+
+[node name="Brazier07" type="OmniLight3D" parent="BrazierLights" unique_id=1080115214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, 1.9000001, -5.35)
+light_color = Color(1, 0.627451, 0.25490198, 1)
+light_energy = 4.0
+omni_range = 4.3
+omni_attenuation = 1.55
+
+[node name="LivingFlames" type="Node3D" parent="." unique_id=664841026]
+
+[node name="Flame00" type="MeshInstance3D" parent="LivingFlames" unique_id=1792813741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1, 1.83, 0.6)
+material_override = SubResource("ShaderMaterial_are6r")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_7pgus")
+
+[node name="Flame01" type="MeshInstance3D" parent="LivingFlames" unique_id=1073738654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 1.83, 0.6)
+material_override = SubResource("ShaderMaterial_0uuco")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_t371k")
+
+[node name="Flame02" type="MeshInstance3D" parent="LivingFlames" unique_id=1709050814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1, 1.88, -2.6)
+material_override = SubResource("ShaderMaterial_h5otp")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_l3dgo")
+
+[node name="Flame03" type="MeshInstance3D" parent="LivingFlames" unique_id=22172995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 1.88, -2.6)
+material_override = SubResource("ShaderMaterial_3ya4l")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_rri2u")
+
+[node name="Flame04" type="MeshInstance3D" parent="LivingFlames" unique_id=1438556640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.63, 12.2)
+material_override = SubResource("ShaderMaterial_vo341")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_7ktgu")
+
+[node name="Flame05" type="MeshInstance3D" parent="LivingFlames" unique_id=511892690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 1.63, 12.2)
+material_override = SubResource("ShaderMaterial_8jndb")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_cdof6")
+
+[node name="Flame06" type="MeshInstance3D" parent="LivingFlames" unique_id=956231651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 2.03, -5.35)
+material_override = SubResource("ShaderMaterial_t4p8p")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_svelh")
+
+[node name="Flame07" type="MeshInstance3D" parent="LivingFlames" unique_id=947933339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, 2.03, -5.35)
+material_override = SubResource("ShaderMaterial_awjc2")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_o3h0o")
+
+[node name="AltarViolet" type="OmniLight3D" parent="." unique_id=910449131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.1, -7)
+light_color = Color(0.6509804, 0.45490196, 1, 1)
+light_energy = 1.15
+omni_range = 5.3
+
+[node name="PixelCharacters" type="Node3D" parent="." unique_id=504662384]
+
+[node name="凯尔" type="Sprite3D" parent="PixelCharacters" unique_id=703794728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.29, 11)
+cast_shadow = 0
+offset = Vector2(0, 26)
+modulate = Color(0.78, 0.84, 1, 1)
+pixel_size = 0.029
+billboard = 1
+alpha_cut = 1
+alpha_scissor_threshold = 0.4
+texture_filter = 0
+texture = ExtResource("7_mihrq")
+metadata/class = "sword"
+metadata/col = 4.0
+metadata/row = 11.0
+
+[node name="凯尔ContactShadow" type="MeshInstance3D" parent="PixelCharacters" unique_id=1636387226]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.65, -3, 0.268, 11)
+material_override = SubResource("StandardMaterial3D_3fxbd")
+mesh = SubResource("CylinderMesh_adpgk")
+
+[node name="莱拉" type="Sprite3D" parent="PixelCharacters" unique_id=2009876120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.29, 11)
+cast_shadow = 0
+offset = Vector2(0, 32)
+modulate = Color(0.78, 0.84, 1, 1)
+pixel_size = 0.029
+billboard = 1
+alpha_cut = 1
+alpha_scissor_threshold = 0.4
+texture_filter = 0
+texture = ExtResource("8_ddr7q")
+metadata/class = "cavalry"
+metadata/col = 5.0
+metadata/row = 11.0
+
+[node name="莱拉ContactShadow" type="MeshInstance3D" parent="PixelCharacters" unique_id=743365360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.65, -1, 0.268, 11)
+material_override = SubResource("StandardMaterial3D_aobt0")
+mesh = SubResource("CylinderMesh_hyqwu")
+
+[node name="米菈" type="Sprite3D" parent="PixelCharacters" unique_id=974559005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.29, 11)
+cast_shadow = 0
+offset = Vector2(0, 32)
+modulate = Color(0.78, 0.84, 1, 1)
+pixel_size = 0.029
+billboard = 1
+alpha_cut = 1
+alpha_scissor_threshold = 0.4
+texture_filter = 0
+texture = ExtResource("9_hkf8t")
+metadata/class = "lancer"
+metadata/col = 6.0
+metadata/row = 11.0
+
+[node name="米菈ContactShadow" type="MeshInstance3D" parent="PixelCharacters" unique_id=721654693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.65, 1, 0.268, 11)
+material_override = SubResource("StandardMaterial3D_uatop")
+mesh = SubResource("CylinderMesh_kdkqv")
+
+[node name="诺克斯" type="Sprite3D" parent="PixelCharacters" unique_id=1990540705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.29, 11)
+cast_shadow = 0
+offset = Vector2(-0.52699226, 26)
+modulate = Color(0.78, 0.84, 1, 1)
+pixel_size = 0.029
+billboard = 1
+alpha_cut = 1
+alpha_scissor_threshold = 0.4
+texture_filter = 0
+texture = SubResource("ImageTexture_dh6fv")
+metadata/source_art = "public/assets/starfall/animations/nox/sheet.png"
+metadata/class = "nox"
+metadata/col = 7.0
+metadata/row = 11.0
+
+[node name="诺克斯ContactShadow" type="MeshInstance3D" parent="PixelCharacters" unique_id=370889073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.65, 3, 0.268, 11)
+material_override = SubResource("StandardMaterial3D_yb6ke")
+mesh = SubResource("CylinderMesh_gan0d")
+
+[node name="赛勒涅" type="Sprite3D" parent="PixelCharacters" unique_id=442520166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.325, -7)
+cast_shadow = 0
+offset = Vector2(0, 26)
+modulate = Color(0.78, 0.84, 1, 1)
+pixel_size = 0.029
+billboard = 1
+alpha_cut = 1
+alpha_scissor_threshold = 0.4
+texture_filter = 0
+texture = ExtResource("10_iwsu2")
+metadata/class = "mage"
+metadata/col = 9.0
+metadata/row = 2.0
+
+[node name="赛勒涅ContactShadow" type="MeshInstance3D" parent="PixelCharacters" unique_id=1027577203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.65, 7, 1.3030001, -7)
+material_override = SubResource("StandardMaterial3D_6ssty")
+mesh = SubResource("CylinderMesh_wiifn")
+
+[node name="艾琳" type="Sprite3D" parent="PixelCharacters" unique_id=1353648335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2109, -3)
+cast_shadow = 0
+offset = Vector2(0, 26)
+modulate = Color(0.78, 0.84, 1, 1)
+pixel_size = 0.029
+billboard = 1
+alpha_cut = 1
+alpha_scissor_threshold = 0.4
+texture_filter = 0
+texture = ExtResource("11_kw8k1")
+metadata/class = "sword"
+metadata/sprite = "eileen"
+metadata/col = 6.0
+metadata/row = 4.0
+
+[node name="艾琳ContactShadow" type="MeshInstance3D" parent="PixelCharacters" unique_id=1754742167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.65, 1, 0.1889, -3)
+material_override = SubResource("StandardMaterial3D_mc3wy")
+mesh = SubResource("CylinderMesh_jql57")
+
+[node name="峡道重甲" type="Sprite3D" parent="PixelCharacters" unique_id=561485397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.175, -1)
+cast_shadow = 0
+offset = Vector2(0, 26)
+modulate = Color(0.78, 0.84, 1, 1)
+pixel_size = 0.029
+billboard = 1
+alpha_cut = 1
+alpha_scissor_threshold = 0.4
+texture_filter = 0
+texture = ExtResource("12_hxhep")
+metadata/class = "knight"
+metadata/col = 5.0
+metadata/row = 5.0
+
+[node name="峡道重甲ContactShadow" type="MeshInstance3D" parent="PixelCharacters" unique_id=1151212160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.65, -1, 0.153, -1)
+material_override = SubResource("StandardMaterial3D_0epd4")
+mesh = SubResource("CylinderMesh_x8rg0")
+
+[node name="暮鸦西" type="Sprite3D" parent="PixelCharacters" unique_id=292917081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.1639, -3)
+cast_shadow = 0
+offset = Vector2(0, 26)
+modulate = Color(0.78, 0.84, 1, 1)
+pixel_size = 0.029
+billboard = 1
+alpha_cut = 1
+alpha_scissor_threshold = 0.4
+texture_filter = 0
+texture = ExtResource("13_fyatn")
+metadata/class = "raider"
+metadata/col = 3.0
+metadata/row = 4.0
+
+[node name="暮鸦西ContactShadow" type="MeshInstance3D" parent="PixelCharacters" unique_id=783173511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.65, -5, 1.1419001, -3)
+material_override = SubResource("StandardMaterial3D_ydtp6")
+mesh = SubResource("CylinderMesh_lmhvr")
+
+[node name="暮鸦东" type="Sprite3D" parent="PixelCharacters" unique_id=2010784208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2211, -3)
+cast_shadow = 0
+offset = Vector2(0, 26)
+modulate = Color(0.78, 0.84, 1, 1)
+pixel_size = 0.029
+billboard = 1
+alpha_cut = 1
+alpha_scissor_threshold = 0.4
+texture_filter = 0
+texture = ExtResource("13_fyatn")
+metadata/class = "raider"
+metadata/col = 8.0
+metadata/row = 4.0
+
+[node name="暮鸦东ContactShadow" type="MeshInstance3D" parent="PixelCharacters" unique_id=602803851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.65, 5, 0.1991, -3)
+material_override = SubResource("StandardMaterial3D_sp8r0")
+mesh = SubResource("CylinderMesh_hccos")
+
+[node name="北坡斥候" type="Sprite3D" parent="PixelCharacters" unique_id=1723779046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.597, -11)
+cast_shadow = 0
+offset = Vector2(0, 26)
+modulate = Color(0.78, 0.84, 1, 1)
+pixel_size = 0.029
+billboard = 1
+alpha_cut = 1
+alpha_scissor_threshold = 0.4
+texture_filter = 0
+texture = ExtResource("13_fyatn")
+metadata/class = "raider"
+metadata/col = 2.0
+metadata/row = 0.0
+
+[node name="北坡斥候ContactShadow" type="MeshInstance3D" parent="PixelCharacters" unique_id=757341606]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.65, -7, 0.575, -11)
+material_override = SubResource("StandardMaterial3D_1voxr")
+mesh = SubResource("CylinderMesh_muh0i")
+
+[node name="祭坛术士" type="Sprite3D" parent="PixelCharacters" unique_id=306288101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5366, -9)
+cast_shadow = 0
+offset = Vector2(0, 26)
+modulate = Color(0.78, 0.84, 1, 1)
+pixel_size = 0.029
+billboard = 1
+alpha_cut = 1
+alpha_scissor_threshold = 0.4
+texture_filter = 0
+texture = ExtResource("14_p1iny")
+metadata/class = "mage"
+metadata/sprite = "altar-mage"
+metadata/col = 5.0
+metadata/row = 1.0
+
+[node name="祭坛术士ContactShadow" type="MeshInstance3D" parent="PixelCharacters" unique_id=242335583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.65, -1, 0.5146, -9)
+material_override = SubResource("StandardMaterial3D_ve6uq")
+mesh = SubResource("CylinderMesh_yoci2")
+
+[node name="TerrainSurface" type="Node3D" parent="." unique_id=1491111920]
+metadata/source = "src/game/data/chapters.ts: moonlit-pass"
+metadata/rows = ["gggggggggggg", "ggfgggrggggg", "ggfffggggsgg", "ggffmggffggg", "gggmmgrffggg", "wwwwbbbrwwww", "ggggrrgggggg", "ggffrrgmfggg", "ggggrrfffggg", "ggggrrgggggg", "gggssssssggg", "gggssssssggg"]
+
+[node name="Cell_0_0" type="StaticBody3D" parent="TerrainSurface" unique_id=580567399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.3677, -11)
+collision_mask = 0
+metadata/col = 0
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.4677
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_0_0" unique_id=1163900204]
+shape = SubResource("BoxShape3D_hoqrv")
+
+[node name="Cell_1_0" type="StaticBody3D" parent="TerrainSurface" unique_id=135865910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.4093, -11)
+collision_mask = 0
+metadata/col = 1
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.5093
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_1_0" unique_id=807333488]
+shape = SubResource("BoxShape3D_07g3f")
+
+[node name="Cell_2_0" type="StaticBody3D" parent="TerrainSurface" unique_id=932972832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.452, -11)
+collision_mask = 0
+metadata/col = 2
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.552
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_2_0" unique_id=1523349775]
+shape = SubResource("BoxShape3D_varmv")
+
+[node name="Cell_3_0" type="StaticBody3D" parent="TerrainSurface" unique_id=263652744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.425, -11)
+collision_mask = 0
+metadata/col = 3
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.525
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_3_0" unique_id=1348174920]
+shape = SubResource("BoxShape3D_dkuld")
+
+[node name="Cell_4_0" type="StaticBody3D" parent="TerrainSurface" unique_id=1503365522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.3731, -11)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.4731
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_0" unique_id=1841951580]
+shape = SubResource("BoxShape3D_kfkmn")
+
+[node name="Cell_5_0" type="StaticBody3D" parent="TerrainSurface" unique_id=2012199180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.3825, -11)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.4825
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_0" unique_id=1313210516]
+shape = SubResource("BoxShape3D_qps2g")
+
+[node name="Cell_6_0" type="StaticBody3D" parent="TerrainSurface" unique_id=493525819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.4375, -11)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.5375
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_0" unique_id=1610574037]
+shape = SubResource("BoxShape3D_1nl48")
+
+[node name="Cell_7_0" type="StaticBody3D" parent="TerrainSurface" unique_id=1239780249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.4469, -11)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.5469
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_0" unique_id=196414440]
+shape = SubResource("BoxShape3D_mk4cn")
+
+[node name="Cell_8_0" type="StaticBody3D" parent="TerrainSurface" unique_id=461199026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.395, -11)
+collision_mask = 0
+metadata/col = 8
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.495
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_8_0" unique_id=496981419]
+shape = SubResource("BoxShape3D_lojiy")
+
+[node name="Cell_9_0" type="StaticBody3D" parent="TerrainSurface" unique_id=1775839037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.368, -11)
+collision_mask = 0
+metadata/col = 9
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.468
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_9_0" unique_id=951906486]
+shape = SubResource("BoxShape3D_lvf5u")
+
+[node name="Cell_10_0" type="StaticBody3D" parent="TerrainSurface" unique_id=1190064478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.4107, -11)
+collision_mask = 0
+metadata/col = 10
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.5107
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_10_0" unique_id=1916265453]
+shape = SubResource("BoxShape3D_8b8y8")
+
+[node name="Cell_11_0" type="StaticBody3D" parent="TerrainSurface" unique_id=610544023]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.4523, -11)
+collision_mask = 0
+metadata/col = 11
+metadata/row = 0
+metadata/terrain = "g"
+metadata/surface_height = 0.5523
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_11_0" unique_id=558942582]
+shape = SubResource("BoxShape3D_370xe")
+
+[node name="Cell_0_1" type="StaticBody3D" parent="TerrainSurface" unique_id=1243981802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.3818, -9)
+collision_mask = 0
+metadata/col = 0
+metadata/row = 1
+metadata/terrain = "g"
+metadata/surface_height = 0.4818
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_0_1" unique_id=610269930]
+shape = SubResource("BoxShape3D_putul")
+
+[node name="Cell_1_1" type="StaticBody3D" parent="TerrainSurface" unique_id=775960732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.4095, -9)
+collision_mask = 0
+metadata/col = 1
+metadata/row = 1
+metadata/terrain = "g"
+metadata/surface_height = 0.5095
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_1_1" unique_id=66698392]
+shape = SubResource("BoxShape3D_x3jmg")
+
+[node name="Cell_2_1" type="StaticBody3D" parent="TerrainSurface" unique_id=276356072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.4381, -9)
+collision_mask = 0
+metadata/col = 2
+metadata/row = 1
+metadata/terrain = "f"
+metadata/surface_height = 0.5381
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_2_1" unique_id=792666455]
+shape = SubResource("BoxShape3D_iff1l")
+
+[node name="Cell_3_1" type="StaticBody3D" parent="TerrainSurface" unique_id=1873471241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.42, -9)
+collision_mask = 0
+metadata/col = 3
+metadata/row = 1
+metadata/terrain = "g"
+metadata/surface_height = 0.52
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_3_1" unique_id=1131477758]
+shape = SubResource("BoxShape3D_ka37m")
+
+[node name="Cell_4_1" type="StaticBody3D" parent="TerrainSurface" unique_id=1095928890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.3853, -9)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 1
+metadata/terrain = "g"
+metadata/surface_height = 0.4853
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_1" unique_id=329909913]
+shape = SubResource("BoxShape3D_xr4i0")
+
+[node name="Cell_5_1" type="StaticBody3D" parent="TerrainSurface" unique_id=1258362014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.3916, -9)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 1
+metadata/terrain = "g"
+metadata/surface_height = 0.4916
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_1" unique_id=1308322735]
+shape = SubResource("BoxShape3D_ld7hi")
+
+[node name="Cell_6_1" type="StaticBody3D" parent="TerrainSurface" unique_id=499729338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.4284, -9)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 1
+metadata/terrain = "r"
+metadata/surface_height = 0.5284
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_1" unique_id=240555309]
+shape = SubResource("BoxShape3D_1k5jx")
+
+[node name="Cell_7_1" type="StaticBody3D" parent="TerrainSurface" unique_id=1300704762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.4347, -9)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 1
+metadata/terrain = "g"
+metadata/surface_height = 0.5347
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_1" unique_id=1368646497]
+shape = SubResource("BoxShape3D_wbt4p")
+
+[node name="Cell_8_1" type="StaticBody3D" parent="TerrainSurface" unique_id=862487284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.52, -9)
+collision_mask = 0
+metadata/col = 8
+metadata/row = 1
+metadata/terrain = "g"
+metadata/surface_height = 0.62
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_8_1" unique_id=507384332]
+shape = SubResource("BoxShape3D_ntsix")
+
+[node name="Cell_9_1" type="StaticBody3D" parent="TerrainSurface" unique_id=300989925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.18, -9)
+collision_mask = 0
+metadata/col = 9
+metadata/row = 1
+metadata/terrain = "g"
+metadata/surface_height = 1.28
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_9_1" unique_id=1136135527]
+shape = SubResource("BoxShape3D_6u4i4")
+
+[node name="Cell_10_1" type="StaticBody3D" parent="TerrainSurface" unique_id=2018352465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.52, -9)
+collision_mask = 0
+metadata/col = 10
+metadata/row = 1
+metadata/terrain = "g"
+metadata/surface_height = 0.62
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_10_1" unique_id=1596649657]
+shape = SubResource("BoxShape3D_m6h31")
+
+[node name="Cell_11_1" type="StaticBody3D" parent="TerrainSurface" unique_id=1518828067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.4382, -9)
+collision_mask = 0
+metadata/col = 11
+metadata/row = 1
+metadata/terrain = "g"
+metadata/surface_height = 0.5382
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_11_1" unique_id=701291383]
+shape = SubResource("BoxShape3D_hbt2m")
+
+[node name="Cell_0_2" type="StaticBody3D" parent="TerrainSurface" unique_id=2046048241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.4318, -7)
+collision_mask = 0
+metadata/col = 0
+metadata/row = 2
+metadata/terrain = "g"
+metadata/surface_height = 0.5318
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_0_2" unique_id=1983280727]
+shape = SubResource("BoxShape3D_nvh5x")
+
+[node name="Cell_1_2" type="StaticBody3D" parent="TerrainSurface" unique_id=346370037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.4104, -7)
+collision_mask = 0
+metadata/col = 1
+metadata/row = 2
+metadata/terrain = "g"
+metadata/surface_height = 0.5104
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_1_2" unique_id=1954081858]
+shape = SubResource("BoxShape3D_6r7wj")
+
+[node name="Cell_2_2" type="StaticBody3D" parent="TerrainSurface" unique_id=747931050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.3883, -7)
+collision_mask = 0
+metadata/col = 2
+metadata/row = 2
+metadata/terrain = "f"
+metadata/surface_height = 0.4883
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_2_2" unique_id=1385574419]
+shape = SubResource("BoxShape3D_nbp8y")
+
+[node name="Cell_3_2" type="StaticBody3D" parent="TerrainSurface" unique_id=1203969057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.4023, -7)
+collision_mask = 0
+metadata/col = 3
+metadata/row = 2
+metadata/terrain = "f"
+metadata/surface_height = 0.5023
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_3_2" unique_id=1048148533]
+shape = SubResource("BoxShape3D_2dwmh")
+
+[node name="Cell_4_2" type="StaticBody3D" parent="TerrainSurface" unique_id=1954168876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.429, -7)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 2
+metadata/terrain = "f"
+metadata/surface_height = 0.529
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_2" unique_id=2094703695]
+shape = SubResource("BoxShape3D_x31sk")
+
+[node name="Cell_5_2" type="StaticBody3D" parent="TerrainSurface" unique_id=422253612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.4242, -7)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 2
+metadata/terrain = "g"
+metadata/surface_height = 0.5242
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_2" unique_id=697531491]
+shape = SubResource("BoxShape3D_l11fl")
+
+[node name="Cell_6_2" type="StaticBody3D" parent="TerrainSurface" unique_id=404962986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.3958, -7)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 2
+metadata/terrain = "g"
+metadata/surface_height = 0.4958
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_2" unique_id=259244186]
+shape = SubResource("BoxShape3D_0j3sc")
+
+[node name="Cell_7_2" type="StaticBody3D" parent="TerrainSurface" unique_id=298399416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.391, -7)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 2
+metadata/terrain = "g"
+metadata/surface_height = 0.491
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_2" unique_id=721748479]
+shape = SubResource("BoxShape3D_ugxom")
+
+[node name="Cell_8_2" type="StaticBody3D" parent="TerrainSurface" unique_id=2082047054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.18, -7)
+collision_mask = 0
+metadata/col = 8
+metadata/row = 2
+metadata/terrain = "g"
+metadata/surface_height = 1.28
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_8_2" unique_id=576010649]
+shape = SubResource("BoxShape3D_h1sf4")
+
+[node name="Cell_9_2" type="StaticBody3D" parent="TerrainSurface" unique_id=340195727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.18, -7)
+collision_mask = 0
+metadata/col = 9
+metadata/row = 2
+metadata/terrain = "s"
+metadata/surface_height = 1.28
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_9_2" unique_id=1194945350]
+shape = SubResource("BoxShape3D_wby24")
+
+[node name="Cell_10_2" type="StaticBody3D" parent="TerrainSurface" unique_id=731871445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1.18, -7)
+collision_mask = 0
+metadata/col = 10
+metadata/row = 2
+metadata/terrain = "g"
+metadata/surface_height = 1.28
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_10_2" unique_id=838647451]
+shape = SubResource("BoxShape3D_iess6")
+
+[node name="Cell_11_2" type="StaticBody3D" parent="TerrainSurface" unique_id=752761123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.3882, -7)
+collision_mask = 0
+metadata/col = 11
+metadata/row = 2
+metadata/terrain = "g"
+metadata/surface_height = 0.4882
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_11_2" unique_id=95369292]
+shape = SubResource("BoxShape3D_1op1k")
+
+[node name="Cell_0_3" type="StaticBody3D" parent="TerrainSurface" unique_id=1342377764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.3415, -5)
+collision_mask = 0
+metadata/col = 0
+metadata/row = 3
+metadata/terrain = "g"
+metadata/surface_height = 0.4415
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_0_3" unique_id=231537162]
+shape = SubResource("BoxShape3D_ywwx3")
+
+[node name="Cell_1_3" type="StaticBody3D" parent="TerrainSurface" unique_id=445362410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.2982, -5)
+collision_mask = 0
+metadata/col = 1
+metadata/row = 3
+metadata/terrain = "g"
+metadata/surface_height = 0.3982
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_1_3" unique_id=2109643581]
+shape = SubResource("BoxShape3D_wovnh")
+
+[node name="Cell_2_3" type="StaticBody3D" parent="TerrainSurface" unique_id=1383117855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1.2037, -5)
+collision_mask = 0
+metadata/col = 2
+metadata/row = 3
+metadata/terrain = "f"
+metadata/surface_height = 1.3037
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_2_3" unique_id=1781371373]
+shape = SubResource("BoxShape3D_1pxds")
+
+[node name="Cell_3_3" type="StaticBody3D" parent="TerrainSurface" unique_id=1342636776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.2319, -5)
+collision_mask = 0
+metadata/col = 3
+metadata/row = 3
+metadata/terrain = "f"
+metadata/surface_height = 1.3319
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_3_3" unique_id=1807163933]
+shape = SubResource("BoxShape3D_nqgxo")
+
+[node name="Cell_4_3" type="StaticBody3D" parent="TerrainSurface" unique_id=1982482413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.431, -5)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 3
+metadata/terrain = "m"
+metadata/surface_height = 0.531
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_3" unique_id=474944313]
+shape = SubResource("BoxShape3D_64pau")
+
+[node name="Cell_5_3" type="StaticBody3D" parent="TerrainSurface" unique_id=1092695318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.3262, -5)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 3
+metadata/terrain = "g"
+metadata/surface_height = 0.4262
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_3" unique_id=1275389414]
+shape = SubResource("BoxShape3D_3wl3t")
+
+[node name="Cell_6_3" type="StaticBody3D" parent="TerrainSurface" unique_id=1611136970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2688, -5)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 3
+metadata/terrain = "g"
+metadata/surface_height = 0.3688
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_3" unique_id=1195406500]
+shape = SubResource("BoxShape3D_gkibs")
+
+[node name="Cell_7_3" type="StaticBody3D" parent="TerrainSurface" unique_id=330910049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.259, -5)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 3
+metadata/terrain = "f"
+metadata/surface_height = 0.359
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_3" unique_id=190547087]
+shape = SubResource("BoxShape3D_i376s")
+
+[node name="Cell_8_3" type="StaticBody3D" parent="TerrainSurface" unique_id=417088964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.52, -5)
+collision_mask = 0
+metadata/col = 8
+metadata/row = 3
+metadata/terrain = "f"
+metadata/surface_height = 0.62
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_8_3" unique_id=1019032002]
+shape = SubResource("BoxShape3D_nwwkk")
+
+[node name="Cell_9_3" type="StaticBody3D" parent="TerrainSurface" unique_id=1429150019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.18, -5)
+collision_mask = 0
+metadata/col = 9
+metadata/row = 3
+metadata/terrain = "g"
+metadata/surface_height = 1.28
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_9_3" unique_id=1817896517]
+shape = SubResource("BoxShape3D_hfdr5")
+
+[node name="Cell_10_3" type="StaticBody3D" parent="TerrainSurface" unique_id=1430176915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.52, -5)
+collision_mask = 0
+metadata/col = 10
+metadata/row = 3
+metadata/terrain = "g"
+metadata/surface_height = 0.62
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_10_3" unique_id=273663208]
+shape = SubResource("BoxShape3D_3nj35")
+
+[node name="Cell_11_3" type="StaticBody3D" parent="TerrainSurface" unique_id=1351633347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.2535, -5)
+collision_mask = 0
+metadata/col = 11
+metadata/row = 3
+metadata/terrain = "g"
+metadata/surface_height = 0.3535
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_11_3" unique_id=985907460]
+shape = SubResource("BoxShape3D_r7sy7")
+
+[node name="Cell_0_4" type="StaticBody3D" parent="TerrainSurface" unique_id=653204010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.0826, -3)
+collision_mask = 0
+metadata/col = 0
+metadata/row = 4
+metadata/terrain = "g"
+metadata/surface_height = 0.1826
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_0_4" unique_id=747250459]
+shape = SubResource("BoxShape3D_2vqfj")
+
+[node name="Cell_1_4" type="StaticBody3D" parent="TerrainSurface" unique_id=1149980715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.0727, -3)
+collision_mask = 0
+metadata/col = 1
+metadata/row = 4
+metadata/terrain = "g"
+metadata/surface_height = 0.1727
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_1_4" unique_id=1550122885]
+shape = SubResource("BoxShape3D_bxkl0")
+
+[node name="Cell_2_4" type="StaticBody3D" parent="TerrainSurface" unique_id=979385373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1.0125, -3)
+collision_mask = 0
+metadata/col = 2
+metadata/row = 4
+metadata/terrain = "g"
+metadata/surface_height = 1.1125
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_2_4" unique_id=1863314091]
+shape = SubResource("BoxShape3D_cr6pw")
+
+[node name="Cell_3_4" type="StaticBody3D" parent="TerrainSurface" unique_id=1136855411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.0189, -3)
+collision_mask = 0
+metadata/col = 3
+metadata/row = 4
+metadata/terrain = "m"
+metadata/surface_height = 1.1189
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_3_4" unique_id=650712665]
+shape = SubResource("BoxShape3D_4721u")
+
+[node name="Cell_4_4" type="StaticBody3D" parent="TerrainSurface" unique_id=1073138175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.1763, -3)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 4
+metadata/terrain = "m"
+metadata/surface_height = 0.2763
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_4" unique_id=2124429229]
+shape = SubResource("BoxShape3D_ebd3c")
+
+[node name="Cell_5_4" type="StaticBody3D" parent="TerrainSurface" unique_id=1782141370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.0791, -3)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 4
+metadata/terrain = "g"
+metadata/surface_height = 0.1791
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_4" unique_id=1397356027]
+shape = SubResource("BoxShape3D_tjxap")
+
+[node name="Cell_6_4" type="StaticBody3D" parent="TerrainSurface" unique_id=74020531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.0659, -3)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 4
+metadata/terrain = "r"
+metadata/surface_height = 0.1659
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_4" unique_id=1600379304]
+shape = SubResource("BoxShape3D_elwwy")
+
+[node name="Cell_7_4" type="StaticBody3D" parent="TerrainSurface" unique_id=177094952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.0637, -3)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 4
+metadata/terrain = "f"
+metadata/surface_height = 0.1637
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_4" unique_id=1692747657]
+shape = SubResource("BoxShape3D_qf5iw")
+
+[node name="Cell_8_4" type="StaticBody3D" parent="TerrainSurface" unique_id=1735368395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.0761, -3)
+collision_mask = 0
+metadata/col = 8
+metadata/row = 4
+metadata/terrain = "f"
+metadata/surface_height = 0.1761
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_8_4" unique_id=455348622]
+shape = SubResource("BoxShape3D_vms0t")
+
+[node name="Cell_9_4" type="StaticBody3D" parent="TerrainSurface" unique_id=355538590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.0825, -3)
+collision_mask = 0
+metadata/col = 9
+metadata/row = 4
+metadata/terrain = "g"
+metadata/surface_height = 0.1825
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_9_4" unique_id=729140920]
+shape = SubResource("BoxShape3D_sddgi")
+
+[node name="Cell_10_4" type="StaticBody3D" parent="TerrainSurface" unique_id=689103160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.0723, -3)
+collision_mask = 0
+metadata/col = 10
+metadata/row = 4
+metadata/terrain = "g"
+metadata/surface_height = 0.1723
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_10_4" unique_id=1031731175]
+shape = SubResource("BoxShape3D_ax3qp")
+
+[node name="Cell_11_4" type="StaticBody3D" parent="TerrainSurface" unique_id=757389386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.0624, -3)
+collision_mask = 0
+metadata/col = 11
+metadata/row = 4
+metadata/terrain = "g"
+metadata/surface_height = 0.1624
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_11_4" unique_id=244089004]
+shape = SubResource("BoxShape3D_binps")
+
+[node name="Cell_4_5" type="StaticBody3D" parent="TerrainSurface" unique_id=161793832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.03, -1)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 5
+metadata/terrain = "b"
+metadata/surface_height = 0.13
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_5" unique_id=553165934]
+shape = SubResource("BoxShape3D_74617")
+
+[node name="Cell_5_5" type="StaticBody3D" parent="TerrainSurface" unique_id=1061320167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.03, -1)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 5
+metadata/terrain = "b"
+metadata/surface_height = 0.13
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_5" unique_id=25543051]
+shape = SubResource("BoxShape3D_q86ce")
+
+[node name="Cell_6_5" type="StaticBody3D" parent="TerrainSurface" unique_id=895728790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.03, -1)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 5
+metadata/terrain = "b"
+metadata/surface_height = 0.13
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_5" unique_id=1529744892]
+shape = SubResource("BoxShape3D_ruot7")
+
+[node name="Cell_7_5" type="StaticBody3D" parent="TerrainSurface" unique_id=754238895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.0079, -1)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 5
+metadata/terrain = "r"
+metadata/surface_height = 0.0921
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_5" unique_id=2077049028]
+shape = SubResource("BoxShape3D_iolww")
+
+[node name="Cell_0_6" type="StaticBody3D" parent="TerrainSurface" unique_id=17233998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -0.0767, 1)
+collision_mask = 0
+metadata/col = 0
+metadata/row = 6
+metadata/terrain = "g"
+metadata/surface_height = 0.0233
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_0_6" unique_id=1008269687]
+shape = SubResource("BoxShape3D_kew2h")
+
+[node name="Cell_1_6" type="StaticBody3D" parent="TerrainSurface" unique_id=476090302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.0406, 1)
+collision_mask = 0
+metadata/col = 1
+metadata/row = 6
+metadata/terrain = "g"
+metadata/surface_height = 0.0594
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_1_6" unique_id=1344425036]
+shape = SubResource("BoxShape3D_uhu6d")
+
+[node name="Cell_2_6" type="StaticBody3D" parent="TerrainSurface" unique_id=1789993087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.0035, 1)
+collision_mask = 0
+metadata/col = 2
+metadata/row = 6
+metadata/terrain = "g"
+metadata/surface_height = 0.0965
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_2_6" unique_id=509889672]
+shape = SubResource("BoxShape3D_6101p")
+
+[node name="Cell_3_6" type="StaticBody3D" parent="TerrainSurface" unique_id=719817164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.027, 1)
+collision_mask = 0
+metadata/col = 3
+metadata/row = 6
+metadata/terrain = "g"
+metadata/surface_height = 0.073
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_3_6" unique_id=1477524413]
+shape = SubResource("BoxShape3D_x406b")
+
+[node name="Cell_4_6" type="StaticBody3D" parent="TerrainSurface" unique_id=463871610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.0721, 1)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 6
+metadata/terrain = "r"
+metadata/surface_height = 0.0279
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_6" unique_id=831855701]
+shape = SubResource("BoxShape3D_qi2m2")
+
+[node name="Cell_5_6" type="StaticBody3D" parent="TerrainSurface" unique_id=1325877029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.0639, 1)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 6
+metadata/terrain = "r"
+metadata/surface_height = 0.0361
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_6" unique_id=1013262089]
+shape = SubResource("BoxShape3D_d1af2")
+
+[node name="Cell_6_6" type="StaticBody3D" parent="TerrainSurface" unique_id=1229707091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.0161, 1)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 6
+metadata/terrain = "g"
+metadata/surface_height = 0.0839
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_6" unique_id=1914471536]
+shape = SubResource("BoxShape3D_71esv")
+
+[node name="Cell_7_6" type="StaticBody3D" parent="TerrainSurface" unique_id=139442664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.0079, 1)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 6
+metadata/terrain = "g"
+metadata/surface_height = 0.0921
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_6" unique_id=360524426]
+shape = SubResource("BoxShape3D_rjrte")
+
+[node name="Cell_8_6" type="StaticBody3D" parent="TerrainSurface" unique_id=865387225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.053, 1)
+collision_mask = 0
+metadata/col = 8
+metadata/row = 6
+metadata/terrain = "g"
+metadata/surface_height = 0.047
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_8_6" unique_id=966232620]
+shape = SubResource("BoxShape3D_6cevp")
+
+[node name="Cell_9_6" type="StaticBody3D" parent="TerrainSurface" unique_id=572374897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.0765, 1)
+collision_mask = 0
+metadata/col = 9
+metadata/row = 6
+metadata/terrain = "g"
+metadata/surface_height = 0.0235
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_9_6" unique_id=1639375878]
+shape = SubResource("BoxShape3D_ifnyt")
+
+[node name="Cell_10_6" type="StaticBody3D" parent="TerrainSurface" unique_id=660889658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.0394, 1)
+collision_mask = 0
+metadata/col = 10
+metadata/row = 6
+metadata/terrain = "g"
+metadata/surface_height = 0.0606
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_10_6" unique_id=1469397949]
+shape = SubResource("BoxShape3D_v7x8s")
+
+[node name="Cell_11_6" type="StaticBody3D" parent="TerrainSurface" unique_id=1054852783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.0033, 1)
+collision_mask = 0
+metadata/col = 11
+metadata/row = 6
+metadata/terrain = "g"
+metadata/surface_height = 0.0967
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_11_6" unique_id=1847974927]
+shape = SubResource("BoxShape3D_e2a0j")
+
+[node name="Cell_0_7" type="StaticBody3D" parent="TerrainSurface" unique_id=263233158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -0.0299, 3)
+collision_mask = 0
+metadata/col = 0
+metadata/row = 7
+metadata/terrain = "g"
+metadata/surface_height = 0.0701
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_0_7" unique_id=666474713]
+shape = SubResource("BoxShape3D_uv5e2")
+
+[node name="Cell_1_7" type="StaticBody3D" parent="TerrainSurface" unique_id=445716249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.0398, 3)
+collision_mask = 0
+metadata/col = 1
+metadata/row = 7
+metadata/terrain = "g"
+metadata/surface_height = 0.0602
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_1_7" unique_id=1378136273]
+shape = SubResource("BoxShape3D_ig15d")
+
+[node name="Cell_2_7" type="StaticBody3D" parent="TerrainSurface" unique_id=2030917903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.05, 3)
+collision_mask = 0
+metadata/col = 2
+metadata/row = 7
+metadata/terrain = "f"
+metadata/surface_height = 0.05
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_2_7" unique_id=1043794031]
+shape = SubResource("BoxShape3D_vueul")
+
+[node name="Cell_3_7" type="StaticBody3D" parent="TerrainSurface" unique_id=900075665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.0436, 3)
+collision_mask = 0
+metadata/col = 3
+metadata/row = 7
+metadata/terrain = "f"
+metadata/surface_height = 0.0564
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_3_7" unique_id=2010326055]
+shape = SubResource("BoxShape3D_38b13")
+
+[node name="Cell_4_7" type="StaticBody3D" parent="TerrainSurface" unique_id=919900316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.0312, 3)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 7
+metadata/terrain = "r"
+metadata/surface_height = 0.0688
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_7" unique_id=2127499538]
+shape = SubResource("BoxShape3D_2e46m")
+
+[node name="Cell_5_7" type="StaticBody3D" parent="TerrainSurface" unique_id=244823691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.0334, 3)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 7
+metadata/terrain = "r"
+metadata/surface_height = 0.0666
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_7" unique_id=1638571165]
+shape = SubResource("BoxShape3D_s0m1k")
+
+[node name="Cell_6_7" type="StaticBody3D" parent="TerrainSurface" unique_id=1624408701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.0466, 3)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 7
+metadata/terrain = "g"
+metadata/surface_height = 0.0534
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_7" unique_id=413009707]
+shape = SubResource("BoxShape3D_hxydp")
+
+[node name="Cell_7_7" type="StaticBody3D" parent="TerrainSurface" unique_id=1151508734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.0488, 3)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 7
+metadata/terrain = "m"
+metadata/surface_height = 0.0512
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_7" unique_id=2029439931]
+shape = SubResource("BoxShape3D_5sfg5")
+
+[node name="Cell_8_7" type="StaticBody3D" parent="TerrainSurface" unique_id=1967367771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.0364, 3)
+collision_mask = 0
+metadata/col = 8
+metadata/row = 7
+metadata/terrain = "f"
+metadata/surface_height = 0.0636
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_8_7" unique_id=1218740334]
+shape = SubResource("BoxShape3D_o406c")
+
+[node name="Cell_9_7" type="StaticBody3D" parent="TerrainSurface" unique_id=1162277710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.03, 3)
+collision_mask = 0
+metadata/col = 9
+metadata/row = 7
+metadata/terrain = "g"
+metadata/surface_height = 0.07
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_9_7" unique_id=79273776]
+shape = SubResource("BoxShape3D_ax4ib")
+
+[node name="Cell_10_7" type="StaticBody3D" parent="TerrainSurface" unique_id=22189430]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.0402, 3)
+collision_mask = 0
+metadata/col = 10
+metadata/row = 7
+metadata/terrain = "g"
+metadata/surface_height = 0.0598
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_10_7" unique_id=1565313617]
+shape = SubResource("BoxShape3D_q72r2")
+
+[node name="Cell_11_7" type="StaticBody3D" parent="TerrainSurface" unique_id=448206205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.0501, 3)
+collision_mask = 0
+metadata/col = 11
+metadata/row = 7
+metadata/terrain = "g"
+metadata/surface_height = 0.0499
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_11_7" unique_id=1523473454]
+shape = SubResource("BoxShape3D_t7dgs")
+
+[node name="Cell_0_8" type="StaticBody3D" parent="TerrainSurface" unique_id=912549858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0.004, 5)
+collision_mask = 0
+metadata/col = 0
+metadata/row = 8
+metadata/terrain = "g"
+metadata/surface_height = 0.104
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_0_8" unique_id=1307649775]
+shape = SubResource("BoxShape3D_rspo6")
+
+[node name="Cell_1_8" type="StaticBody3D" parent="TerrainSurface" unique_id=1446319452]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.0393, 5)
+collision_mask = 0
+metadata/col = 1
+metadata/row = 8
+metadata/terrain = "g"
+metadata/surface_height = 0.0607
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_1_8" unique_id=1722741159]
+shape = SubResource("BoxShape3D_r7t3e")
+
+[node name="Cell_2_8" type="StaticBody3D" parent="TerrainSurface" unique_id=537377095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.0838, 5)
+collision_mask = 0
+metadata/col = 2
+metadata/row = 8
+metadata/terrain = "g"
+metadata/surface_height = 0.0162
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_2_8" unique_id=1161748900]
+shape = SubResource("BoxShape3D_sf60m")
+
+[node name="Cell_3_8" type="StaticBody3D" parent="TerrainSurface" unique_id=972147742]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.0556, 5)
+collision_mask = 0
+metadata/col = 3
+metadata/row = 8
+metadata/terrain = "g"
+metadata/surface_height = 0.0444
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_3_8" unique_id=2132876478]
+shape = SubResource("BoxShape3D_m071x")
+
+[node name="Cell_4_8" type="StaticBody3D" parent="TerrainSurface" unique_id=1526441275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.0015, 5)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 8
+metadata/terrain = "r"
+metadata/surface_height = 0.0985
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_8" unique_id=1849255506]
+shape = SubResource("BoxShape3D_3mhqm")
+
+[node name="Cell_5_8" type="StaticBody3D" parent="TerrainSurface" unique_id=1497805205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.0113, 5)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 8
+metadata/terrain = "r"
+metadata/surface_height = 0.0887
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_8" unique_id=763465577]
+shape = SubResource("BoxShape3D_yfr0r")
+
+[node name="Cell_6_8" type="StaticBody3D" parent="TerrainSurface" unique_id=1431910384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.0687, 5)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 8
+metadata/terrain = "f"
+metadata/surface_height = 0.0313
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_8" unique_id=354666956]
+shape = SubResource("BoxShape3D_fcsl8")
+
+[node name="Cell_7_8" type="StaticBody3D" parent="TerrainSurface" unique_id=1557095677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.0785, 5)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 8
+metadata/terrain = "f"
+metadata/surface_height = 0.0215
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_8" unique_id=1725672258]
+shape = SubResource("BoxShape3D_krny8")
+
+[node name="Cell_8_8" type="StaticBody3D" parent="TerrainSurface" unique_id=1356289296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.0244, 5)
+collision_mask = 0
+metadata/col = 8
+metadata/row = 8
+metadata/terrain = "f"
+metadata/surface_height = 0.0756
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_8_8" unique_id=1247473166]
+shape = SubResource("BoxShape3D_08vxb")
+
+[node name="Cell_9_8" type="StaticBody3D" parent="TerrainSurface" unique_id=7331462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.0038, 5)
+collision_mask = 0
+metadata/col = 9
+metadata/row = 8
+metadata/terrain = "g"
+metadata/surface_height = 0.1038
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_9_8" unique_id=364632357]
+shape = SubResource("BoxShape3D_3ifmy")
+
+[node name="Cell_10_8" type="StaticBody3D" parent="TerrainSurface" unique_id=132542154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.0407, 5)
+collision_mask = 0
+metadata/col = 10
+metadata/row = 8
+metadata/terrain = "g"
+metadata/surface_height = 0.0593
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_10_8" unique_id=428047563]
+shape = SubResource("BoxShape3D_uavoj")
+
+[node name="Cell_11_8" type="StaticBody3D" parent="TerrainSurface" unique_id=1850062185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.084, 5)
+collision_mask = 0
+metadata/col = 11
+metadata/row = 8
+metadata/terrain = "g"
+metadata/surface_height = 0.016
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_11_8" unique_id=760004883]
+shape = SubResource("BoxShape3D_uvlt8")
+
+[node name="Cell_0_9" type="StaticBody3D" parent="TerrainSurface" unique_id=355529110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -0.0182, 7)
+collision_mask = 0
+metadata/col = 0
+metadata/row = 9
+metadata/terrain = "g"
+metadata/surface_height = 0.0818
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_0_9" unique_id=1004883689]
+shape = SubResource("BoxShape3D_etoku")
+
+[node name="Cell_1_9" type="StaticBody3D" parent="TerrainSurface" unique_id=313508277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.0396, 7)
+collision_mask = 0
+metadata/col = 1
+metadata/row = 9
+metadata/terrain = "g"
+metadata/surface_height = 0.0604
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_1_9" unique_id=1965443504]
+shape = SubResource("BoxShape3D_exc08")
+
+[node name="Cell_2_9" type="StaticBody3D" parent="TerrainSurface" unique_id=1340122554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.0617, 7)
+collision_mask = 0
+metadata/col = 2
+metadata/row = 9
+metadata/terrain = "g"
+metadata/surface_height = 0.0383
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_2_9" unique_id=1504461135]
+shape = SubResource("BoxShape3D_p2oip")
+
+[node name="Cell_3_9" type="StaticBody3D" parent="TerrainSurface" unique_id=1522322623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.0477, 7)
+collision_mask = 0
+metadata/col = 3
+metadata/row = 9
+metadata/terrain = "g"
+metadata/surface_height = 0.0523
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_3_9" unique_id=399861857]
+shape = SubResource("BoxShape3D_iicn6")
+
+[node name="Cell_4_9" type="StaticBody3D" parent="TerrainSurface" unique_id=1134420366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.021, 7)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 9
+metadata/terrain = "r"
+metadata/surface_height = 0.079
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_9" unique_id=1179990036]
+shape = SubResource("BoxShape3D_yqyp0")
+
+[node name="Cell_5_9" type="StaticBody3D" parent="TerrainSurface" unique_id=1272811274]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.0258, 7)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 9
+metadata/terrain = "r"
+metadata/surface_height = 0.0742
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_9" unique_id=257045440]
+shape = SubResource("BoxShape3D_2oyfi")
+
+[node name="Cell_6_9" type="StaticBody3D" parent="TerrainSurface" unique_id=1803881820]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.0542, 7)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 9
+metadata/terrain = "g"
+metadata/surface_height = 0.0458
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_9" unique_id=54327738]
+shape = SubResource("BoxShape3D_286s6")
+
+[node name="Cell_7_9" type="StaticBody3D" parent="TerrainSurface" unique_id=1400732064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.059, 7)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 9
+metadata/terrain = "g"
+metadata/surface_height = 0.041
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_9" unique_id=1629393834]
+shape = SubResource("BoxShape3D_pq64i")
+
+[node name="Cell_8_9" type="StaticBody3D" parent="TerrainSurface" unique_id=1590451441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.0323, 7)
+collision_mask = 0
+metadata/col = 8
+metadata/row = 9
+metadata/terrain = "g"
+metadata/surface_height = 0.0677
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_8_9" unique_id=1982996454]
+shape = SubResource("BoxShape3D_4bhub")
+
+[node name="Cell_9_9" type="StaticBody3D" parent="TerrainSurface" unique_id=1230702559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.0183, 7)
+collision_mask = 0
+metadata/col = 9
+metadata/row = 9
+metadata/terrain = "g"
+metadata/surface_height = 0.0817
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_9_9" unique_id=1264837519]
+shape = SubResource("BoxShape3D_vuxxq")
+
+[node name="Cell_10_9" type="StaticBody3D" parent="TerrainSurface" unique_id=1926574016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.0404, 7)
+collision_mask = 0
+metadata/col = 10
+metadata/row = 9
+metadata/terrain = "g"
+metadata/surface_height = 0.0596
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_10_9" unique_id=34270103]
+shape = SubResource("BoxShape3D_nlqd4")
+
+[node name="Cell_11_9" type="StaticBody3D" parent="TerrainSurface" unique_id=284464373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.0618, 7)
+collision_mask = 0
+metadata/col = 11
+metadata/row = 9
+metadata/terrain = "g"
+metadata/surface_height = 0.0382
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_11_9" unique_id=201521147]
+shape = SubResource("BoxShape3D_x0feh")
+
+[node name="Cell_0_10" type="StaticBody3D" parent="TerrainSurface" unique_id=1546383482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -0.0682, 9)
+collision_mask = 0
+metadata/col = 0
+metadata/row = 10
+metadata/terrain = "g"
+metadata/surface_height = 0.0318
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_0_10" unique_id=1273554177]
+shape = SubResource("BoxShape3D_hl872")
+
+[node name="Cell_1_10" type="StaticBody3D" parent="TerrainSurface" unique_id=1680934905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.0405, 9)
+collision_mask = 0
+metadata/col = 1
+metadata/row = 10
+metadata/terrain = "g"
+metadata/surface_height = 0.0595
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_1_10" unique_id=1963779202]
+shape = SubResource("BoxShape3D_wffsi")
+
+[node name="Cell_2_10" type="StaticBody3D" parent="TerrainSurface" unique_id=2026197530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.0119, 9)
+collision_mask = 0
+metadata/col = 2
+metadata/row = 10
+metadata/terrain = "g"
+metadata/surface_height = 0.0881
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_2_10" unique_id=526412524]
+shape = SubResource("BoxShape3D_8uoaq")
+
+[node name="Cell_3_10" type="StaticBody3D" parent="TerrainSurface" unique_id=532902635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.03, 9)
+collision_mask = 0
+metadata/col = 3
+metadata/row = 10
+metadata/terrain = "s"
+metadata/surface_height = 0.07
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_3_10" unique_id=2087937108]
+shape = SubResource("BoxShape3D_ldken")
+
+[node name="Cell_4_10" type="StaticBody3D" parent="TerrainSurface" unique_id=1815215322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.0647, 9)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 10
+metadata/terrain = "s"
+metadata/surface_height = 0.0353
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_10" unique_id=2136148791]
+shape = SubResource("BoxShape3D_vbyhc")
+
+[node name="Cell_5_10" type="StaticBody3D" parent="TerrainSurface" unique_id=1335102106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.0584, 9)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 10
+metadata/terrain = "s"
+metadata/surface_height = 0.0416
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_10" unique_id=247447723]
+shape = SubResource("BoxShape3D_h80bt")
+
+[node name="Cell_6_10" type="StaticBody3D" parent="TerrainSurface" unique_id=981114980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.0216, 9)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 10
+metadata/terrain = "s"
+metadata/surface_height = 0.0784
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_10" unique_id=168311476]
+shape = SubResource("BoxShape3D_uifdd")
+
+[node name="Cell_7_10" type="StaticBody3D" parent="TerrainSurface" unique_id=128739494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.0153, 9)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 10
+metadata/terrain = "s"
+metadata/surface_height = 0.0847
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_10" unique_id=1435150907]
+shape = SubResource("BoxShape3D_667hj")
+
+[node name="Cell_8_10" type="StaticBody3D" parent="TerrainSurface" unique_id=1916357998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.05, 9)
+collision_mask = 0
+metadata/col = 8
+metadata/row = 10
+metadata/terrain = "s"
+metadata/surface_height = 0.05
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_8_10" unique_id=1642016994]
+shape = SubResource("BoxShape3D_t31fu")
+
+[node name="Cell_9_10" type="StaticBody3D" parent="TerrainSurface" unique_id=1868000118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.0681, 9)
+collision_mask = 0
+metadata/col = 9
+metadata/row = 10
+metadata/terrain = "g"
+metadata/surface_height = 0.0319
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_9_10" unique_id=168626080]
+shape = SubResource("BoxShape3D_ewvkb")
+
+[node name="Cell_10_10" type="StaticBody3D" parent="TerrainSurface" unique_id=785655877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.0395, 9)
+collision_mask = 0
+metadata/col = 10
+metadata/row = 10
+metadata/terrain = "g"
+metadata/surface_height = 0.0605
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_10_10" unique_id=1542886495]
+shape = SubResource("BoxShape3D_4yxry")
+
+[node name="Cell_11_10" type="StaticBody3D" parent="TerrainSurface" unique_id=552510329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.0118, 9)
+collision_mask = 0
+metadata/col = 11
+metadata/row = 10
+metadata/terrain = "g"
+metadata/surface_height = 0.0882
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_11_10" unique_id=1523708710]
+shape = SubResource("BoxShape3D_vvksq")
+
+[node name="Cell_0_11" type="StaticBody3D" parent="TerrainSurface" unique_id=1630849803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -0.0823, 11)
+collision_mask = 0
+metadata/col = 0
+metadata/row = 11
+metadata/terrain = "g"
+metadata/surface_height = 0.0177
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_0_11" unique_id=582781385]
+shape = SubResource("BoxShape3D_uutbm")
+
+[node name="Cell_1_11" type="StaticBody3D" parent="TerrainSurface" unique_id=253196546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.0407, 11)
+collision_mask = 0
+metadata/col = 1
+metadata/row = 11
+metadata/terrain = "g"
+metadata/surface_height = 0.0593
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_1_11" unique_id=152209014]
+shape = SubResource("BoxShape3D_jyyfp")
+
+[node name="Cell_2_11" type="StaticBody3D" parent="TerrainSurface" unique_id=1860498242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.002, 11)
+collision_mask = 0
+metadata/col = 2
+metadata/row = 11
+metadata/terrain = "g"
+metadata/surface_height = 0.102
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_2_11" unique_id=542414788]
+shape = SubResource("BoxShape3D_gb0nu")
+
+[node name="Cell_3_11" type="StaticBody3D" parent="TerrainSurface" unique_id=1046973325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.025, 11)
+collision_mask = 0
+metadata/col = 3
+metadata/row = 11
+metadata/terrain = "s"
+metadata/surface_height = 0.075
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_3_11" unique_id=1810265370]
+shape = SubResource("BoxShape3D_0psrp")
+
+[node name="Cell_4_11" type="StaticBody3D" parent="TerrainSurface" unique_id=1529447169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.145, 11)
+collision_mask = 0
+metadata/col = 4
+metadata/row = 11
+metadata/terrain = "s"
+metadata/surface_height = 0.245
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_4_11" unique_id=857676139]
+shape = SubResource("BoxShape3D_ye7wn")
+
+[node name="Cell_5_11" type="StaticBody3D" parent="TerrainSurface" unique_id=123930360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.145, 11)
+collision_mask = 0
+metadata/col = 5
+metadata/row = 11
+metadata/terrain = "s"
+metadata/surface_height = 0.245
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_5_11" unique_id=1827777217]
+shape = SubResource("BoxShape3D_uk7tv")
+
+[node name="Cell_6_11" type="StaticBody3D" parent="TerrainSurface" unique_id=346474698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.145, 11)
+collision_mask = 0
+metadata/col = 6
+metadata/row = 11
+metadata/terrain = "s"
+metadata/surface_height = 0.245
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_6_11" unique_id=1526376097]
+shape = SubResource("BoxShape3D_jc707")
+
+[node name="Cell_7_11" type="StaticBody3D" parent="TerrainSurface" unique_id=1988262326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.145, 11)
+collision_mask = 0
+metadata/col = 7
+metadata/row = 11
+metadata/terrain = "s"
+metadata/surface_height = 0.245
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_7_11" unique_id=2074771576]
+shape = SubResource("BoxShape3D_pikjx")
+
+[node name="Cell_8_11" type="StaticBody3D" parent="TerrainSurface" unique_id=1687754468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.055, 11)
+collision_mask = 0
+metadata/col = 8
+metadata/row = 11
+metadata/terrain = "s"
+metadata/surface_height = 0.045
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_8_11" unique_id=636867857]
+shape = SubResource("BoxShape3D_7k2s5")
+
+[node name="Cell_9_11" type="StaticBody3D" parent="TerrainSurface" unique_id=485829494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.082, 11)
+collision_mask = 0
+metadata/col = 9
+metadata/row = 11
+metadata/terrain = "g"
+metadata/surface_height = 0.018
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_9_11" unique_id=2089168683]
+shape = SubResource("BoxShape3D_yo3t6")
+
+[node name="Cell_10_11" type="StaticBody3D" parent="TerrainSurface" unique_id=365178888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.0393, 11)
+collision_mask = 0
+metadata/col = 10
+metadata/row = 11
+metadata/terrain = "g"
+metadata/surface_height = 0.0607
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_10_11" unique_id=106736186]
+shape = SubResource("BoxShape3D_kb8dk")
+
+[node name="Cell_11_11" type="StaticBody3D" parent="TerrainSurface" unique_id=743414490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0.0023, 11)
+collision_mask = 0
+metadata/col = 11
+metadata/row = 11
+metadata/terrain = "g"
+metadata/surface_height = 0.1023
+
+[node name="WalkableSurface" type="CollisionShape3D" parent="TerrainSurface/Cell_11_11" unique_id=825864962]
+shape = SubResource("BoxShape3D_bkbjn")
+
+[node name="OriginalGrid" type="MeshInstance3D" parent="." unique_id=482420037]
+visible = false
+mesh = SubResource("ArrayMesh_gq508")
+
+[node name="DioramaCamera" type="Camera3D" parent="." unique_id=1799693216]
+transform = Transform3D(0.9993628, -0.025668645, 0.024799319, 0, 0.69482356, 0.7191802, -0.035691533, -0.718722, 0.6943808, 1, 29.8, 29)
+attributes = SubResource("CameraAttributesPractical_75efs")
+current = true
+fov = 39.0
+near = 0.1
+far = 450.0

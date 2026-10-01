@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "frames": 25,
+  "region": [
+    400,
+    120,
+    1450,
+    400
+  ],
+  "sky_mean_absolute_pixel_change": 3.834655328798186,
+  "animation": "07-moving-clouds.gif",
+  "note": "Actual successive runtime captures, sky-only region; camera is fixed."
+}

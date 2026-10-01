@@ -1,0 +1,21 @@
+{
+  "src/game/rules/threat.ts": "a8d5cc09882c337ab225c5fb2b4efade7f47d1004352e39364171dbfa965fc6c",
+  "src/game/rules/movement.ts": "f2aeb48c8be08c085b4a42f9c57bba6fdcc766b20fe1da39ac05242f9bc17130",
+  "src/game/rules/ai.ts": "9dd56e3cc01b57fbf641d666331da7c10dd61489335571f14f1d7e5af60aee67",
+  "src/game/rules/combat.ts": "14cea33d85d26638eb7934f64b6cf6c823288e138b536832074c822711176d02",
+  "src/game/rules/progression.ts": "afce92dc7f979e0e879e901e7149383c95518433f94a661de9ab2fcec4da5da5",
+  "src/game/data/items.ts": "89b6f3e5113636186d110a5e5a704fc496516325c9fad54bd57fb37dc25a38f0",
+  "src/game/data/classes.ts": "12083bedc1f4be854a4f420f8b975ccd9dcbfabcbb9da47e43fd08da714ddc67",
+  "src/game/data/characters.ts": "08d433aff975ae9ae93c103b8889729c1ddf24163b5bc4b18c03fe3b794015d3",
+  "src/game/data/mission.ts": "c09e3e1ec0f72fc97a4c4a0a5f1d0c954a99751bee7ee26d562a8899f7b8a231",
+  "src/game/data/spellLearning.ts": "36d16ecdb28b0754f1d54d5e5819850f06411df596b512c6fdb0a6b4dc9bd97f",
+  "src/game/data/types.ts": "fd827cab160f9ceaf25beb6698f7ecbf3050749e8ffb4d00267bd206c2e77590",
+  "src/game/data/spells.ts": "27fa458f6ad40f2c3c01230408cb95e624aa093bef66301b24562a51739a01db",
+  "src/game/data/terrain.ts": "6da27f8055ab2971de38f3cffc09080caf6591668c433f080d3ddcc75230cfdd",
+  "src/game/data/recruitment.ts": "4884fd2a1b2b6c4728e26271bbf24e055ba4ab1199a07857f234505f242bcbb7",
+  "src/game/data/chapters.ts": "ea7355697297b14fc7f4b5be25835785a6eea4a1052fee018da4b07c2467db3a",
+  "src/game/data/promotions.ts": "ea3ba3d245d9b15642ae90989567d4dc7e8b9591906f9e5e6f0b2955e10acdf3",
+  "src/game/data/equipment.ts": "d7979100e3784dd2f1cf68ceee9c32480691f563cee5669f00daef3528fb437d",
+  "src/game/save.ts": "c933e95c9499dfd78c07ea075731534467fbf0e724fbcbb65e24bf3b6470117a",
+  "src/game/state.ts": "f3000affb5270723fb026bb021dd3eb883204515d70135f594371300ba16a27f"
+}

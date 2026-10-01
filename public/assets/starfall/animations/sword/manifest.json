@@ -1,0 +1,71 @@
+{
+  "source": "sword.png",
+  "sharedScale": 0.14772727272727273,
+  "frameSize": 128,
+  "anchor": [
+    64,
+    128
+  ],
+  "frames": [
+    {
+      "file": "01.png",
+      "bbox": [
+        35,
+        76,
+        92,
+        128
+      ],
+      "sha256": "3ae6b4b25d986f5d04085e21f6172d8cc41d46ff37d4ee418e2ec12df9da203f"
+    },
+    {
+      "file": "02.png",
+      "bbox": [
+        38,
+        76,
+        94,
+        128
+      ],
+      "sha256": "ac69792bf14a0e04d21c25f37456b5edfb3a7ed34b90bb187f2e43c26298fbd1"
+    },
+    {
+      "file": "03.png",
+      "bbox": [
+        38,
+        76,
+        93,
+        128
+      ],
+      "sha256": "b61e6078ed6d4b1ecfbb3b29298e107b18826cb3ebfba89dc41b02773f0eab62"
+    },
+    {
+      "file": "04.png",
+      "bbox": [
+        37,
+        65,
+        82,
+        128
+      ],
+      "sha256": "4fd92f9893a45035e097042e07a5b9c3957c12a481d07a922fbf7129814f18a3"
+    },
+    {
+      "file": "05.png",
+      "bbox": [
+        41,
+        82,
+        122,
+        128
+      ],
+      "sha256": "af90ecce787515bf45a1ebcf7d3861a5c9d98d0d6896b21a596d17a4a8bd4bc9"
+    },
+    {
+      "file": "06.png",
+      "bbox": [
+        31,
+        78,
+        86,
+        128
+      ],
+      "sha256": "428af50ce3d7690e48ce106fd4b449ffbf35274b9cf4579c919c778842e9d240"
+    }
+  ]
+}

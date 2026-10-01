@@ -1,0 +1,182 @@
+{
+  "movementCancelAttack": {
+    "mode": "idle",
+    "units": [
+      {
+        "id": "kael",
+        "x": 3,
+        "y": 5,
+        "hp": 24,
+        "acted": true
+      },
+      {
+        "id": "e4",
+        "x": 3,
+        "y": 4,
+        "hp": 0,
+        "acted": false
+      }
+    ],
+    "busy": false,
+    "environment": "StarfallImportedEnvironment"
+  },
+  "healed": [
+    {
+      "id": "kael",
+      "hp": 19,
+      "acted": false
+    },
+    {
+      "id": "lyra",
+      "hp": 21,
+      "acted": true
+    }
+  ],
+  "enemyTurn": 2,
+  "saveReload": true,
+  "classicRoundtrip": true,
+  "all80CellsPickCorrectly": true,
+  "recruitment": true,
+  "seizeVictory": true,
+  "secondChapterUnlocked": true,
+  "worldReturn": true,
+  "defeatRetry": true,
+  "combatParity": [
+    {
+      "scenario": "melee-hit-followup",
+      "finalHp": {
+        "kael": 20,
+        "e4": 3
+      },
+      "events": [
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": false,
+          "followUp": false,
+          "damage": 9
+        },
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": false,
+          "followUp": false,
+          "damage": 4
+        },
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": false,
+          "followUp": true,
+          "damage": 9
+        }
+      ],
+      "variantsAgree": true,
+      "cameraRestored": true
+    },
+    {
+      "scenario": "melee-miss",
+      "finalHp": {
+        "kael": 24,
+        "e4": 21
+      },
+      "events": [
+        {
+          "type": "strike",
+          "hit": false,
+          "critical": false,
+          "followUp": false,
+          "damage": 0
+        },
+        {
+          "type": "strike",
+          "hit": false,
+          "critical": false,
+          "followUp": false,
+          "damage": 0
+        },
+        {
+          "type": "strike",
+          "hit": false,
+          "critical": false,
+          "followUp": true,
+          "damage": 0
+        }
+      ],
+      "variantsAgree": true,
+      "cameraRestored": true
+    },
+    {
+      "scenario": "critical-death",
+      "finalHp": {
+        "kael": 24,
+        "e4": 0
+      },
+      "events": [
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": true,
+          "followUp": false,
+          "damage": 27
+        }
+      ],
+      "variantsAgree": true,
+      "cameraRestored": true
+    },
+    {
+      "scenario": "mounted-spell-cost",
+      "finalHp": {
+        "lyra": 20,
+        "e4": 0
+      },
+      "events": [
+        {
+          "type": "cost"
+        },
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": false,
+          "followUp": false,
+          "damage": 11
+        },
+        {
+          "type": "cost"
+        },
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": false,
+          "followUp": true,
+          "damage": 11
+        }
+      ],
+      "variantsAgree": true,
+      "cameraRestored": true
+    }
+  ],
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "visibleCells": 80,
+    "point": {
+      "id": "3,7",
+      "x": 114.33682473488383,
+      "y": 463.7034560709423
+    },
+    "selection": {
+      "mode": "move",
+      "hud": "我方阶段\nTURN 1/20\n穿越星落桥\n胜利：击败蚀月骑士 / 凯尔抵达北岸\n失败：凯尔战败或超过 20 回合\n返回经典画面\n聚焦单位\n全图\n画面设置\n全体危险\n演出 1×\n完整演出\n战斗记录\n凯尔\n剑士 · 星火剑士\nLv.1　EXP 0/100\nHP 24/24\n攻 14\n防 4\n攻速 8\n战斗\n回复魔法\n交谈\n交换\n物品\n详情\n返回行动\n取消移动\n待机\n结束回合"
+    }
+  },
+  "secondChapter": {
+    "chapter": "moonlit-pass",
+    "terrain": "TerrainView",
+    "points": 80,
+    "hud": "我方阶段\nTURN 1/18\n突破月影峡道\n胜利：击败月蚀女巫 / 凯尔占领峡道出口\n失败：凯尔战败或超过 18 回合\n选择单位 → 按地形成本移动 → 行动\n点击敌人查看威胁　神殿可转职　靠近特殊单位可交谈\n返回经典画面\n聚焦单位\n全图\n画面设置\n全体危险\n演出 1×\n完整演出\n战斗记录\n战斗\n回复魔法\n交谈\n交换\n物品\n详情\n返回行动\n取消移动\n待机\n结束回合",
+    "units": 8
+  },
+  "errors": []
+}

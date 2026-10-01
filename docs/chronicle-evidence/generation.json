@@ -1,0 +1,34 @@
+{
+  "tool": "built-in image_gen",
+  "requests": [
+    {
+      "key": "portraits",
+      "paths": [
+        "/var/folders/p1/013ksgnj7ng0_ymrj4mcs8jm0000gn/T/codex-file-preview-UsvYHM/551059e7-629e-4b5b-950c-45a088382117.png",
+        "/var/folders/p1/013ksgnj7ng0_ymrj4mcs8jm0000gn/T/codex-file-preview-auzmLL/b812a72a-cb1f-43f8-b5c8-0ed9892df9ea.png",
+        "/var/folders/p1/013ksgnj7ng0_ymrj4mcs8jm0000gn/T/codex-file-preview-GgrAA0/daeaf808-6484-4b15-99d8-dfafe89fa8f2.png",
+        "/var/folders/p1/013ksgnj7ng0_ymrj4mcs8jm0000gn/T/codex-file-preview-sQeORZ/f099c96a-1fbc-4b66-b936-e316796b0fa9.png"
+      ],
+      "prompt": "Create a unified ORIGINAL fantasy tactical RPG half-body portrait atlas for EMBERS OF THE TWIN STARS. Reference 1 contains the eight EXACT original characters to adapt, in the same order. Reference 2 is LINEWORK and CEL-SHADING STYLE ONLY: clean elegant Japanese tactical RPG anime, mature expressive faces, crisp ink lines, restrained flat tones. Do not copy identities/costumes from reference 2. References 3 and 4 define the exact green-haired female spear guard and blonde blue-eyed female holy knight. Exactly 8 equally sized panels, 4 columns x 2 rows, 2048x1536 landscape canvas. Each cell a tall half-body portrait from head through belt, face in upper third, fully visible hair and shoulders, same scale, no text. Top row in order: blue-black-haired young male swordsman, navy scarf silver armor; forest-green-haired FEMALE spear guard with high ponytail green cloak silver pauldrons (ref3); long pale-blonde blue-eyed FEMALE holy knight gold star circlet white armor blue trim (ref4); pink-red-haired FEMALE rogue with crimson cloak dark leather. Bottom row in order: copper-brown-haired freckled FEMALE spear recruit with braid and moss cloak; long raven-purple-haired FEMALE moon sorceress with violet eyes silver crescent circlet black-purple robes; concealed-face black-armored knight with thin red visor and dark red cloak; rugged sandy-brown-haired middle-aged male veteran with short beard teal scarf and leather armor. Each panel background matte desaturated heraldic color, thin antique gold arch and star linework on warm ivory border, identical visual system. Clean controlled cel shaded painting, not photoreal, not 3D, not chibi. Premium fantasy chronicle UI character cards. Keep separation of all eight cells exact for game extraction.",
+      "generatedPath": "/Users/jessefei/.codex/generated_images/01a09faf-b09f-7640-adf4-0487af702b80/exec-231b8f95-adf5-4131-8574-2513ad15e778.png"
+    },
+    {
+      "key": "cavalry-female",
+      "paths": [
+        "/Users/jessefei/Documents/ChatGPT/Sanjiaozhou/public/assets/starfall/sprites/cavalry.png",
+        "/var/folders/p1/013ksgnj7ng0_ymrj4mcs8jm0000gn/T/codex-file-preview-sQeORZ/f099c96a-1fbc-4b66-b936-e316796b0fa9.png"
+      ],
+      "prompt": "Edit the mounted pixel character from reference 1 so the rider unmistakably matches the WOMAN in reference 2: long flowing pale-blonde hair, blue eyes, delicate feminine face, gold star circlet, white and gold armor with subtle blue trim. Keep the white horse, saddle, blue crystal staff, red cloak, viewing angle and tiny pixel-art proportions from reference 1. Create SIX full-body mounted animation frames in a 3-column 2-row grid, equal cells, transparent alpha background, no background glow, text, floor, labels or borders. Same woman and horse, same head and body scale, facing screen-right at 3/4 angle in ALL frames. Row1: idle; horse left-foreleg step; opposite horse step. Row2: rider raises staff gathering light; rider casts with staff extended forward; recovery to resting staff. Rider's long blonde hair remains visible in EVERY pose; do not turn her into a short-haired boy. Exactly two arms, same horse anatomy and four legs, readable pixel clusters. All weapons and hair fit with transparent margins in each cell. 1536x1024 canvas. This is a production tactical game animation sheet, not a concept poster.",
+      "generatedPath": "/Users/jessefei/.codex/generated_images/01a09faf-b09f-7640-adf4-0487af702b80/exec-cde16d75-a779-4633-bf38-cbb7adb86723.png"
+    },
+    {
+      "key": "lancer-female",
+      "paths": [
+        "/Users/jessefei/Documents/ChatGPT/Sanjiaozhou/public/assets/starfall/sprites/lancer.png",
+        "/var/folders/p1/013ksgnj7ng0_ymrj4mcs8jm0000gn/T/codex-file-preview-GgrAA0/daeaf808-6484-4b15-99d8-dfafe89fa8f2.png"
+      ],
+      "prompt": "Edit the spear-guard pixel sprite from reference1 so she matches the WOMAN in reference2: long deep forest-green hair in high ponytail, green eyes, delicate mature feminine face, green cloak and silver shoulder armor, brown belts, long spear. Preserve the tiny tactical pixel-art scale and gold/green palette of reference1. SIX complete animation poses in exact 3 columns x 2 rows equal-cell grid, transparent ALPHA background, no text, labels, floor, atmosphere or panel borders. All faces and feet oriented screen-right 3/4, same character head size and torso proportions each frame. Row1 idle; walk left foot forward; walk right foot forward. Row2 spear windup; spear thrust diagonally forward; recovery to guard. Clearly visible long ponytail in all frames, no short-haired male redesign. No glows. Each figure fully isolated with generous transparent margins and no spear crossing into neighboring sprite. 1536x1024 production pixel-art sheet, crisp low-resolution pixel clusters not smooth illustration.",
+      "generatedPath": "/Users/jessefei/.codex/generated_images/01a09faf-b09f-7640-adf4-0487af702b80/exec-71318575-9065-4a04-87c0-0ebdb22f31bd.png"
+    }
+  ]
+}

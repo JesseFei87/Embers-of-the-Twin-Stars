@@ -1,0 +1,79 @@
+{
+  "actors": 11,
+  "adapter": "Apple M5 (Apple9)",
+  "boundary": "Visual scene only; no duplicate combat or saves",
+  "draw_calls": 289.0,
+  "elapsed": 9.35440300000002,
+  "engine": "4.6.3-stable (official)",
+  "frame_ms_p95": 16.9953333333333,
+  "frames": 518,
+  "primitives": 1427206.0,
+  "renderer": "forward_plus",
+  "scene": "res://scenes/moonlit_pass.tscn",
+  "terrain_columns": 12,
+  "terrain_rows": 12,
+  "viewport": "(1600.0, 900.0)",
+  "views": [
+    {
+      "camera_position": [
+        1.0,
+        29.7999992370605,
+        29.0
+      ],
+      "file": "res://evidence/moonlit/overview.png",
+      "fov": 39.0,
+      "name": "overview",
+      "target": [
+        0.0,
+        0.800000011920929,
+        1.0
+      ]
+    },
+    {
+      "camera_position": [
+        4.0,
+        9.89999961853027,
+        14.0
+      ],
+      "file": "res://evidence/moonlit/bridge.png",
+      "fov": 39.0,
+      "name": "bridge",
+      "target": [
+        -1.0,
+        -0.100000001490116,
+        -1.0
+      ]
+    },
+    {
+      "camera_position": [
+        12.0,
+        9.5,
+        5.5
+      ],
+      "file": "res://evidence/moonlit/altar.png",
+      "fov": 39.0,
+      "name": "altar",
+      "target": [
+        7.0,
+        2.0,
+        -7.0
+      ]
+    },
+    {
+      "camera_position": [
+        -2.5,
+        8.0,
+        10.0
+      ],
+      "file": "res://evidence/moonlit/cliff-detail.png",
+      "fov": 39.0,
+      "name": "cliff-detail",
+      "target": [
+        -12.5,
+        3.0,
+        -1.0
+      ]
+    }
+  ],
+  "waterfalls": 2
+}

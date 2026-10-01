@@ -1,0 +1,32 @@
+{
+  "cavalry": {
+    "height": 64,
+    "transparent_corner": true,
+    "width": 45
+  },
+  "knight": {
+    "height": 52,
+    "transparent_corner": true,
+    "width": 49
+  },
+  "lancer": {
+    "height": 64,
+    "transparent_corner": true,
+    "width": 45
+  },
+  "mage": {
+    "height": 52,
+    "transparent_corner": true,
+    "width": 42
+  },
+  "raider": {
+    "height": 52,
+    "transparent_corner": true,
+    "width": 61
+  },
+  "sword": {
+    "height": 52,
+    "transparent_corner": true,
+    "width": 57
+  }
+}

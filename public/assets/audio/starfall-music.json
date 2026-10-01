@@ -1,0 +1,55 @@
+{
+  "title": "同一片星光之下 · 钢琴战记",
+  "instrument": "Acoustic grand piano",
+  "version": 3,
+  "chapter": "starfall-bridge",
+  "duration": 96.0,
+  "bpm": 100,
+  "bars": 40,
+  "key": "D minor with major-colour hope",
+  "sampleRate": 24000,
+  "seamless": true,
+  "origin": "Original score; piano rendered with macOS General MIDI acoustic grand; synthesized percussion",
+  "peakDb": -1.7200000286102295,
+  "rmsDb": -21.59000015258789,
+  "seamDelta": 9.220524225383997e-05,
+  "spectrum": {
+    "0-100Hz": 0.0037,
+    "0-180Hz": 0.0254,
+    "180-450Hz": 0.1533,
+    "450-2000Hz": 0.8055,
+    "2000-12000Hz": 0.0159
+  },
+  "sections": [
+    {
+      "name": "克制开场",
+      "start": 0.0,
+      "end": 9.6,
+      "rmsDb": -30.040000915527344
+    },
+    {
+      "name": "暗流推进",
+      "start": 9.6,
+      "end": 28.8,
+      "rmsDb": -23.1200008392334
+    },
+    {
+      "name": "逐步蓄势",
+      "start": 28.8,
+      "end": 48.0,
+      "rmsDb": -21.170000076293945
+    },
+    {
+      "name": "战斗高潮",
+      "start": 48.0,
+      "end": 76.8,
+      "rmsDb": -18.75
+    },
+    {
+      "name": "回落与希望",
+      "start": 76.8,
+      "end": 96.0,
+      "rmsDb": -27.719999313354492
+    }
+  ]
+}

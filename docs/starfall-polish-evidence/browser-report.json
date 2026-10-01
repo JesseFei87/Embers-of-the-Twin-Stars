@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-16T16:17:11.954Z",
+  "moveCancelAttack": true,
+  "settings": [
+    {
+      "quality": "low",
+      "time": "day",
+      "statePreserved": true
+    },
+    {
+      "quality": "low",
+      "time": "night",
+      "statePreserved": true
+    },
+    {
+      "quality": "medium",
+      "time": "day",
+      "statePreserved": true
+    },
+    {
+      "quality": "medium",
+      "time": "night",
+      "statePreserved": true
+    },
+    {
+      "quality": "high",
+      "time": "day",
+      "statePreserved": true
+    },
+    {
+      "quality": "high",
+      "time": "night",
+      "statePreserved": true
+    }
+  ],
+  "reducedMotionFreezesWater": true,
+  "picking": [
+    {
+      "width": 390,
+      "height": 844,
+      "failures": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "failures": []
+    }
+  ],
+  "errors": [],
+  "shaderErrors": []
+}

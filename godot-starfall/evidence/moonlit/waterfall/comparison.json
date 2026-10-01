@@ -1,0 +1,22 @@
+{
+  "before": {
+    "water_patch": [
+      580,
+      220,
+      705,
+      410
+    ],
+    "mean_temporal_rgb_change": 28.45274385964912,
+    "mean_luminance": 123.30857543859649
+  },
+  "after": {
+    "water_patch": [
+      580,
+      220,
+      705,
+      410
+    ],
+    "mean_temporal_rgb_change": 5.389459649122807,
+    "mean_luminance": 60.15490526315789
+  }
+}

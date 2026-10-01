@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-CN"><meta charset="UTF-8"><title>星落桥配乐验收</title><style>body{background:#101b28;color:#ebd3a4;font:18px system-ui;padding:40px;max-width:850px}button{padding:12px;margin:8px}pre{line-height:1.8;white-space:pre-wrap}audio{width:100%}</style><h1>同一片星光之下 · 钢琴战记</h1><p>星落桥 · 100 BPM · 96 秒循环 · 原创钢琴配乐</p><button id="enter">进入星落桥</button><button id="leave">离开关卡</button><div id="settings"></div><pre id="status">等待操作</pre><h2>配乐试听</h2><audio controls loop preload="metadata" src="/assets/audio/starfall-under-the-same-stars.wav?v=3"></audio><script type="module">
+import {battleMusic,musicSettingsMarkup,bindMusicSettings} from '/src/audio/BattleMusic.ts';
+battleMusic.install();document.querySelector('#settings').innerHTML=musicSettingsMarkup();bindMusicSettings(document);
+document.querySelector('#enter').onclick=()=>battleMusic.playChapter('starfall-bridge');
+document.querySelector('#leave').onclick=()=>battleMusic.playChapter('moonlit-pass');
+let analyser, graphContext, frames=0, lastLevel=0;
+setInterval(()=>{
+ const context=battleMusic.context, voice=battleMusic.voice;
+ if(context && context!==graphContext){analyser=context.createAnalyser();analyser.fftSize=2048;battleMusic.master.connect(analyser);graphContext=context;}
+ if(analyser){const data=new Float32Array(analyser.fftSize);analyser.getFloatTimeDomainData(data);lastLevel=Math.sqrt(data.reduce((a,b)=>a+b*b,0)/data.length);if(lastLevel>.00001)frames++;}
+ document.querySelector('#status').textContent=JSON.stringify({context:context?.state??'not-created',playing:!!voice,loop:voice?.source.loop??false,duration:voice?.source.buffer?.duration??0,clock:Math.round(context?.currentTime??0),rms:Number(lastLevel.toFixed(5)),audibleChecks:frames,volume:battleMusic.volume},null,2);
+},250);
+window.addEventListener('pagehide',()=>battleMusic.dispose());
+</script></html>

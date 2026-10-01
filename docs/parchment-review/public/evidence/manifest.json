@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-21",
+  "viewport": [
+    1440,
+    810
+  ],
+  "source": "当前游戏实机；内存测试存档；部分状态由开发验收入口触发；不修改真实存档",
+  "screens": [
+    "01-title",
+    "02-title-settings",
+    "03-village",
+    "04-dialogue",
+    "05-shrine",
+    "06-promotion",
+    "07-formation-reference",
+    "08-battle-reference",
+    "09-battle-settings",
+    "10-unit-detail",
+    "11-combat-preview",
+    "12-trade",
+    "13-battle-menu-reference",
+    "14-render-error",
+    "15-victory",
+    "16-frontier",
+    "17-map-error",
+    "18-new-game-confirm",
+    "19-save-dialog",
+    "20-battle-clean",
+    "21-defeat"
+  ]
+}

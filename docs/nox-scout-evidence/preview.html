@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-CN"><meta charset="UTF-8"><title>诺克斯 · 斥候动作验收</title><style>body{margin:32px;background:#14222b;color:#efddb7;font:18px serif}main{display:flex;gap:12px;flex-wrap:wrap}figure{margin:0;text-align:center}figure>svg,#motion>svg{width:256px;height:256px;background:repeating-conic-gradient(#26363c 0% 25%,#34454b 0% 50%) 0/32px 32px}figcaption{padding:12px}#motion{display:flex;align-items:end;gap:20px}h1{font-size:28px}</style><h1>诺克斯 · 专属斥候六动作</h1><main id="frames"></main><h2>连续动作</h2><div id="motion"></div><script type="module">
+import {noxSpriteMarkup} from '/src/game/ui/noxSprite.ts';
+const names=['待机','奔跑一','奔跑二','蓄势','短刃突刺','受击'];
+document.querySelector('#frames').innerHTML=names.map((name,i)=>`<figure>${noxSpriteMarkup(i,92)}<figcaption>${name}</figcaption></figure>`).join('');
+const sequence=[0,0,1,2,1,2,0,3,4,4,0,5,0];let i=0;
+setInterval(()=>{document.querySelector('#motion').innerHTML=noxSpriteMarkup(sequence[i++%sequence.length],92)},180);
+</script></html>

@@ -1,0 +1,98 @@
+[
+  {
+    "buttons": [
+      {
+        "inside": true,
+        "text": ""
+      },
+      {
+        "inside": true,
+        "text": "旋转视角"
+      },
+      {
+        "inside": true,
+        "text": "菜单"
+      },
+      {
+        "inside": true,
+        "text": "详情"
+      },
+      {
+        "inside": true,
+        "text": "待机"
+      },
+      {
+        "inside": true,
+        "text": "结束回合"
+      }
+    ],
+    "height": 720,
+    "overflow": false,
+    "stats": "HP 24/24攻 14防 4速 8",
+    "width": 1280
+  },
+  {
+    "buttons": [
+      {
+        "inside": true,
+        "text": ""
+      },
+      {
+        "inside": true,
+        "text": "旋转视角"
+      },
+      {
+        "inside": true,
+        "text": "菜单"
+      },
+      {
+        "inside": true,
+        "text": "详情"
+      },
+      {
+        "inside": true,
+        "text": "待机"
+      },
+      {
+        "inside": true,
+        "text": "结束回合"
+      }
+    ],
+    "height": 1080,
+    "overflow": false,
+    "stats": "HP 24/24攻 14防 4速 8",
+    "width": 1920
+  },
+  {
+    "buttons": [
+      {
+        "inside": true,
+        "text": ""
+      },
+      {
+        "inside": true,
+        "text": "旋转视角"
+      },
+      {
+        "inside": true,
+        "text": "菜单"
+      },
+      {
+        "inside": true,
+        "text": "详情"
+      },
+      {
+        "inside": true,
+        "text": "待机"
+      },
+      {
+        "inside": true,
+        "text": "结束回合"
+      }
+    ],
+    "height": 810,
+    "overflow": false,
+    "stats": "HP 24/24攻 14防 4速 8",
+    "width": 1100
+  }
+]

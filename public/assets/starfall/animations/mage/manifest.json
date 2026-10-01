@@ -1,0 +1,71 @@
+{
+  "source": "mage.png",
+  "sharedScale": 0.15853658536585366,
+  "frameSize": 128,
+  "anchor": [
+    64,
+    128
+  ],
+  "frames": [
+    {
+      "file": "01.png",
+      "bbox": [
+        43,
+        76,
+        85,
+        128
+      ],
+      "sha256": "9e8c00d02dc9d4ea22e24bd5433dffbc639c030d1323f20cb3e4698122a214d9"
+    },
+    {
+      "file": "02.png",
+      "bbox": [
+        46,
+        76,
+        85,
+        128
+      ],
+      "sha256": "3964e3d881ba090943913d861baccba492b5c72a859bd109cb98b63862b4a58b"
+    },
+    {
+      "file": "03.png",
+      "bbox": [
+        46,
+        76,
+        85,
+        128
+      ],
+      "sha256": "63d9626c55488bc3fa8a363f4ca22f066935c6ee596d1796d5b009911eb71b8d"
+    },
+    {
+      "file": "04.png",
+      "bbox": [
+        47,
+        65,
+        91,
+        128
+      ],
+      "sha256": "455ce4295c6aba4ef555ae0eff1eeebf87a5e85df16a465196f037bafcb8e28d"
+    },
+    {
+      "file": "05.png",
+      "bbox": [
+        45,
+        73,
+        106,
+        128
+      ],
+      "sha256": "513ff33cfdf6b85742f8c5457d4d6ed921bafcb220bec5d722505f5a8c22f3b2"
+    },
+    {
+      "file": "06.png",
+      "bbox": [
+        47,
+        75,
+        86,
+        128
+      ],
+      "sha256": "e1db62213693167a40a77bfb68f9fd317d343a406e2ad78592367ae20bd6a077"
+    }
+  ]
+}

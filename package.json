@@ -1,0 +1,24 @@
+{
+  "name": "embers-of-the-twin-stars",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc && vite build",
+    "test": "node scripts/verify-hd2d.mjs && node scripts/verify-presentation.mjs && node scripts/verify-starfall.mjs && node scripts/verify-starfall-animation.mjs && node scripts/verify-music.mjs && node scripts/verify-moonlit-integration.mjs && node scripts/verify-world-map.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "sync:starfall": "node scripts/sync-starfall-assets.mjs",
+    "sync:moonlit": "node scripts/sync-moonlit-assets.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/core": "^2.1.1",
+    "phaser": "^3.90.0",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.180.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3"
+  }
+}

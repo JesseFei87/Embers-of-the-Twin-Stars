@@ -1,0 +1,130 @@
+{
+  "source": "src/game/data/chapters.ts: moonlit-pass",
+  "grid": {
+    "columns": 10,
+    "rows": 8,
+    "rowsNorthToSouth": [
+      "gfffggggsg",
+      "gffmggffgg",
+      "ggmmgrffgg",
+      "wwwbbbrwww",
+      "gggrrggggg",
+      "gffrrgmfgg",
+      "gggrrfffgg",
+      "gggssssggg"
+    ]
+  },
+  "proposedCellMeters": 2,
+  "godotTileCenter": {
+    "x": "(column - 4.5) * 2",
+    "z": "(row - 3.5) * 2",
+    "up": "Y"
+  },
+  "landmarks": [
+    {
+      "marker": "A",
+      "x": 3,
+      "y": 7,
+      "label": "南侧部署平台"
+    },
+    {
+      "marker": "B",
+      "x": 4,
+      "y": 3,
+      "label": "中央木桥 / 重甲守卫"
+    },
+    {
+      "marker": "C",
+      "x": 5,
+      "y": 2,
+      "label": "艾琳 / 守关点"
+    },
+    {
+      "marker": "D",
+      "x": 8,
+      "y": 0,
+      "label": "赛勒涅 / 祭坛与出口"
+    },
+    {
+      "marker": "E",
+      "x": 2,
+      "y": 2,
+      "label": "西侧山地斥候"
+    },
+    {
+      "marker": "F",
+      "x": 7,
+      "y": 2,
+      "label": "东侧林地斥候"
+    }
+  ],
+  "deployment": [
+    {
+      "x": 3,
+      "y": 7
+    },
+    {
+      "x": 4,
+      "y": 7
+    },
+    {
+      "x": 5,
+      "y": 7
+    },
+    {
+      "x": 6,
+      "y": 7
+    }
+  ],
+  "suggestedRoute": [
+    {
+      "x": 4,
+      "y": 7
+    },
+    {
+      "x": 4,
+      "y": 6
+    },
+    {
+      "x": 4,
+      "y": 5
+    },
+    {
+      "x": 4,
+      "y": 4
+    },
+    {
+      "x": 4,
+      "y": 3
+    },
+    {
+      "x": 4,
+      "y": 2
+    },
+    {
+      "x": 5,
+      "y": 2
+    },
+    {
+      "x": 5,
+      "y": 1
+    },
+    {
+      "x": 5,
+      "y": 0
+    },
+    {
+      "x": 6,
+      "y": 0
+    },
+    {
+      "x": 7,
+      "y": 0
+    },
+    {
+      "x": 8,
+      "y": 0
+    }
+  ],
+  "note": "Visual preproduction reference only; no gameplay or terrain changes applied."
+}

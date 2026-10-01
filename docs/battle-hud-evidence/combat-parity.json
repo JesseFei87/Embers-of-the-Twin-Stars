@@ -1,0 +1,118 @@
+{
+  "results": [
+    {
+      "scenario": "melee-hit-followup",
+      "finalHp": {
+        "kael": 20,
+        "e4": 3
+      },
+      "events": [
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": false,
+          "followUp": false,
+          "damage": 9
+        },
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": false,
+          "followUp": false,
+          "damage": 4
+        },
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": false,
+          "followUp": true,
+          "damage": 9
+        }
+      ],
+      "variantsAgree": true,
+      "cameraRestored": true
+    },
+    {
+      "scenario": "melee-miss",
+      "finalHp": {
+        "kael": 24,
+        "e4": 21
+      },
+      "events": [
+        {
+          "type": "strike",
+          "hit": false,
+          "critical": false,
+          "followUp": false,
+          "damage": 0
+        },
+        {
+          "type": "strike",
+          "hit": false,
+          "critical": false,
+          "followUp": false,
+          "damage": 0
+        },
+        {
+          "type": "strike",
+          "hit": false,
+          "critical": false,
+          "followUp": true,
+          "damage": 0
+        }
+      ],
+      "variantsAgree": true,
+      "cameraRestored": true
+    },
+    {
+      "scenario": "critical-death",
+      "finalHp": {
+        "kael": 24,
+        "e4": 0
+      },
+      "events": [
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": true,
+          "followUp": false,
+          "damage": 27
+        }
+      ],
+      "variantsAgree": true,
+      "cameraRestored": true
+    },
+    {
+      "scenario": "mounted-spell-cost",
+      "finalHp": {
+        "lyra": 20,
+        "e4": 0
+      },
+      "events": [
+        {
+          "type": "cost"
+        },
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": false,
+          "followUp": false,
+          "damage": 11
+        },
+        {
+          "type": "cost"
+        },
+        {
+          "type": "strike",
+          "hit": true,
+          "critical": false,
+          "followUp": true,
+          "damage": 11
+        }
+      ],
+      "variantsAgree": true,
+      "cameraRestored": true
+    }
+  ],
+  "errors": []
+}

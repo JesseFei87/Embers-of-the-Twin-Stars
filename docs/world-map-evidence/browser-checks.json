@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-19",
+  "browser": "Tabbit, isolated localhost:4174 save; player 127.0.0.1 save untouched",
+  "desktopSizes": [[1280,720],[1440,810],[1920,1080],[1074,909]],
+  "offscreenButtons": 0,
+  "pageErrors": [],
+  "roadTravel": "Village -> Moss Hollow, UI click; arrived at (410,296), all traced coordinates on authored roads",
+  "seaClick": "Position remained (330,538)",
+  "animatedOceanTime": [0.6918633333,1.7986000000],
+  "animatedSmokeY": [1.9198237337,2.2031483204],
+  "enemyFramesChanged": true,
+  "reducedMotion": "Ocean time, smoke positions and all actor frames identical across two samples",
+  "sampledWorldFPS": 58,
+  "combat": "Moss Hollow completed through actual mouse movement, attack preview, strikes, AI turn and victory",
+  "postVictory": {"encounterWins":{"moss-hollow":1},"mainStoryClears":[],"partyHP":[24,22,28],"partyEXP":[68,20,37]},
+  "repeatEntry": {"enemyHP":[12,12,12],"partyEXP":[68,20,37]},
+  "secondEncounter": "Travelled along roads to Tide Cove, prepared and deployed; 3 tidecrabs and Three.js scene loaded"
+}

@@ -1,0 +1,71 @@
+{
+  "source": "sheet.png",
+  "sharedScale": 0.20175438596491227,
+  "frameSize": 128,
+  "anchor": [
+    64,
+    128
+  ],
+  "frames": [
+    {
+      "file": "01.png",
+      "bbox": [
+        38,
+        36,
+        87,
+        128
+      ],
+      "sha256": "0d64b32f982863314fa5bd0f1dcdd585d956853f056cf9fb8d645bb119306ad7"
+    },
+    {
+      "file": "02.png",
+      "bbox": [
+        31,
+        38,
+        92,
+        128
+      ],
+      "sha256": "dab9fe998eba205e63fb9e8450b1ff5d7e86e2c36edc02773f0a84546621d271"
+    },
+    {
+      "file": "03.png",
+      "bbox": [
+        32,
+        40,
+        91,
+        128
+      ],
+      "sha256": "6ffc6b99e7791383350cd27238656b56d1b17f3be7c62c8118a8a6aa4246f65c"
+    },
+    {
+      "file": "04.png",
+      "bbox": [
+        24,
+        41,
+        96,
+        128
+      ],
+      "sha256": "ffb2e2c18ca719041ccc0223c7d5f0f80582b1f9c39e3837f8efdc29a901e6dd"
+    },
+    {
+      "file": "05.png",
+      "bbox": [
+        26,
+        48,
+        115,
+        128
+      ],
+      "sha256": "fa9803a3d7f910c3fd93e403e131735589e739640a905bc9f4781b10f7c30200"
+    },
+    {
+      "file": "06.png",
+      "bbox": [
+        32,
+        56,
+        88,
+        128
+      ],
+      "sha256": "c48d8808e1e60d3ab4fa0ea8688c800184a2b0bfa47930488cc09c69a2018e37"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "source": "raider.png",
+  "sharedScale": 0.15249266862170088,
+  "frameSize": 128,
+  "anchor": [
+    64,
+    128
+  ],
+  "frames": [
+    {
+      "file": "01.png",
+      "bbox": [
+        33,
+        76,
+        93,
+        128
+      ],
+      "sha256": "95a1f82b2dcce0b16745f89d271f11c829feee2977c535b94ca1ada26db214af"
+    },
+    {
+      "file": "02.png",
+      "bbox": [
+        34,
+        75,
+        91,
+        128
+      ],
+      "sha256": "19c4b3562c1b5dffe212c96d7ff37dd463c10be36a814ef622018e581a7d7059"
+    },
+    {
+      "file": "03.png",
+      "bbox": [
+        35,
+        75,
+        95,
+        128
+      ],
+      "sha256": "c34d56b12ac045e2a111642b7f916a73366fb0bd41024d3170f89430b81a7365"
+    },
+    {
+      "file": "04.png",
+      "bbox": [
+        36,
+        80,
+        85,
+        128
+      ],
+      "sha256": "af65af8d52f66b08b76b0df01cd94aa402ed8fd8fe63fcc2b1df20dfada9d457"
+    },
+    {
+      "file": "05.png",
+      "bbox": [
+        32,
+        80,
+        115,
+        128
+      ],
+      "sha256": "6bc55aaa2dc08a4ece8ea413b8c48bea0c7033f07578853cd08ac5de9ceb9bd3"
+    },
+    {
+      "file": "06.png",
+      "bbox": [
+        38,
+        79,
+        98,
+        128
+      ],
+      "sha256": "a3799f46f2a745d1a8912922c10a8f223d4c76fb83bbc06d42252dc2d689074e"
+    }
+  ]
+}

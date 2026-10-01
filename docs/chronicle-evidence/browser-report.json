@@ -1,0 +1,183 @@
+{
+  "ui": {
+    "motion": {
+      "unfurl": "true",
+      "animation": "chronicle-unfurl",
+      "rod": "chronicle-spindle"
+    },
+    "portrait": "url(\"http://starfall-check.localhost:4174/assets/chronicle/portraits/lyra.png\")",
+    "reduced": "none",
+    "detail": {
+      "width": 366.59375,
+      "unfurl": "true",
+      "numberColor": "rgb(75, 65, 46)"
+    },
+    "keyboardDialogue": true,
+    "worldTravel": true,
+    "preparationLaunch": true,
+    "mobile390": true,
+    "errors": []
+  },
+  "animation": {
+    "walk": [
+      1,
+      2,
+      1,
+      0,
+      1,
+      2,
+      1,
+      0
+    ],
+    "attack": {
+      "poses": [
+        1,
+        2,
+        1,
+        0,
+        1,
+        2,
+        1,
+        0,
+        3,
+        4,
+        5,
+        0,
+        3,
+        4,
+        5,
+        0
+      ],
+      "frame": 0
+    },
+    "heal": {
+      "poses": [
+        3,
+        4,
+        5,
+        0
+      ],
+      "hp": 19,
+      "casterHp": 21,
+      "frame": 0
+    },
+    "errors": []
+  },
+  "combat": {
+    "combatParity": [
+      {
+        "scenario": "melee-hit-followup",
+        "finalHp": {
+          "kael": 20,
+          "e4": 3
+        },
+        "events": [
+          {
+            "type": "strike",
+            "hit": true,
+            "critical": false,
+            "followUp": false,
+            "damage": 9
+          },
+          {
+            "type": "strike",
+            "hit": true,
+            "critical": false,
+            "followUp": false,
+            "damage": 4
+          },
+          {
+            "type": "strike",
+            "hit": true,
+            "critical": false,
+            "followUp": true,
+            "damage": 9
+          }
+        ],
+        "variantsAgree": true,
+        "cameraRestored": true
+      },
+      {
+        "scenario": "melee-miss",
+        "finalHp": {
+          "kael": 24,
+          "e4": 21
+        },
+        "events": [
+          {
+            "type": "strike",
+            "hit": false,
+            "critical": false,
+            "followUp": false,
+            "damage": 0
+          },
+          {
+            "type": "strike",
+            "hit": false,
+            "critical": false,
+            "followUp": false,
+            "damage": 0
+          },
+          {
+            "type": "strike",
+            "hit": false,
+            "critical": false,
+            "followUp": true,
+            "damage": 0
+          }
+        ],
+        "variantsAgree": true,
+        "cameraRestored": true
+      },
+      {
+        "scenario": "critical-death",
+        "finalHp": {
+          "kael": 24,
+          "e4": 0
+        },
+        "events": [
+          {
+            "type": "strike",
+            "hit": true,
+            "critical": true,
+            "followUp": false,
+            "damage": 27
+          }
+        ],
+        "variantsAgree": true,
+        "cameraRestored": true
+      },
+      {
+        "scenario": "mounted-spell-cost",
+        "finalHp": {
+          "lyra": 20,
+          "e4": 0
+        },
+        "events": [
+          {
+            "type": "cost"
+          },
+          {
+            "type": "strike",
+            "hit": true,
+            "critical": false,
+            "followUp": false,
+            "damage": 11
+          },
+          {
+            "type": "cost"
+          },
+          {
+            "type": "strike",
+            "hit": true,
+            "critical": false,
+            "followUp": true,
+            "damage": 11
+          }
+        ],
+        "variantsAgree": true,
+        "cameraRestored": true
+      }
+    ]
+  }
+}

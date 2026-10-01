@@ -1,0 +1,30 @@
+{
+  "count": 51,
+  "sizes": [
+    {
+      "approvalVisible": true,
+      "width": 1280,
+      "height": 720,
+      "horizontal": false
+    },
+    {
+      "approvalVisible": true,
+      "width": 1440,
+      "height": 810,
+      "horizontal": false
+    },
+    {
+      "approvalVisible": true,
+      "width": 1920,
+      "height": 1080,
+      "horizontal": false
+    },
+    {
+      "approvalVisible": true,
+      "width": 1100,
+      "height": 760,
+      "horizontal": false
+    }
+  ],
+  "overflow": []
+}

@@ -1,0 +1,71 @@
+{
+  "source": "cavalry-female.png",
+  "sharedScale": 0.13763440860215054,
+  "frameSize": 128,
+  "anchor": [
+    64,
+    128
+  ],
+  "frames": [
+    {
+      "file": "01.png",
+      "bbox": [
+        40,
+        65,
+        84,
+        128
+      ],
+      "sha256": "00e96cce3f1f37bd589d60c1a778da6facb4384e19058fd1ba3a38a7618d4138"
+    },
+    {
+      "file": "02.png",
+      "bbox": [
+        40,
+        65,
+        85,
+        128
+      ],
+      "sha256": "648ab5782a0ccbd5426c4d463ed23e3e10591d71235cfd52164d5909aee18f62"
+    },
+    {
+      "file": "03.png",
+      "bbox": [
+        40,
+        64,
+        85,
+        128
+      ],
+      "sha256": "f876d058d77c276d22f9d4e17c1ca87db1fbf752cfe89773046d07075fcba0b9"
+    },
+    {
+      "file": "04.png",
+      "bbox": [
+        38,
+        58,
+        89,
+        128
+      ],
+      "sha256": "bcd453139050856a08b51191accc8a66df24c08312491c10b4432f8933ad3edb"
+    },
+    {
+      "file": "05.png",
+      "bbox": [
+        36,
+        75,
+        101,
+        128
+      ],
+      "sha256": "6b1c951412dcc5514dd163e8e4d93e0581bf5e668862c5d983265e3104a6ec32"
+    },
+    {
+      "file": "06.png",
+      "bbox": [
+        38,
+        64,
+        85,
+        128
+      ],
+      "sha256": "05bf9ce0431b0fd2dba846fd24b29882053328825ba7b4f3432eb28544e83d28"
+    }
+  ]
+}

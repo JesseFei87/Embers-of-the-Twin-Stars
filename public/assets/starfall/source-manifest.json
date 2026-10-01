@@ -1,0 +1,10 @@
+{
+  "environment.glb": "adb11d8bec7595794d1a077e71ee8ac0c80a3b52b7b4b5e342079a9fab178f3e",
+  "layout.json": "ae99e10c1a977033ddfd50c9217ffdd15fd49695b38003d97fb671a5a628f842",
+  "sprites/sword.png": "0582fb0453befdd0a6561f7d9647150bafc63eadd755cf3b33c1e294d80f4695",
+  "sprites/lancer.png": "24108f1b003b034454037d727275eb33197070ab13f14ad0abc7de02292d7893",
+  "sprites/cavalry.png": "9c051c801f2e85dbece3e1955d3f3f50b0d020e1c3a18cdf4705f77e463e9ea7",
+  "sprites/mage.png": "b382bcbf6382874f4b7615c5c0691c3072f0609ffccd377f06bb05752a95d44e",
+  "sprites/knight.png": "29806712f5cf7c6ca5833fcd2f5e3b2f24629df0f3a66fa8ac87dd97b4bd5cba",
+  "sprites/raider.png": "b1765d23c176eecd92270260197c6d6abfcf77d5086201fceb87d07cdee2a953"
+}

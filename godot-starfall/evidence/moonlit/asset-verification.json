@@ -1,0 +1,154 @@
+{
+  "passed": true,
+  "glb_sha256": "edcaa6239a311e6e5b4102603331faf2846224a46ad5ae041c1cf08fb05d6632",
+  "landmarks": [
+    "Southern silver crescent",
+    "Suspended ritual crescent",
+    "Broken moon gate arch",
+    "Distant viaduct arches",
+    "West canyon wall",
+    "East canyon wall",
+    "Northern precipice",
+    "Bridge individual planks",
+    "Moon terrace foundation",
+    "Altar concentric steps",
+    "Moon gate upright",
+    "East crossing stone apron",
+    "Scout terrace slope",
+    "Distant mountain panorama 0",
+    "Distant mountain panorama 1",
+    "Distant mountain panorama 2"
+  ],
+  "packed_images": 30,
+  "foliage_alpha_range": [
+    0,
+    255
+  ],
+  "closed_solid_signed_volumes_m3": {
+    "Southern silver crescent": 0.064227,
+    "Suspended ritual crescent": 0.186154,
+    "Broken moon gate arch": 1.268473,
+    "Distant viaduct arches": 3.663499,
+    "West canyon wall": 8761.283364,
+    "East canyon wall": 9400.835139,
+    "Northern precipice": 5661.219864
+  },
+  "supported_walkable_cells": 136,
+  "actor_surface_probes": [
+    {
+      "name": "凯尔",
+      "cell": [
+        4,
+        11
+      ],
+      "mesh_surface": 0.2441,
+      "baseline_gap_m": 0.0459
+    },
+    {
+      "name": "莱拉",
+      "cell": [
+        5,
+        11
+      ],
+      "mesh_surface": 0.2395,
+      "baseline_gap_m": 0.0505
+    },
+    {
+      "name": "米菈",
+      "cell": [
+        6,
+        11
+      ],
+      "mesh_surface": 0.2332,
+      "baseline_gap_m": 0.0568
+    },
+    {
+      "name": "诺克斯",
+      "cell": [
+        7,
+        11
+      ],
+      "mesh_surface": 0.2542,
+      "baseline_gap_m": 0.0358
+    },
+    {
+      "name": "赛勒涅",
+      "cell": [
+        9,
+        2
+      ],
+      "mesh_surface": 1.28,
+      "baseline_gap_m": 0.045
+    },
+    {
+      "name": "艾琳",
+      "cell": [
+        6,
+        4
+      ],
+      "mesh_surface": 0.1979,
+      "baseline_gap_m": 0.013
+    },
+    {
+      "name": "峡道重甲",
+      "cell": [
+        5,
+        5
+      ],
+      "mesh_surface": 0.13,
+      "baseline_gap_m": 0.045
+    },
+    {
+      "name": "暮鸦西",
+      "cell": [
+        3,
+        4
+      ],
+      "mesh_surface": 1.0676,
+      "baseline_gap_m": 0.0963
+    },
+    {
+      "name": "暮鸦东",
+      "cell": [
+        8,
+        4
+      ],
+      "mesh_surface": 0.1256,
+      "baseline_gap_m": 0.0955
+    },
+    {
+      "name": "北坡斥候",
+      "cell": [
+        2,
+        0
+      ],
+      "mesh_surface": 0.4924,
+      "baseline_gap_m": 0.1046
+    },
+    {
+      "name": "祭坛卫兵",
+      "cell": [
+        5,
+        1
+      ],
+      "mesh_surface": 0.4333,
+      "baseline_gap_m": 0.1033
+    }
+  ],
+  "road_cell_7_5_mesh_height": 0.0428,
+  "terrain_rows": [
+    "gggggggggggg",
+    "ggfgggrggggg",
+    "ggfffggggsgg",
+    "ggffmggffggg",
+    "gggmmgrffggg",
+    "wwwwbbbrwwww",
+    "ggggrrgggggg",
+    "ggffrrgmfggg",
+    "ggggrrfffggg",
+    "ggggrrgggggg",
+    "gggssssssggg",
+    "gggssssssggg"
+  ],
+  "scope": "Exported geometry, packed foliage, source terrain and actor support; native visual review and Godot runtime validation remain separate."
+}

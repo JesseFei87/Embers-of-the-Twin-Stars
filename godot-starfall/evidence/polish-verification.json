@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "date": "2026-09-14",
+  "reference": "art-direction/starfall-hd2d-concept-v1.png",
+  "baseline": "evidence/before-polish",
+  "asset_checks": {
+    "status": "PASS",
+    "meshes": 39,
+    "embedded_images": 31,
+    "source_textures": 34,
+    "layout_matches_original": true,
+    "uv_complete": true,
+    "alpha_mask_foliage": true,
+    "scene_external_resources_present": true
+  },
+  "scene_checks": [
+    "eight transparent nearest-filtered pixel actors",
+    "nine local lights",
+    "fern and grass instances",
+    "distant forest",
+    "camera preset reset",
+    "day/night ambient and background restoration",
+    "original 10x8 layout"
+  ],
+  "runtime": {
+    "adapter": "Apple M5 (Apple9)",
+    "draw_calls": 170.0,
+    "engine": "4.6.3-stable (official)",
+    "frame_ms_p95": 46.2962962962963,
+    "frames": 255,
+    "primitives": 3628610.0,
+    "renderer": "forward_plus",
+    "viewport": "(1600.0, 947.0)"
+  },
+  "clean_logs": [
+    "polish-import.log",
+    "polish-scene-build.log",
+    "polish-runtime.log",
+    "polish-verification.log"
+  ],
+  "screenshots": [
+    "01-starfall-day.png",
+    "02-bridge-detail.png",
+    "03-star-shrine.png",
+    "04-starfall-night.png"
+  ],
+  "limitations": [
+    "Procedural tree silhouettes still repeat more than the reference.",
+    "Stone weathering and soft atmospheric light are not a pixel-exact reconstruction.",
+    "Capture timing includes warm-up and camera changes; not a performance benchmark."
+  ]
+}

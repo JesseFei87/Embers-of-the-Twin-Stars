@@ -1,0 +1,46 @@
+{
+  "desktopSizes": [
+    {
+      "clipped": [],
+      "overflow": false,
+      "viewport": [
+        1280,
+        720
+      ]
+    },
+    {
+      "clipped": [],
+      "overflow": false,
+      "viewport": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "clipped": [],
+      "overflow": false,
+      "viewport": [
+        1440,
+        810
+      ]
+    }
+  ],
+  "narrowDesktop": {
+    "width": 1100,
+    "height": 810,
+    "controlsInside": true
+  },
+  "flows": [
+    "six menu destinations",
+    "read-only battle formation",
+    "unit details",
+    "movement and cancel",
+    "wait",
+    "end turn and reload to turn 2",
+    "native dialog Escape",
+    "modal backdrop blocks battlefield",
+    "camera mode toggle and reset",
+    "overview operation feedback"
+  ],
+  "consoleErrors": []
+}

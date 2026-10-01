@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" viewBox="0 0 1440 1040">
+<rect width="1440" height="1040" fill="#101b29"/>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#e9e2cc} .small{font-size:16px}.title{font-size:30px;font-weight:600}.label{font-size:19px}</style>
+<text x="65" y="58" class="title">月影峡道 · 地形与建模定位</text>
+<text x="65" y="90" class="small">原有关卡 10 × 8 格 · 北在上 · 高差、尺寸为制作建议</text>
+<text x="126" y="140" class="small">0</text>
+<text x="206" y="140" class="small">1</text>
+<text x="286" y="140" class="small">2</text>
+<text x="366" y="140" class="small">3</text>
+<text x="446" y="140" class="small">4</text>
+<text x="526" y="140" class="small">5</text>
+<text x="606" y="140" class="small">6</text>
+<text x="686" y="140" class="small">7</text>
+<text x="766" y="140" class="small">8</text>
+<text x="846" y="140" class="small">9</text>
+<text x="62" y="200" class="small">0</text>
+<rect x="90" y="155" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="99" y="175" class="small" opacity=".75">G</text>
+<rect x="170" y="155" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="179" y="175" class="small" opacity=".75">F</text>
+<rect x="250" y="155" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="259" y="175" class="small" opacity=".75">F</text>
+<rect x="330" y="155" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="339" y="175" class="small" opacity=".75">F</text>
+<rect x="410" y="155" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="419" y="175" class="small" opacity=".75">G</text>
+<rect x="490" y="155" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="499" y="175" class="small" opacity=".75">G</text>
+<rect x="570" y="155" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="579" y="175" class="small" opacity=".75">G</text>
+<rect x="650" y="155" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="659" y="175" class="small" opacity=".75">G</text>
+<rect x="730" y="155" width="80" height="80" fill="#718f9c" stroke="#bac5c7" stroke-opacity=".22"/><text x="739" y="175" class="small" opacity=".75">S</text>
+<rect x="810" y="155" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="819" y="175" class="small" opacity=".75">G</text>
+<text x="62" y="280" class="small">1</text>
+<rect x="90" y="235" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="99" y="255" class="small" opacity=".75">G</text>
+<rect x="170" y="235" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="179" y="255" class="small" opacity=".75">F</text>
+<rect x="250" y="235" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="259" y="255" class="small" opacity=".75">F</text>
+<rect x="330" y="235" width="80" height="80" fill="#63697d" stroke="#bac5c7" stroke-opacity=".22"/><text x="339" y="255" class="small" opacity=".75">M</text>
+<rect x="410" y="235" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="419" y="255" class="small" opacity=".75">G</text>
+<rect x="490" y="235" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="499" y="255" class="small" opacity=".75">G</text>
+<rect x="570" y="235" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="579" y="255" class="small" opacity=".75">F</text>
+<rect x="650" y="235" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="659" y="255" class="small" opacity=".75">F</text>
+<rect x="730" y="235" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="739" y="255" class="small" opacity=".75">G</text>
+<rect x="810" y="235" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="819" y="255" class="small" opacity=".75">G</text>
+<text x="62" y="360" class="small">2</text>
+<rect x="90" y="315" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="99" y="335" class="small" opacity=".75">G</text>
+<rect x="170" y="315" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="179" y="335" class="small" opacity=".75">G</text>
+<rect x="250" y="315" width="80" height="80" fill="#63697d" stroke="#bac5c7" stroke-opacity=".22"/><text x="259" y="335" class="small" opacity=".75">M</text>
+<rect x="330" y="315" width="80" height="80" fill="#63697d" stroke="#bac5c7" stroke-opacity=".22"/><text x="339" y="335" class="small" opacity=".75">M</text>
+<rect x="410" y="315" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="419" y="335" class="small" opacity=".75">G</text>
+<rect x="490" y="315" width="80" height="80" fill="#979889" stroke="#bac5c7" stroke-opacity=".22"/><text x="499" y="335" class="small" opacity=".75">R</text>
+<rect x="570" y="315" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="579" y="335" class="small" opacity=".75">F</text>
+<rect x="650" y="315" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="659" y="335" class="small" opacity=".75">F</text>
+<rect x="730" y="315" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="739" y="335" class="small" opacity=".75">G</text>
+<rect x="810" y="315" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="819" y="335" class="small" opacity=".75">G</text>
+<text x="62" y="440" class="small">3</text>
+<rect x="90" y="395" width="80" height="80" fill="#244d6e" stroke="#bac5c7" stroke-opacity=".22"/><text x="99" y="415" class="small" opacity=".75">W</text>
+<rect x="170" y="395" width="80" height="80" fill="#244d6e" stroke="#bac5c7" stroke-opacity=".22"/><text x="179" y="415" class="small" opacity=".75">W</text>
+<rect x="250" y="395" width="80" height="80" fill="#244d6e" stroke="#bac5c7" stroke-opacity=".22"/><text x="259" y="415" class="small" opacity=".75">W</text>
+<rect x="330" y="395" width="80" height="80" fill="#a57948" stroke="#bac5c7" stroke-opacity=".22"/><text x="339" y="415" class="small" opacity=".75">B</text>
+<rect x="410" y="395" width="80" height="80" fill="#a57948" stroke="#bac5c7" stroke-opacity=".22"/><text x="419" y="415" class="small" opacity=".75">B</text>
+<rect x="490" y="395" width="80" height="80" fill="#a57948" stroke="#bac5c7" stroke-opacity=".22"/><text x="499" y="415" class="small" opacity=".75">B</text>
+<rect x="570" y="395" width="80" height="80" fill="#979889" stroke="#bac5c7" stroke-opacity=".22"/><text x="579" y="415" class="small" opacity=".75">R</text>
+<rect x="650" y="395" width="80" height="80" fill="#244d6e" stroke="#bac5c7" stroke-opacity=".22"/><text x="659" y="415" class="small" opacity=".75">W</text>
+<rect x="730" y="395" width="80" height="80" fill="#244d6e" stroke="#bac5c7" stroke-opacity=".22"/><text x="739" y="415" class="small" opacity=".75">W</text>
+<rect x="810" y="395" width="80" height="80" fill="#244d6e" stroke="#bac5c7" stroke-opacity=".22"/><text x="819" y="415" class="small" opacity=".75">W</text>
+<text x="62" y="520" class="small">4</text>
+<rect x="90" y="475" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="99" y="495" class="small" opacity=".75">G</text>
+<rect x="170" y="475" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="179" y="495" class="small" opacity=".75">G</text>
+<rect x="250" y="475" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="259" y="495" class="small" opacity=".75">G</text>
+<rect x="330" y="475" width="80" height="80" fill="#979889" stroke="#bac5c7" stroke-opacity=".22"/><text x="339" y="495" class="small" opacity=".75">R</text>
+<rect x="410" y="475" width="80" height="80" fill="#979889" stroke="#bac5c7" stroke-opacity=".22"/><text x="419" y="495" class="small" opacity=".75">R</text>
+<rect x="490" y="475" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="499" y="495" class="small" opacity=".75">G</text>
+<rect x="570" y="475" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="579" y="495" class="small" opacity=".75">G</text>
+<rect x="650" y="475" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="659" y="495" class="small" opacity=".75">G</text>
+<rect x="730" y="475" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="739" y="495" class="small" opacity=".75">G</text>
+<rect x="810" y="475" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="819" y="495" class="small" opacity=".75">G</text>
+<text x="62" y="600" class="small">5</text>
+<rect x="90" y="555" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="99" y="575" class="small" opacity=".75">G</text>
+<rect x="170" y="555" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="179" y="575" class="small" opacity=".75">F</text>
+<rect x="250" y="555" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="259" y="575" class="small" opacity=".75">F</text>
+<rect x="330" y="555" width="80" height="80" fill="#979889" stroke="#bac5c7" stroke-opacity=".22"/><text x="339" y="575" class="small" opacity=".75">R</text>
+<rect x="410" y="555" width="80" height="80" fill="#979889" stroke="#bac5c7" stroke-opacity=".22"/><text x="419" y="575" class="small" opacity=".75">R</text>
+<rect x="490" y="555" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="499" y="575" class="small" opacity=".75">G</text>
+<rect x="570" y="555" width="80" height="80" fill="#63697d" stroke="#bac5c7" stroke-opacity=".22"/><text x="579" y="575" class="small" opacity=".75">M</text>
+<rect x="650" y="555" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="659" y="575" class="small" opacity=".75">F</text>
+<rect x="730" y="555" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="739" y="575" class="small" opacity=".75">G</text>
+<rect x="810" y="555" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="819" y="575" class="small" opacity=".75">G</text>
+<text x="62" y="680" class="small">6</text>
+<rect x="90" y="635" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="99" y="655" class="small" opacity=".75">G</text>
+<rect x="170" y="635" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="179" y="655" class="small" opacity=".75">G</text>
+<rect x="250" y="635" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="259" y="655" class="small" opacity=".75">G</text>
+<rect x="330" y="635" width="80" height="80" fill="#979889" stroke="#bac5c7" stroke-opacity=".22"/><text x="339" y="655" class="small" opacity=".75">R</text>
+<rect x="410" y="635" width="80" height="80" fill="#979889" stroke="#bac5c7" stroke-opacity=".22"/><text x="419" y="655" class="small" opacity=".75">R</text>
+<rect x="490" y="635" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="499" y="655" class="small" opacity=".75">F</text>
+<rect x="570" y="635" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="579" y="655" class="small" opacity=".75">F</text>
+<rect x="650" y="635" width="80" height="80" fill="#263f38" stroke="#bac5c7" stroke-opacity=".22"/><text x="659" y="655" class="small" opacity=".75">F</text>
+<rect x="730" y="635" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="739" y="655" class="small" opacity=".75">G</text>
+<rect x="810" y="635" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="819" y="655" class="small" opacity=".75">G</text>
+<text x="62" y="760" class="small">7</text>
+<rect x="90" y="715" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="99" y="735" class="small" opacity=".75">G</text>
+<rect x="170" y="715" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="179" y="735" class="small" opacity=".75">G</text>
+<rect x="250" y="715" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="259" y="735" class="small" opacity=".75">G</text>
+<rect x="330" y="715" width="80" height="80" fill="#718f9c" stroke="#bac5c7" stroke-opacity=".22"/><text x="339" y="735" class="small" opacity=".75">S</text>
+<rect x="410" y="715" width="80" height="80" fill="#718f9c" stroke="#bac5c7" stroke-opacity=".22"/><text x="419" y="735" class="small" opacity=".75">S</text>
+<rect x="490" y="715" width="80" height="80" fill="#718f9c" stroke="#bac5c7" stroke-opacity=".22"/><text x="499" y="735" class="small" opacity=".75">S</text>
+<rect x="570" y="715" width="80" height="80" fill="#718f9c" stroke="#bac5c7" stroke-opacity=".22"/><text x="579" y="735" class="small" opacity=".75">S</text>
+<rect x="650" y="715" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="659" y="735" class="small" opacity=".75">G</text>
+<rect x="730" y="715" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="739" y="735" class="small" opacity=".75">G</text>
+<rect x="810" y="715" width="80" height="80" fill="#526a60" stroke="#bac5c7" stroke-opacity=".22"/><text x="819" y="735" class="small" opacity=".75">G</text>
+<polyline points="450,755 450,675 450,595 450,515 450,435 450,355 530,355 530,275 530,195 610,195 690,195 770,195" fill="none" stroke="#edcf77" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+<circle cx="370" cy="755" r="18" fill="#172331" stroke="#f7de98" stroke-width="2"/><text x="370" y="762" text-anchor="middle" class="label">A</text>
+<circle cx="450" cy="435" r="18" fill="#172331" stroke="#f7de98" stroke-width="2"/><text x="450" y="442" text-anchor="middle" class="label">B</text>
+<circle cx="530" cy="355" r="18" fill="#172331" stroke="#f7de98" stroke-width="2"/><text x="530" y="362" text-anchor="middle" class="label">C</text>
+<circle cx="770" cy="195" r="18" fill="#172331" stroke="#f7de98" stroke-width="2"/><text x="770" y="202" text-anchor="middle" class="label">D</text>
+<circle cx="290" cy="355" r="18" fill="#172331" stroke="#f7de98" stroke-width="2"/><text x="290" y="362" text-anchor="middle" class="label">E</text>
+<circle cx="690" cy="355" r="18" fill="#172331" stroke="#f7de98" stroke-width="2"/><text x="690" y="362" text-anchor="middle" class="label">F</text>
+<rect x="335" y="720" width="70" height="70" rx="5" fill="none" stroke="#9be5e8" stroke-width="3"/>
+<rect x="415" y="720" width="70" height="70" rx="5" fill="none" stroke="#9be5e8" stroke-width="3"/>
+<rect x="495" y="720" width="70" height="70" rx="5" fill="none" stroke="#9be5e8" stroke-width="3"/>
+<rect x="575" y="720" width="70" height="70" rx="5" fill="none" stroke="#9be5e8" stroke-width="3"/>
+<text x="945" y="171" class="title">定位标记</text>
+<text x="945" y="216" class="label">A  南侧部署平台</text>
+<text x="945" y="257" class="label">B  中央木桥 / 重甲守卫</text>
+<text x="945" y="298" class="label">C  艾琳 / 守关点</text>
+<text x="945" y="339" class="label">D  赛勒涅 / 祭坛与出口</text>
+<text x="945" y="380" class="label">E  西侧山地斥候</text>
+<text x="945" y="421" class="label">F  东侧林地斥候</text>
+<text x="945" y="509" class="title">地形图例</text>
+<rect x="945" y="528" width="22" height="22" fill="#526a60"/><text x="980" y="545" class="label">G · 草地</text>
+<rect x="945" y="561" width="22" height="22" fill="#263f38"/><text x="980" y="578" class="label">F · 森林</text>
+<rect x="945" y="594" width="22" height="22" fill="#63697d"/><text x="980" y="611" class="label">M · 山地</text>
+<rect x="945" y="627" width="22" height="22" fill="#244d6e"/><text x="980" y="644" class="label">W · 河流</text>
+<rect x="945" y="660" width="22" height="22" fill="#a57948"/><text x="980" y="677" class="label">B · 木桥</text>
+<rect x="945" y="693" width="22" height="22" fill="#979889"/><text x="980" y="710" class="label">R · 道路</text>
+<rect x="945" y="726" width="22" height="22" fill="#718f9c"/><text x="980" y="743" class="label">S · 回复地形</text>
+<text x="945" y="820" class="small">金线：建议推进方向</text>
+<text x="945" y="850" class="small">青框：原有关卡四个部署位</text>
+<text x="90" y="860" class="title">建议的空间层次</text>
+<text x="90" y="898" class="label">河床 / 水面 −3 m　→　桥面 / 岸上主通道 0 m　→　祭坛 +0.6 m</text>
+<text x="90" y="934" class="label">可攀山地 +0.6–1.2 m　｜　边界峭壁 4–10 m　｜　单格建议 2 m</text>
+<text x="90" y="986" class="small">视觉图负责材质与氛围；此图负责格位。远景装饰不构成额外路线，不能改变原有通行规则。</text>
+</svg>

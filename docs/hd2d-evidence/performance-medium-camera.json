@@ -1,0 +1,38 @@
+{
+  "done": true,
+  "quality": "medium",
+  "mode": "camera",
+  "warmupMs": 10000,
+  "sampleMs": 60013,
+  "viewport": {
+    "width": 1461,
+    "height": 907,
+    "dpr": 1,
+    "internalRatio": 1
+  },
+  "map": "moonlit-pass",
+  "units": 8,
+  "hiddenFrames": 0,
+  "frames": {
+    "samples": 3600,
+    "p95": 17.599999999998545,
+    "p99": 17.700000000004366
+  },
+  "cpu": {
+    "samples": 3601,
+    "p95": 0.800000011920929,
+    "p99": 0.9000000059604645
+  },
+  "gpu": {
+    "samples": 3600,
+    "p95": 4.138666,
+    "p99": 6.853999
+  },
+  "gpuTimerSupported": true,
+  "calls": 101,
+  "triangles": 8200,
+  "resources": {
+    "geometries": 135,
+    "textures": 48
+  }
+}
