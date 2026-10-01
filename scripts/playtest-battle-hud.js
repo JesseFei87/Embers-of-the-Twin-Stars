@@ -1,0 +1,23 @@
+// Only use the dedicated QA origin. Creates a fresh campaign there.
+assert.equal(new URL(page.url()).origin, 'http://replica-check.localhost:4174');
+await page.evaluate(() => { localStorage.removeItem('embers-of-the-twin-stars-campaign-v2'); localStorage.removeItem('embers-battle-staging-v1'); });
+await page.setViewportSize({width:1074,height:909}); await page.reload();
+await page.locator('#formation-menu').click(); await page.locator('#start-battle').click();
+await page.waitForFunction(()=>window.__embers.game.scene.getScene('battle').renderHost?.enabled);
+await expect(page.locator('#deploy-battle')).toBeVisible({timeout:2000});
+assert.equal(await page.locator('#end').isVisible(),false);
+const tile=async id=>{const p=await page.evaluate(id=>window.__embers.game.scene.getScene('battle').renderHost.debug().points.find(p=>p.id===id),id);await page.mouse.click(p.x,p.y);};
+await tile('3,7');assert.equal(await page.evaluate(()=>window.__embers.game.scene.getScene('battle').selected?.id??null),null);
+await page.reload();await page.locator('#continue').click();await expect(page.locator('#deploy-battle')).toBeVisible();
+await page.locator('#dock-party').click();await expect(page.locator('[data-sortie=lyra]')).toBeEnabled();
+await page.locator('[data-sortie=mira]').uncheck();await page.locator('#start-battle').click();await page.locator('#dock-party').click();await expect(page.locator('[data-sortie=mira]')).not.toBeChecked();await page.locator('[data-sortie=mira]').check();await page.locator('#start-battle').click();await expect(page.locator('#deploy-battle')).toBeVisible();
+await page.locator('#deploy-battle').click();await expect(page.locator('.replica-dock')).toBeHidden();await expect(page.locator('.party-cards')).toBeHidden();await expect(page.locator('#battle-menu')).toBeVisible();
+await page.locator('#battle-menu').click();await expect(page.locator('dialog')).toBeVisible();await tile('3,7');assert.equal(await page.evaluate(()=>window.__embers.game.scene.getScene('battle').selected?.id??null),null);await page.keyboard.press('Escape');
+await page.locator('#battle-menu').click();await page.locator('[data-battle-menu=party]').click();await expect(page.locator('[data-sortie=lyra]')).toBeDisabled();await page.locator('#prep-back').click();await expect(page.locator('.battle-live')).toBeVisible();
+await page.locator('#battle-menu').click();await page.locator('[data-battle-menu=system]').click();await page.locator('#render-settings-close').click();await expect(page.locator('.party-cards')).toBeHidden();
+await page.reload();await page.locator('#continue').click();await page.waitForFunction(()=>window.__embers.game.scene.getScene('battle').renderHost?.enabled);await expect(page.locator('.battle-live')).toBeVisible();
+await page.setViewportSize({width:390,height:844});await tile('3,7');await expect(page.locator('.battle-live .unit-card')).toBeVisible();await tile('3,6');await page.waitForFunction(()=>window.__embers.game.scene.getScene('battle').mode==='command');await page.locator('#cancel-move').click();assert.equal(await page.evaluate(()=>window.__embers.game.scene.getScene('battle').units.find(u=>u.id==='kael').y),7);
+assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+await page.locator('#end').click();await page.waitForFunction(()=>{const s=window.__embers.game.scene.getScene('battle');return s.turn===2&&s.mode==='idle';},null,{timeout:45000});await expect(page.locator('.battle-live')).toBeVisible();
+const errors=(await page.pageErrors()).map(e=>e.message);assert.equal(errors.length,0);
+return {staging:true,deploy:true,stagingReload:true,editableFormation:true,battleReload:true,modalBlocksMap:true,readOnlyBattleFormation:true,settingsReturn:true,mobileMovement:true,enemyTurn:true,errors};

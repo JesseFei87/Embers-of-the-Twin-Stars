@@ -1,0 +1,15 @@
+// Execute with Tabbit CLI on the isolated starfall-check.localhost:4174 origin.
+const t=pages().find(p=>p.url().startsWith('http://starfall-check.localhost:4174/'));assert(t);usePage(t);
+const initial=await t.evaluate(async()=>(await fetch('/docs/hd2d-evidence/starfall-bridge-fixture.json')).json());
+await t.evaluate(f=>localStorage.setItem('embers-of-the-twin-stars-campaign-v2',JSON.stringify(f)),initial);await t.reload();await t.locator('#continue').click();await t.waitForFunction(()=>window.__embers.game.scene.getScene('battle').renderHost?.enabled);
+async function observePoses(){await t.evaluate(()=>{const s=window.__embers.game.scene.getScene('battle');window.__animationPoses={};for(const [id,v] of s.renderHost.renderer.units){const original=v.pose.bind(v);window.__animationPoses[id]=[];v.pose=frame=>{const frames=window.__animationPoses[id];if(frames.at(-1)!==frame)frames.push(frame);original(frame);};}});}
+async function tile(id){const p=await t.evaluate(id=>window.__embers.game.scene.getScene('battle').renderHost.debug().points.find(p=>p.id===id),id);await t.mouse.click(p.x,p.y);}
+await observePoses();await tile('3,7');await tile('3,5');await t.waitForFunction(()=>window.__embers.game.scene.getScene('battle').mode==='command');
+const walk=await t.evaluate(()=>window.__animationPoses.kael);assert(walk.includes(1)&&walk.includes(2)&&walk.at(-1)===0);
+await t.locator('#fight').click();await tile('3,4');await t.locator('#confirm-combat').click();await t.waitForFunction(()=>window.__embers.game.scene.getScene('battle').mode==='idle',null,{timeout:30000});
+const attack=await t.evaluate(()=>({poses:window.__animationPoses.kael,frame:window.__embers.game.scene.getScene('battle').renderHost.renderer.units.get('kael').frame}));assert([3,4,5,0].every(f=>attack.poses.includes(f)));assert.equal(attack.frame,0);
+const fixture=await t.evaluate(async()=>(await fetch('/docs/hd2d-evidence/starfall-bridge-fixture.json')).json());fixture.battleUnits.find(u=>u.id==='kael').hp=10;
+await t.evaluate(f=>localStorage.setItem('embers-of-the-twin-stars-campaign-v2',JSON.stringify(f)),fixture);await t.reload();await t.locator('#continue').click();await t.waitForFunction(()=>window.__embers.game.scene.getScene('battle').renderHost?.enabled);
+await observePoses();await tile('4,7');await tile('4,7');await t.locator('#heal').click();await tile('3,7');await t.waitForFunction(()=>window.__embers.game.scene.getScene('battle').mode==='idle');
+const heal=await t.evaluate(()=>{const s=window.__embers.game.scene.getScene('battle');return {poses:window.__animationPoses.lyra,hp:s.units.find(u=>u.id==='kael').hp,casterHp:s.units.find(u=>u.id==='lyra').hp,frame:s.renderHost.renderer.units.get('lyra').frame};});assert.equal(heal.hp,19);assert.equal(heal.casterHp,21);assert([3,4,5,0].every(f=>heal.poses.includes(f)));assert.equal(heal.frame,0);
+globalThis.animationResults={...globalThis.animationResults,walk,attack,heal,errors:(await t.pageErrors()).map(e=>e.stack)};return globalThis.animationResults;

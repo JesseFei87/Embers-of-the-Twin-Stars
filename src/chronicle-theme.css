@@ -1,0 +1,118 @@
+/* Twin Stars chronicle: warm parchment, engraved gold, forest ink. */
+:root {
+  --chronicle-ink:#302b22; --chronicle-muted:#71634d; --chronicle-gold:#967039;
+  --chronicle-paper:#eadbb8; --chronicle-edge:#b39055; --chronicle-green:#314e44;
+  --chronicle-material:url('/assets/chronicle/paper-grain.svg'),radial-gradient(ellipse at 45% 25%,#f7efd9 0%,#ecdfbd 60%,#d6bd88 100%);
+  --chronicle-shadow:inset 0 0 0 3px #e9d8b4,inset 0 0 0 4px #af8c4f80,inset 0 0 28px #96734025,0 12px 30px #09181650;
+}
+#hud :is(.dialogue,.mission-box,.battle-top,.unit-card,.destination-card,.atlas-dock,.combat-log,.preview-side,.detail-card,.promotion-card,.result-card,.exp-card,.shrine-card,.render-settings,.render-notice,.stage-panel) {
+  color:var(--chronicle-ink);background:var(--chronicle-material);border:1px solid var(--chronicle-edge);border-radius:2px;
+  box-shadow:var(--chronicle-shadow);text-shadow:none;
+}
+#hud :is(.detail-card,.promotion-card,.result-card,.exp-card,.shrine-card,.render-settings,.preview-side) { border-top:5px double var(--chronicle-gold);border-bottom:5px double var(--chronicle-gold); }
+#hud :is(.detail-card,.promotion-card,.result-card,.exp-card,.shrine-card,.render-settings) h2 { color:var(--chronicle-ink);font-weight:600;letter-spacing:.08em; }
+#hud :is(.dialogue,.destination-card,.detail-card,.promotion-card,.result-card,.exp-card,.shrine-card,.render-settings,.preview-side,.stage-panel) :is(p,small) { color:var(--chronicle-muted);text-shadow:none; }
+#hud :is(.speaker,.unit-name,.mission-box b,.destination-card h2,.combat-log b,.preview-name b,.stage-name b,.detail-card h3,.summary-grid h3) { color:#463b29;text-shadow:none; }
+#hud :is(.line,.stats,.mission-box span,.combat-log span,.preview-stats,.stage-name span,.stage-hp,.preview-hp,.preview-cost,.detail-head p,.character-note) { color:#4b4536;text-shadow:none; }
+#hud :is(.unit-title,.unit-level,.turn,.destination-status) { color:#78603b; }
+#hud .phase { color:var(--chronicle-green); }
+#hud :is(.primary,.small-btn,.command,.prep-controls button,.atlas-dock nav button) {
+  color:var(--chronicle-ink);background:var(--chronicle-material);border:1px solid #a28555;border-radius:2px;
+  box-shadow:inset 0 0 0 2px #f6ebd0,inset 0 0 0 3px #b69b6460,0 3px 8px #17201933;text-shadow:none;
+}
+#hud :is(.primary,.battle-command:not(:disabled),.small-btn.active,.atlas-dock nav button.active) {
+  color:#f6eccf;background:linear-gradient(145deg,#4b6251,#263f37);border-color:#b19657;
+  box-shadow:inset 0 0 0 2px #233c32,inset 0 0 0 3px #a58b5055,0 4px 12px #17201940;
+}
+#hud :is(.primary,.small-btn,.command,.atlas-dock nav button):hover:not(:disabled) { border-color:#be9750;filter:brightness(1.08);box-shadow:inset 0 0 0 2px #bda06666,0 5px 14px #15251c44; }
+#hud button:disabled { opacity:.48;filter:saturate(.3); }
+#hud button:focus-visible,#hud select:focus-visible,#hud [tabindex]:focus-visible { outline:2px solid #7d4928;outline-offset:3px; }
+#hud .command::before { color:var(--chronicle-gold); }
+#hud .battle-command:not(:disabled)::before { color:#e4c688; }
+#hud select { background:#f5ebd4;color:#3b3428;border:1px solid #ad915e;accent-color:#385446; }
+#hud input { accent-color:#385446; }
+#hud :is(.hp-line,.exp-bar,.stage-hp-track) { background:#b4a78a;border-color:#947b4e;box-shadow:inset 0 1px 3px #49371844; }
+#hud :is(.hp-line,.exp-bar) i { background:linear-gradient(90deg,#355d4d,#7b9770);box-shadow:none; }
+#hud .dialogue { padding:10px 16px;border-block:5px double #997741; }
+#hud .dialogue .portrait { flex-basis:140px;height:170px;border:1px solid #aa8b4c;box-shadow:inset 0 0 10px #76654833; }
+#hud .dialogue-copy { align-self:center;padding:16px 24px 26px; }
+#hud .speaker { border-bottom:1px solid #b2996970;padding-bottom:8px; }
+#hud .speaker::before { content:'✦';font-size:12px;color:#97703a;margin-right:10px; }
+#hud .advance { color:#775b32; }
+#hud .title-screen { background:#192720; }
+#hud .title-landscape { background:linear-gradient(90deg,#15251cdb,#15251c66 50%,#14241c11),url('/assets/world-atlas-v4.png') center/cover;filter:saturate(.7) sepia(.16); }
+#hud .title-card { background:var(--chronicle-material);border:1px solid #b8995d;border-top:6px double #a7864a;border-bottom:6px double #a7864a;box-shadow:var(--chronicle-shadow),0 30px 80px #081b1680;padding:32px 42px;width:480px;margin-right:40vw; }
+#hud .title-card h1 { color:#393326;text-shadow:0 1px #fff4d8;font-size:clamp(44px,5vw,64px); }
+#hud .title-card :is(.eyebrow,.subtitle,.hint) { color:#80643d; }
+#hud .title-card .eyebrow { letter-spacing:.16em;font-size:9px; }
+#hud .title-card .subtitle { font-size:9px;letter-spacing:.21em; }
+#hud .title-verse { color:#685d47;border-color:#b6975766; }
+#hud .crest { width:104px;height:78px;background:url('/assets/chronicle/twin-stars.svg') center/contain no-repeat;border:0;transform:none;box-shadow:none;margin:18px 0; }
+#hud .crest::after { content:none; }
+#hud .title-card .primary,#hud .title-card .small-btn { width:100%; }
+#hud .title-edition { color:#eadcba; }
+#hud .atlas-dock { border-top:3px double #a78b55; }
+#hud .travel-party b { color:#453f2e; }#hud .travel-party small { color:#736448; }
+#hud .atlas-dock nav button span { color:#98763d; }#hud .atlas-dock nav button.active span { color:#e5d1a0; }
+#hud .destination-card { animation:none; }
+#hud .prep-screen { color:#e9ddbf;background:linear-gradient(100deg,#172920ef,#21372bee),url('/assets/world-atlas-v4.png') center/cover; }
+#hud .prep-screen header { border-bottom:3px double #b99a5c; }
+#hud .prep-screen header h2 { color:#f0e2bc; }
+#hud .prep-screen header small { color:#cbb17b; }
+#hud .prep-unit,#hud .prep-layout aside { background:var(--chronicle-material);color:var(--chronicle-ink);border:1px solid #ab8c54;box-shadow:var(--chronicle-shadow); }
+#hud .prep-unit.selected { border-left:4px solid #526b50; }
+#hud .prep-unit.focused { border-color:#d6b768;outline:2px solid #d6b768;outline-offset:2px; }
+#hud .prep-unit :is(label,b,span),#hud .prep-layout aside :is(p,h3,small,span,b) { color:#4b4433; }
+#hud .prep-controls label small,#hud .prep-inspect { color:#755932; }
+#hud .prep-focus-stats span,#hud .detail-stats span,#hud .promotion-compare span,#hud .level-gains span,#hud .summary-grid>div { color:#4e493a;background:#b3986030;border-color:#b2945a60; }
+#hud .prep-focus { border-color:#b2945a70; }
+#hud .prep-screen footer { background:#1b3027f5; }
+#hud :is(.inventory-list,.deploy-order) span { background:#d9c89e;border:1px solid #a88c56;color:#4b4433; }
+#hud .dossier-cover { aspect-ratio:3/4;border:3px double #947747;border-radius:48% 48% 2px 2px; }
+#hud .combat-preview,#hud .unit-detail { background:#0c201abf;backdrop-filter:blur(4px); }
+#hud :is(.preview-title,.preview-order,.preview-note) { color:#f2e4c5; }
+#hud .preview-side.player { border-top-color:#4d7158; }#hud .preview-side.enemy { border-top-color:#994938; }
+#hud .preview-status { color:#375747; }
+#hud .preview-side.enemy .preview-status { color:#8f4739; }
+#hud .preview-stats b { color:#302c20; }
+#hud .spell-row { color:#403a2c;background:#d7c49855;border-color:#b0925f77; }
+#hud .spell-row span { color:#6d5c42; }#hud .spell-row.active { border-color:#536d51;box-shadow:inset 3px 0 #536d51; }
+#hud .shrine-unit { border-color:#aa8b5466;background:#dfceaa44; }
+#hud .shrine-unit :is(span,small) { color:#746044; }
+#hud .chapter-rating { color:#8f6030;border-color:#a98243;box-shadow:0 0 30px #b18d3730; }
+#hud .phase-banner { color:#f2e2b7;background:linear-gradient(90deg,transparent,#263e32ed,transparent);text-shadow:0 1px 5px #17281f; }
+#hud .detail-close { color:#624d2f;background:transparent; }
+#hud .stage-panel :is(b,span) { color:#453c2d; }
+#hud [data-unfurl='true'] { animation:chronicle-unfurl .48s cubic-bezier(.2,.65,.25,1) both; }
+@keyframes chronicle-unfurl {
+  0% { clip-path:inset(0 0 96% 0);filter:brightness(.84); }
+  55% { clip-path:inset(0 0 25% 0);filter:brightness(1.03); }
+  100% { clip-path:inset(0);filter:none; }
+}
+#hud :is(.portrait,.mini-portrait,.detail-portrait,.prep-portrait,.dossier-cover) { background-size:cover!important;background-position:center 18%!important; }
+#hud .p0 { background-image:url('/assets/chronicle/portraits/kael.png')!important; }
+#hud .p2 { background-image:url('/assets/chronicle/portraits/mira.png')!important; }
+#hud .p4 { background-image:url('/assets/chronicle/portraits/lyra.png')!important; }
+#hud .p5 { background-image:url('/assets/chronicle/portraits/nox.png')!important; }
+#hud .p6 { background-image:url('/assets/chronicle/battle-v2/eileen-bust-refined.png')!important; }
+#hud .p8 { background-image:url('/assets/chronicle/battle-v2/altar-mage-bust.png')!important; }
+#hud .p7 { background-image:url('/assets/chronicle/portraits/selene.png')!important; }
+#hud .p3 { background-image:url('/assets/chronicle/portraits/knight.png')!important; }
+#hud .p1 { background-image:url('/assets/chronicle/portraits/veteran.png')!important; }
+
+@media(max-height:650px) and (min-width:701px) { #hud .title-card { padding:20px 36px; }#hud .crest { height:45px;margin:8px 0; }#hud .title-verse { margin-bottom:12px; } }
+@media(prefers-reduced-motion:reduce) { #hud [data-unfurl='true'] { animation:none; } }
+html[data-reduced-motion='true'] #hud [data-unfurl='true'] { animation:none; }
+/* The lower spindle follows the revealing edge of a newly opened scroll. */
+#hud :is(.detail-card,.promotion-card,.result-card,.exp-card,.shrine-card,.render-settings) { position:relative; }
+#hud :is(.dialogue,.detail-card,.promotion-card,.result-card,.exp-card,.shrine-card,.render-settings)::after {
+  content:'';position:absolute;left:3px;right:3px;top:calc(100% - 5px);height:5px;pointer-events:none;
+  background:linear-gradient(#6e522d,#ead5a1 40%,#b18a49 70%,#634a2c);border-radius:3px;box-shadow:0 2px 4px #49341c40;
+}
+#hud [data-unfurl='true']::after { animation:chronicle-spindle .48s cubic-bezier(.2,.65,.25,1) both; }
+@keyframes chronicle-spindle { from{top:0} to{top:calc(100% - 5px)} }
+@media(prefers-reduced-motion:reduce) { #hud [data-unfurl='true']::after { animation:none; } }
+html[data-reduced-motion='true'] #hud [data-unfurl='true']::after { animation:none; }
+#hud :is(.detail-stats b,.promotion-compare strong,.spell-row b,.summary-grid span,.exp-value,.promotion-line,.trade-select) { color:#4b412e; }
+#hud .spell-row.active b::after { color:#315d43; }
+#hud .epilogue { color:#65583f!important; }
